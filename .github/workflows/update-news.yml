@@ -1,0 +1,41 @@
+name: Update Chicago News
+
+on:
+  schedule:
+    # Runs every 3 hours
+    - cron: "17 */3 * * *"
+
+  # Allows manual testing from GitHub Actions
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update Chicago news
+        run: python update_news.py
+
+      - name: Commit updated news
+        run: |
+          git config user.name "CityUpdater Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add chicago/news/index.html
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update Chicago news"
+            git push
+          fi
