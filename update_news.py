@@ -12,36 +12,50 @@ SITE_URL = "https://cityupdater.com"
 CITY = "Chicago"
 MAX_ARTICLES = 25
 
+AMAZON_AFFILIATE_TAG = "custommade01-20"
+
 CATEGORIES = {
     "news": {
         "query": "Chicago",
         "title": "Chicago News",
         "description": "Latest Chicago news, local headlines, breaking stories and city updates.",
+        "amazon_query": "Chicago gifts",
+        "deal_text": "Chicago Deals",
     },
     "restaurants": {
         "query": "Chicago restaurants",
         "title": "Chicago Restaurants",
         "description": "Latest Chicago restaurant news, openings, food trends and dining updates.",
+        "amazon_query": "Chicago restaurant gifts kitchen",
+        "deal_text": "Chicago Restaurant Deals",
     },
     "events": {
         "query": "Chicago events",
         "title": "Chicago Events",
         "description": "Latest Chicago events, festivals, concerts, exhibitions and local happenings.",
+        "amazon_query": "Chicago event gifts",
+        "deal_text": "Chicago Event Deals",
     },
     "jobs": {
         "query": "Chicago jobs",
         "title": "Chicago Jobs",
         "description": "Latest Chicago job market news, employment updates and career-related stories.",
+        "amazon_query": "office work accessories",
+        "deal_text": "Chicago Work Deals",
     },
     "real-estate": {
         "query": "Chicago real estate",
         "title": "Chicago Real Estate",
         "description": "Latest Chicago real estate news, housing updates, property trends and market developments.",
+        "amazon_query": "home moving organization",
+        "deal_text": "Chicago Home Deals",
     },
     "sports": {
         "query": "Chicago sports",
         "title": "Chicago Sports",
         "description": "Latest Chicago sports news, teams, games, players and sporting events.",
+        "amazon_query": "Chicago sports",
+        "deal_text": "Chicago Sports Deals",
     },
 }
 
@@ -55,6 +69,17 @@ def get_google_news_rss_url(query):
         "&hl=en-US"
         "&gl=US"
         "&ceid=US:en"
+    )
+
+
+def get_amazon_url(query):
+    encoded_query = urllib.parse.quote_plus(query)
+
+    return (
+        "https://www.amazon.com/s"
+        f"?k={encoded_query}"
+        f"&tag={AMAZON_AFFILIATE_TAG}"
+        "&language=en_US"
     )
 
 
@@ -203,6 +228,7 @@ def build_page(slug, data, articles):
     )
 
     canonical = f"{SITE_URL}/chicago/{slug}/"
+    amazon_url = get_amazon_url(data["amazon_query"])
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -313,7 +339,7 @@ def build_page(slug, data, articles):
     }}
 
     .intro {{
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }}
 
     h2 {{
@@ -324,7 +350,42 @@ def build_page(slug, data, articles):
     .updated {{
       color: #6b7280;
       font-size: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }}
+
+    .deal-box {{
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 25px 0 35px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      text-align: center;
+    }}
+
+    .deal-box h2 {{
+      margin-top: 0;
+      font-size: 24px;
+    }}
+
+    .deal-button {{
+      display: inline-block;
+      margin-top: 10px;
+      padding: 15px 24px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }}
+
+    .deal-button:hover {{
+      opacity: 0.9;
+    }}
+
+    .affiliate-note {{
+      margin-top: 14px;
+      font-size: 13px;
+      color: #6b7280;
     }}
 
     .news-list {{
@@ -440,6 +501,30 @@ def build_page(slug, data, articles):
 
     <p class="updated">
       Last updated: {updated}
+    </p>
+
+  </section>
+
+
+  <section class="deal-box">
+
+    <h2>{data["deal_text"]}</h2>
+
+    <p>
+      Discover products and offers related to {data["title"]}.
+    </p>
+
+    <a
+      class="deal-button"
+      href="{amazon_url}"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+    >
+      View {data["deal_text"]} on Amazon
+    </a>
+
+    <p class="affiliate-note">
+      As an Amazon Associate, CityUpdater may earn from qualifying purchases.
     </p>
 
   </section>
