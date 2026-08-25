@@ -7,6 +7,7 @@ from html import escape
 from pathlib import Path
 
 from content import CITY_CONTENT
+from resources import CITY_RESOURCES
 
 
 SITE_URL = "https://cityupdater.com"
@@ -64,6 +65,7 @@ CATEGORIES = {
 
 def get_google_news_rss_url(query):
     encoded_query = urllib.parse.quote(query)
+
     return (
         "https://news.google.com/rss/search"
         f"?q={encoded_query}"
@@ -75,6 +77,7 @@ def get_google_news_rss_url(query):
 
 def get_amazon_url(query):
     encoded_query = urllib.parse.quote_plus(query)
+
     return (
         "https://www.amazon.com/s"
         f"?k={encoded_query}"
@@ -220,6 +223,76 @@ def get_editorial_content(slug):
     return city_content.get(slug, "")
 
 
+def build_resources_html(slug, data):
+    city_resources = CITY_RESOURCES.get(CITY_SLUG, {})
+    resources = city_resources.get(slug, [])
+
+    if not resources:
+        return ""
+
+    items = []
+
+    for resource in resources:
+        title = escape(resource.get("title", ""))
+        url = escape(resource.get("url", ""), quote=True)
+        description = escape(resource.get("description", ""))
+        affiliate = resource.get("affiliate", False)
+
+        if affiliate:
+            rel = "nofollow sponsored noopener"
+            affiliate_label = """
+              <span class="resource-affiliate">
+                Amazon affiliate link
+              </span>
+            """
+        else:
+            rel = "noopener noreferrer"
+            affiliate_label = ""
+
+        items.append(
+            f"""
+        <article class="resource-item">
+
+          <h3>
+            <a
+              href="{url}"
+              target="_blank"
+              rel="{rel}"
+            >
+              {title}
+            </a>
+          </h3>
+
+          <p>{description}</p>
+
+          {affiliate_label}
+
+        </article>
+        """
+        )
+
+    resources_html = "\n".join(items)
+
+    return f"""
+<section class="resources-section">
+
+  <h2>{data["title"]} Resources</h2>
+
+  <p class="resources-intro">
+    Useful local websites, official resources and selected guides related to
+    {data["title"]}.
+  </p>
+
+  <div class="resources-grid">
+
+    {resources_html}
+
+  </div>
+
+</section>
+"""
+
+
 def build_deal_box(data, amazon_url, position):
     if position == "top":
         button_text = f"Shop {data['deal_text']} on Amazon"
@@ -256,6 +329,7 @@ def build_page(slug, data, articles):
     articles_html = build_articles_html(articles)
     navigation = build_navigation(slug)
     editorial_content = get_editorial_content(slug)
+    resources_html = build_resources_html(slug, data)
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
@@ -419,6 +493,66 @@ def build_page(slug, data, articles):
       margin-bottom: 18px;
     }}
 
+    .resources-section {{
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 25px 0 35px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }}
+
+    .resources-section h2 {{
+      margin-top: 0;
+    }}
+
+    .resources-intro {{
+      margin-bottom: 22px;
+      color: #4b5563;
+    }}
+
+    .resources-grid {{
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+      );
+      gap: 18px;
+    }}
+
+    .resource-item {{
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fafafa;
+    }}
+
+    .resource-item h3 {{
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }}
+
+    .resource-item h3 a {{
+      color: #111827;
+      text-decoration: none;
+    }}
+
+    .resource-item h3 a:hover {{
+      text-decoration: underline;
+    }}
+
+    .resource-item p {{
+      margin-bottom: 8px;
+      font-size: 15px;
+    }}
+
+    .resource-affiliate {{
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #6b7280;
+    }}
+
     .deal-box {{
       background: white;
       border-radius: 12px;
@@ -530,7 +664,8 @@ def build_page(slug, data, articles):
       }}
 
       .news-item,
-      .editorial-content {{
+      .editorial-content,
+      .resources-section {{
         padding: 20px;
       }}
 
@@ -586,6 +721,10 @@ def build_page(slug, data, articles):
   {editorial_content}
 
 
+  <!-- LOCAL RESOURCES -->
+  {resources_html}
+
+
   <!-- AMAZON BUTTON #2 -->
   {bottom_deal_box}
 
@@ -628,13 +767,17 @@ def build_page(slug, data, articles):
 def update_category(slug, data):
     print(f"Updating {data['title']}...")
 
-    rss_url = get_google_news_rss_url(data["query"])
+    rss_url = get_google_news_rss_url(
+        data["query"]
+    )
 
     xml_data = fetch_rss(rss_url)
 
     articles = parse_feed(xml_data)
 
-    print(f"Found {len(articles)} articles.")
+    print(
+        f"Found {len(articles)} articles."
+    )
 
     html_page = build_page(
         slug,
@@ -656,7 +799,9 @@ def update_category(slug, data):
         encoding="utf-8",
     )
 
-    print(f"Updated: {output_file}")
+    print(
+        f"Updated: {output_file}"
+    )
 
 
 def main():
@@ -664,7 +809,10 @@ def main():
     for slug, data in CATEGORIES.items():
 
         try:
-            update_category(slug, data)
+            update_category(
+                slug,
+                data,
+            )
 
         except Exception as error:
             print(
