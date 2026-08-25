@@ -1085,6 +1085,26 @@ def build_page(slug, data, articles, international_articles):
     © 2026 CityUpdater.com
   </p>
 
+  <p>
+    Powered by
+    <a
+      href="https://github.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+    </a>
+    ·
+    SEO by
+    <a
+      href="https://www.seoschweiz.net/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      SEO Schweiz
+    </a>
+  </p>
+
 </footer>
 
 </body>
