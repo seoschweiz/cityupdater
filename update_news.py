@@ -227,6 +227,33 @@ def get_editorial_content(slug):
     return city_content.get(slug, "")
 
 
+def build_deal_box(data, amazon_url, button_prefix="Shop"):
+    return f"""
+  <section class="deal-box">
+
+    <h2>{data["deal_text"]}</h2>
+
+    <p>
+      Discover products and offers related to {data["title"]}.
+    </p>
+
+    <a
+      class="deal-button"
+      href="{amazon_url}"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+    >
+      {button_prefix} {data["deal_text"]} on Amazon
+    </a>
+
+    <p class="affiliate-note">
+      As an Amazon Associate, CityUpdater earns from qualifying purchases.
+    </p>
+
+  </section>
+"""
+
+
 def build_page(slug, data, articles):
     articles_html = build_articles_html(articles)
     navigation = build_navigation(slug)
@@ -238,6 +265,18 @@ def build_page(slug, data, articles):
 
     canonical = f"{SITE_URL}/{CITY_SLUG}/{slug}/"
     amazon_url = get_amazon_url(data["amazon_query"])
+
+    top_deal_box = build_deal_box(
+        data,
+        amazon_url,
+        "Shop",
+    )
+
+    lower_deal_box = build_deal_box(
+        data,
+        amazon_url,
+        "View",
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -536,31 +575,13 @@ def build_page(slug, data, articles):
   </section>
 
 
+  {top_deal_box}
+
+
   {editorial_content}
 
 
-  <section class="deal-box">
-
-    <h2>{data["deal_text"]}</h2>
-
-    <p>
-      Discover products and offers related to {data["title"]}.
-    </p>
-
-    <a
-      class="deal-button"
-      href="{amazon_url}"
-      target="_blank"
-      rel="nofollow sponsored noopener"
-    >
-      View {data["deal_text"]} on Amazon
-    </a>
-
-    <p class="affiliate-note">
-      As an Amazon Associate, CityUpdater may earn from qualifying purchases.
-    </p>
-
-  </section>
+  {lower_deal_box}
 
 
   <section class="news-list">
