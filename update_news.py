@@ -26,6 +26,7 @@ CATEGORIES = {
         "description": "Latest Chicago news, local headlines, breaking stories and city updates.",
         "amazon_query": "Chicago gifts",
         "deal_text": "Chicago Deals",
+        "facebook_query": "Chicago news",
     },
     "restaurants": {
         "query": "Chicago restaurants",
@@ -33,6 +34,7 @@ CATEGORIES = {
         "description": "Latest Chicago restaurant news, openings, food trends and dining updates.",
         "amazon_query": "Chicago restaurant gifts kitchen",
         "deal_text": "Chicago Restaurant Deals",
+        "facebook_query": "Chicago restaurant",
     },
     "events": {
         "query": "Chicago events",
@@ -40,6 +42,7 @@ CATEGORIES = {
         "description": "Latest Chicago events, festivals, concerts, exhibitions and local happenings.",
         "amazon_query": "Chicago event gifts",
         "deal_text": "Chicago Event Deals",
+        "facebook_query": "Chicago events",
     },
     "jobs": {
         "query": "Chicago jobs",
@@ -47,6 +50,7 @@ CATEGORIES = {
         "description": "Latest Chicago job market news, employment updates and career-related stories.",
         "amazon_query": "office work accessories",
         "deal_text": "Chicago Work Deals",
+        "facebook_query": "Chicago jobs",
     },
     "real-estate": {
         "query": "Chicago real estate",
@@ -54,6 +58,7 @@ CATEGORIES = {
         "description": "Latest Chicago real estate news, housing updates, property trends and market developments.",
         "amazon_query": "home moving organization",
         "deal_text": "Chicago Home Deals",
+        "facebook_query": "Chicago real estate",
     },
     "sports": {
         "query": "Chicago sports",
@@ -61,8 +66,10 @@ CATEGORIES = {
         "description": "Latest Chicago sports news, teams, games, players and sporting events.",
         "amazon_query": "Chicago sports",
         "deal_text": "Chicago Sports Deals",
+        "facebook_query": "Chicago sports",
     },
 }
+
 
 INTERNATIONAL_FEEDS = {
     "es": {
@@ -109,6 +116,15 @@ def get_amazon_url(query):
         f"?k={encoded_query}"
         f"&tag={AMAZON_AFFILIATE_TAG}"
         "&language=en_US"
+    )
+
+
+def get_facebook_search_url(query):
+    encoded_query = urllib.parse.quote_plus(query)
+
+    return (
+        "https://www.facebook.com/search/top/"
+        f"?q={encoded_query}"
     )
 
 
@@ -394,7 +410,11 @@ def build_international_html(data, international_articles):
             source_html = ""
 
             if source:
-                source_html = f'<span class="international-source">{source}</span>'
+                source_html = (
+                    f'<span class="international-source">'
+                    f'{source}'
+                    f'</span>'
+                )
 
             links.append(
                 f"""
@@ -454,6 +474,65 @@ def build_international_html(data, international_articles):
 """
 
 
+def build_facebook_html(data):
+    base_query = data["facebook_query"]
+
+    page_url = get_facebook_search_url(
+        f"{base_query} page"
+    )
+
+    group_url = get_facebook_search_url(
+        f"{base_query} group"
+    )
+
+    video_url = get_facebook_search_url(
+        f"{base_query} video"
+    )
+
+    return f"""
+<section class="facebook-section">
+
+  <h2>Explore {data["title"]} on Facebook</h2>
+
+  <p class="facebook-intro">
+    Discover Facebook pages, groups and videos related to {data["title"]}.
+  </p>
+
+  <div class="facebook-buttons">
+
+    <a
+      class="facebook-button"
+      href="{page_url}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="facebook-button"
+      href="{group_url}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="facebook-button"
+      href="{video_url}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+  </div>
+
+</section>
+"""
+
+
 def build_page(slug, data, articles, international_articles):
     articles_html = build_articles_html(articles)
     navigation = build_navigation(slug)
@@ -463,6 +542,7 @@ def build_page(slug, data, articles, international_articles):
         data,
         international_articles,
     )
+    facebook_html = build_facebook_html(data)
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
@@ -608,7 +688,8 @@ def build_page(slug, data, articles, international_articles):
 
     .editorial-content,
     .resources-section,
-    .international-section {{
+    .international-section,
+    .facebook-section {{
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -629,12 +710,14 @@ def build_page(slug, data, articles, international_articles):
     }}
 
     .resources-section h2,
-    .international-section h2 {{
+    .international-section h2,
+    .facebook-section h2 {{
       margin-top: 0;
     }}
 
     .resources-intro,
-    .international-intro {{
+    .international-intro,
+    .facebook-intro {{
       margin-bottom: 22px;
       color: #4b5563;
     }}
@@ -811,6 +894,27 @@ def build_page(slug, data, articles, international_articles):
       color: #6b7280;
     }}
 
+    .facebook-buttons {{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }}
+
+    .facebook-button {{
+      display: block;
+      padding: 15px 18px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }}
+
+    .facebook-button:hover {{
+      opacity: 0.9;
+    }}
+
     footer {{
       margin-top: 60px;
       background: #111827;
@@ -839,11 +943,13 @@ def build_page(slug, data, articles, international_articles):
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {{
+      .international-section,
+      .facebook-section {{
         padding: 20px;
       }}
 
-      .international-grid {{
+      .international-grid,
+      .facebook-buttons {{
         grid-template-columns: 1fr;
       }}
 
@@ -916,6 +1022,9 @@ def build_page(slug, data, articles, international_articles):
 
 
   {international_html}
+
+
+  {facebook_html}
 
 
 </main>
