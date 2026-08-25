@@ -7,17 +7,43 @@ from html import escape
 from pathlib import Path
 
 
-# ---------------------------------------------------------
-# CITYUPDATER - CHICAGO NEWS RSS GENERATOR
-# ---------------------------------------------------------
-
-CITY = "Chicago"
 SITE_NAME = "CityUpdater"
 SITE_URL = "https://cityupdater.com"
-OUTPUT_FILE = Path("chicago/news/index.html")
-
-SEARCH_QUERY = "Chicago"
+CITY = "Chicago"
 MAX_ARTICLES = 25
+
+CATEGORIES = {
+    "news": {
+        "query": "Chicago",
+        "title": "Chicago News",
+        "description": "Latest Chicago news, local headlines, breaking stories and city updates.",
+    },
+    "restaurants": {
+        "query": "Chicago restaurants",
+        "title": "Chicago Restaurants",
+        "description": "Latest Chicago restaurant news, openings, food trends and dining updates.",
+    },
+    "events": {
+        "query": "Chicago events",
+        "title": "Chicago Events",
+        "description": "Latest Chicago events, festivals, concerts, exhibitions and local happenings.",
+    },
+    "jobs": {
+        "query": "Chicago jobs",
+        "title": "Chicago Jobs",
+        "description": "Latest Chicago job market news, employment updates and career-related stories.",
+    },
+    "real-estate": {
+        "query": "Chicago real estate",
+        "title": "Chicago Real Estate",
+        "description": "Latest Chicago real estate news, housing updates, property trends and market developments.",
+    },
+    "sports": {
+        "query": "Chicago sports",
+        "title": "Chicago Sports",
+        "description": "Latest Chicago sports news, teams, games, players and sporting events.",
+    },
+}
 
 
 def get_google_news_rss_url(query):
@@ -73,8 +99,8 @@ def parse_feed(xml_data):
         title = item.findtext("title", default="").strip()
         link = item.findtext("link", default="").strip()
         pub_date = item.findtext("pubDate", default="").strip()
-        source_element = item.find("source")
 
+        source_element = item.find("source")
         source = ""
 
         if source_element is not None and source_element.text:
@@ -103,8 +129,8 @@ def build_articles_html(articles):
         return """
         <article class="news-item">
           <div class="meta">CityUpdater</div>
-          <h3>Chicago news is temporarily unavailable</h3>
-          <p>Please check back later for the latest Chicago headlines.</p>
+          <h3>Updates are temporarily unavailable</h3>
+          <p>Please check back later for fresh local updates.</p>
         </article>
         """
 
@@ -129,24 +155,15 @@ def build_articles_html(articles):
         output.append(
             f"""
         <article class="news-item">
-
-          <div class="meta">
-            {meta}
-          </div>
+          <div class="meta">{meta}</div>
 
           <h3>
-            <a
-              href="{link}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="{link}" target="_blank" rel="noopener noreferrer">
               {title}
             </a>
           </h3>
 
-          <p>
-            Read the full story from the original news publisher.
-          </p>
+          <p>Read the full story from the original publisher.</p>
 
           <a
             class="read-more"
@@ -156,7 +173,6 @@ def build_articles_html(articles):
           >
             Read full article →
           </a>
-
         </article>
         """
         )
@@ -164,12 +180,29 @@ def build_articles_html(articles):
     return "\n".join(output)
 
 
-def build_page(articles):
+def build_navigation(current_slug):
+    links = []
+
+    for slug, data in CATEGORIES.items():
+        label = data["title"].replace("Chicago ", "")
+
+        if slug == current_slug:
+            links.append(f"<strong>{label}</strong>")
+        else:
+            links.append(f'<a href="../{slug}/">{label}</a>')
+
+    return "\n".join(links)
+
+
+def build_page(slug, data, articles):
     articles_html = build_articles_html(articles)
+    navigation = build_navigation(slug)
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
     )
+
+    canonical = f"{SITE_URL}/chicago/{slug}/"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -183,13 +216,11 @@ def build_page(articles):
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Chicago News Today – Latest Local Headlines | CityUpdater
-  </title>
+  <title>{data["title"]} Today | CityUpdater</title>
 
   <meta
     name="description"
-    content="Latest Chicago news today. Follow local headlines, breaking news, business, politics, transportation, events, sports and community updates from Chicago."
+    content="{escape(data["description"], quote=True)}"
   >
 
   <meta
@@ -199,22 +230,22 @@ def build_page(articles):
 
   <link
     rel="canonical"
-    href="https://cityupdater.com/chicago/news/"
+    href="{canonical}"
   >
 
   <meta
     property="og:title"
-    content="Chicago News Today | CityUpdater"
+    content="{data["title"]} | CityUpdater"
   >
 
   <meta
     property="og:description"
-    content="Latest Chicago news, local headlines and city updates from multiple news sources."
+    content="{escape(data["description"], quote=True)}"
   >
 
   <meta
     property="og:url"
-    content="https://cityupdater.com/chicago/news/"
+    content="{canonical}"
   >
 
   <meta
@@ -260,11 +291,19 @@ def build_page(articles):
       text-align: center;
     }}
 
+    nav a,
+    nav strong {{
+      margin: 0 10px;
+      font-weight: bold;
+    }}
+
     nav a {{
       color: #111827;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
+    }}
+
+    nav strong {{
+      color: #2563eb;
     }}
 
     main {{
@@ -352,7 +391,8 @@ def build_page(articles):
         font-size: 36px;
       }}
 
-      nav a {{
+      nav a,
+      nav strong {{
         display: inline-block;
         margin: 5px 7px;
       }}
@@ -371,28 +411,18 @@ def build_page(articles):
 
 <header>
 
-  <h1>Chicago News</h1>
+  <h1>{data["title"]}</h1>
 
-  <p>
-    Latest local headlines and updates from Chicago
-  </p>
+  <p>{data["description"]}</p>
 
 </header>
 
 
 <nav>
 
-  <a href="../">Chicago</a>
+  <a href="../">Chicago Home</a>
 
-  <a href="../events/">Events</a>
-
-  <a href="../restaurants/">Restaurants</a>
-
-  <a href="../jobs/">Jobs</a>
-
-  <a href="../real-estate/">Real Estate</a>
-
-  <a href="../sports/">Sports</a>
+  {navigation}
 
 </nav>
 
@@ -401,12 +431,11 @@ def build_page(articles):
 
   <section class="intro">
 
-    <h2>Latest Chicago News</h2>
+    <h2>Latest {data["title"]}</h2>
 
     <p>
-      Follow the latest Chicago news and local headlines covering
-      business, politics, neighborhoods, transportation, community
-      developments, sports, entertainment and events.
+      CityUpdater collects recent stories and updates related to
+      {data["title"]} from multiple news publishers.
     </p>
 
     <p class="updated">
@@ -445,12 +474,10 @@ def build_page(articles):
 """
 
 
-def main():
+def update_category(slug, data):
+    print(f"Updating {data['title']}...")
 
-    rss_url = get_google_news_rss_url(SEARCH_QUERY)
-
-    print("Downloading Chicago news...")
-    print(rss_url)
+    rss_url = get_google_news_rss_url(data["query"])
 
     xml_data = fetch_rss(rss_url)
 
@@ -458,21 +485,40 @@ def main():
 
     print(f"Found {len(articles)} articles.")
 
-    html_page = build_page(articles)
+    html_page = build_page(
+        slug,
+        data,
+        articles,
+    )
 
-    OUTPUT_FILE.parent.mkdir(
+    output_file = Path(
+        f"chicago/{slug}/index.html"
+    )
+
+    output_file.parent.mkdir(
         parents=True,
-        exist_ok=True
+        exist_ok=True,
     )
 
-    OUTPUT_FILE.write_text(
+    output_file.write_text(
         html_page,
-        encoding="utf-8"
+        encoding="utf-8",
     )
 
-    print(
-        f"Updated: {OUTPUT_FILE}"
-    )
+    print(f"Updated: {output_file}")
+
+
+def main():
+
+    for slug, data in CATEGORIES.items():
+
+        try:
+            update_category(slug, data)
+
+        except Exception as error:
+            print(
+                f"Error updating {slug}: {error}"
+            )
 
 
 if __name__ == "__main__":
