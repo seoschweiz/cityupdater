@@ -6,10 +6,13 @@ from email.utils import parsedate_to_datetime
 from html import escape
 from pathlib import Path
 
+from content import CITY_CONTENT
+
 
 SITE_NAME = "CityUpdater"
 SITE_URL = "https://cityupdater.com"
 CITY = "Chicago"
+CITY_SLUG = "chicago"
 MAX_ARTICLES = 25
 
 AMAZON_AFFILIATE_TAG = "custommade01-20"
@@ -219,15 +222,21 @@ def build_navigation(current_slug):
     return "\n".join(links)
 
 
+def get_editorial_content(slug):
+    city_content = CITY_CONTENT.get(CITY_SLUG, {})
+    return city_content.get(slug, "")
+
+
 def build_page(slug, data, articles):
     articles_html = build_articles_html(articles)
     navigation = build_navigation(slug)
+    editorial_content = get_editorial_content(slug)
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
     )
 
-    canonical = f"{SITE_URL}/chicago/{slug}/"
+    canonical = f"{SITE_URL}/{CITY_SLUG}/{slug}/"
     amazon_url = get_amazon_url(data["amazon_query"])
 
     return f"""<!DOCTYPE html>
@@ -353,6 +362,26 @@ def build_page(slug, data, articles):
       margin-bottom: 20px;
     }}
 
+    .editorial-content {{
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 25px 0 35px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }}
+
+    .editorial-content h2 {{
+      margin-top: 30px;
+    }}
+
+    .editorial-content h2:first-child {{
+      margin-top: 0;
+    }}
+
+    .editorial-content p {{
+      margin-bottom: 18px;
+    }}
+
     .deal-box {{
       background: white;
       border-radius: 12px;
@@ -458,7 +487,8 @@ def build_page(slug, data, articles):
         margin: 5px 7px;
       }}
 
-      .news-item {{
+      .news-item,
+      .editorial-content {{
         padding: 20px;
       }}
 
@@ -504,6 +534,9 @@ def build_page(slug, data, articles):
     </p>
 
   </section>
+
+
+  {editorial_content}
 
 
   <section class="deal-box">
@@ -577,7 +610,7 @@ def update_category(slug, data):
     )
 
     output_file = Path(
-        f"chicago/{slug}/index.html"
+        f"{CITY_SLUG}/{slug}/index.html"
     )
 
     output_file.parent.mkdir(
