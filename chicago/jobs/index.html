@@ -141,6 +141,66 @@
       margin-bottom: 18px;
     }
 
+    .resources-section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 25px 0 35px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }
+
+    .resources-section h2 {
+      margin-top: 0;
+    }
+
+    .resources-intro {
+      margin-bottom: 22px;
+      color: #4b5563;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+      );
+      gap: 18px;
+    }
+
+    .resource-item {
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+
+    .resource-item h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .resource-item h3 a {
+      color: #111827;
+      text-decoration: none;
+    }
+
+    .resource-item h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .resource-item p {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .resource-affiliate {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     .deal-box {
       background: white;
       border-radius: 12px;
@@ -252,7 +312,8 @@
       }
 
       .news-item,
-      .editorial-content {
+      .editorial-content,
+      .resources-section {
         padding: 20px;
       }
 
@@ -299,7 +360,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 21:39 UTC
+      Last updated: August 25, 2026 · 21:59 UTC
     </p>
 
   </section>
@@ -357,8 +418,7 @@
   <p>
     Downtown Chicago and surrounding business districts support many positions in
     finance, law, consulting, marketing, technology, insurance and corporate
-    services. Professional employment can range from entry-level positions to
-    senior management and specialized technical roles.
+    services.
   </p>
 
   <h2>Healthcare Jobs in Chicago</h2>
@@ -395,15 +455,6 @@
     digital marketing, product management and other technology-related roles.
   </p>
 
-  <h2>Chicago Job Market Updates</h2>
-
-  <p>
-    Employment conditions can change as companies expand, restructure or enter
-    new markets. News about major employers, office openings, investment and
-    economic development can therefore provide useful insight into the Chicago
-    job market.
-  </p>
-
   <h2>Latest Chicago Jobs News</h2>
 
   <p>
@@ -412,6 +463,64 @@
     announcements, workforce developments, major employers and changes affecting
     jobs across the Chicago region.
   </p>
+
+</section>
+
+
+
+  <!-- LOCAL RESOURCES -->
+  
+<section class="resources-section">
+
+  <h2>Chicago Jobs Resources</h2>
+
+  <p class="resources-intro">
+    Useful local websites, official resources and selected guides related to
+    Chicago Jobs.
+  </p>
+
+  <div class="resources-grid">
+
+    
+        <article class="resource-item">
+
+          <h3>
+            <a
+              href="https://www.chicago.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              City of Chicago
+            </a>
+          </h3>
+
+          <p>Official city information, employment resources and municipal services.</p>
+
+          
+
+        </article>
+        
+
+        <article class="resource-item">
+
+          <h3>
+            <a
+              href="https://www.choosechicago.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Choose Chicago
+            </a>
+          </h3>
+
+          <p>Information about Chicago tourism, hospitality and the local visitor economy.</p>
+
+          
+
+        </article>
+        
+
+  </div>
 
 </section>
 
