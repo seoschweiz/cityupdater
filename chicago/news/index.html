@@ -121,7 +121,9 @@
       margin-bottom: 20px;
     }
 
-    .editorial-content {
+    .editorial-content,
+    .resources-section,
+    .international-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -141,19 +143,13 @@
       margin-bottom: 18px;
     }
 
-    .resources-section {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }
-
-    .resources-section h2 {
+    .resources-section h2,
+    .international-section h2 {
       margin-top: 0;
     }
 
-    .resources-intro {
+    .resources-intro,
+    .international-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -286,6 +282,50 @@
       text-decoration: underline;
     }
 
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .international-column {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .international-column h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .international-column ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .international-column li {
+      margin-bottom: 14px;
+    }
+
+    .international-column a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .international-column a:hover {
+      text-decoration: underline;
+    }
+
+    .international-source {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -299,7 +339,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
 
       header h1 {
         font-size: 36px;
@@ -313,8 +353,13 @@
 
       .news-item,
       .editorial-content,
-      .resources-section {
+      .resources-section,
+      .international-section {
         padding: 20px;
+      }
+
+      .international-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -360,13 +405,12 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:02 UTC
+      Last updated: August 25, 2026 · 22:10 UTC
     </p>
 
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   
 <section class="deal-box">
 
@@ -393,7 +437,6 @@
 
 
 
-  <!-- EDITORIAL CONTENT -->
   
 <section class="editorial-content">
 
@@ -468,7 +511,6 @@
 
 
 
-  <!-- LOCAL RESOURCES -->
   
 <section class="resources-section">
 
@@ -480,7 +522,6 @@
   </p>
 
   <div class="resources-grid">
-
     
         <article class="resource-item">
 
@@ -519,14 +560,12 @@
 
         </article>
         
-
   </div>
 
 </section>
 
 
 
-  <!-- AMAZON BUTTON #2 -->
   
 <section class="deal-box">
 
@@ -558,9 +597,74 @@
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
+    
+        <article class="news-item">
+          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:00 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5" target="_blank" rel="noopener noreferrer">
+              O&#x27;Hare to the Loop in 15 minutes? This company thinks it can finally bring fast rail to Chicago - Chicago Sun-Times
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">NBC 5 Chicago · August 25, 2026 · 12:02 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5" target="_blank" rel="noopener noreferrer">
+              ‘O&#x27;Hare Flyer:&#x27; Private group aims to build new, electric express train from Loop to airport - NBC 5 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">CBS News · August 25, 2026 · 21:46 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5" target="_blank" rel="noopener noreferrer">
+              3 arrested after khat worth over $140K seized at O&#x27;Hare Airport - CBS News
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
 
         <article class="news-item">
           <div class="meta">ESPN · August 24, 2026 · 10:00 UTC</div>
@@ -620,72 +724,6 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQaUpLMU9BeEhKdk5ERFZpVW5YS0ZEZGdBWG0xT1Jhak9mdmZYWHZJc3lPR3VsMmlwWEt0dENQMS0xTkkyU3ZpUGNGUWpQak9iZm1GcExJLW5BMkw2LTdGQy0zdG1wbTNlLUppdGVscm5CMTJBSE80dy1jYlo2QjZfdWpUZzc0X0dpQzlRV25nWlh1NldBVnh3bGxoQXpOTVlmdUE?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:00 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5" target="_blank" rel="noopener noreferrer">
-              O&#x27;Hare to the Loop in 15 minutes? This company thinks it can finally bring fast rail to Chicago - Chicago Sun-Times
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">NBC 5 Chicago · August 25, 2026 · 12:02 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5" target="_blank" rel="noopener noreferrer">
-              ‘O&#x27;Hare Flyer:&#x27; Private group aims to build new, electric express train from Loop to airport - NBC 5 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">ABC7 Chicago · August 25, 2026 · 13:16 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUZWYlM1MVhJUmplLW4ya0xaYVNId0lXVFVEUmdTcDROTUJ0RWpJQ1hlTDRKMUhZRnM3WDhPLTJxT0s1eDk5Y3k5QUdkQUFRR1ItY3hiNjNOeGdGbEprRWVQWEZkdzJDSHJTcjIzY0UtcEp3NmRNYUxDd2NlODRJbDZUaG5fb1RfUW1yMDUtQ3JHQ3hCOWljNHYxbmoxMjVTR2Vlem9NMWZpSHfSAbABQVVfeXFMTkx0U3NFd1ktUmxVbjlMVjAtODFJTlNibTdUZ2l6ek52T2ZKYlQ0M2NDd1RQQnNPc1VoTE1IZnlzZGJaZzZCd1BXX1A2c2VSRE8zWlNZUDlvZlVvRlZVeGltZExGR1NYeXpNZnpISXh2YTEzdkI2NzJmQUZaUzRFci1uejdnTWtMSlIxcWUxMTlBcFFrMm1QVkhSRHljTUlCQ1lmaGRuank1T0JOMGJTam4?oc=5" target="_blank" rel="noopener noreferrer">
-              Plans unveiled for 15-minute express &#x27;O&#x27;Hare Flyer&#x27; trains from Chicago airport to downtown - ABC7 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUZWYlM1MVhJUmplLW4ya0xaYVNId0lXVFVEUmdTcDROTUJ0RWpJQ1hlTDRKMUhZRnM3WDhPLTJxT0s1eDk5Y3k5QUdkQUFRR1ItY3hiNjNOeGdGbEprRWVQWEZkdzJDSHJTcjIzY0UtcEp3NmRNYUxDd2NlODRJbDZUaG5fb1RfUW1yMDUtQ3JHQ3hCOWljNHYxbmoxMjVTR2Vlem9NMWZpSHfSAbABQVVfeXFMTkx0U3NFd1ktUmxVbjlMVjAtODFJTlNibTdUZ2l6ek52T2ZKYlQ0M2NDd1RQQnNPc1VoTE1IZnlzZGJaZzZCd1BXX1A2c2VSRE8zWlNZUDlvZlVvRlZVeGltZExGR1NYeXpNZnpISXh2YTEzdkI2NzJmQUZaUzRFci1uejdnTWtMSlIxcWUxMTlBcFFrMm1QVkhSRHljTUlCQ1lmaGRuank1T0JOMGJTam4?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -893,28 +931,6 @@
         
 
         <article class="news-item">
-          <div class="meta">CBS News · August 25, 2026 · 21:16 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQVVhzdzh4RnZJaGlsTktQV2p5TWkxUHp3QW44VUk4R0FGWUxfSFZLMEFabEhvZUg4VWU5S0RfZVF0WFdPblBpaGhZVHMyV2FMemJoSm9SSE9PT09OUDg3YVM4REpFd013ZFpBZWpnZGVPenZsZUZWcXZkX0xtYlk5ZjJpcldCUWdfOW5WOWhwN0Q3Yll2OEZOZ1pB?oc=5" target="_blank" rel="noopener noreferrer">
-              Brown Sugar Bakery hit by 2nd smash-and-grab in a month - CBS News
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQVVhzdzh4RnZJaGlsTktQV2p5TWkxUHp3QW44VUk4R0FGWUxfSFZLMEFabEhvZUg4VWU5S0RfZVF0WFdPblBpaGhZVHMyV2FMemJoSm9SSE9PT09OUDg3YVM4REpFd013ZFpBZWpnZGVPenZsZUZWcXZkX0xtYlk5ZjJpcldCUWdfOW5WOWhwN0Q3Yll2OEZOZ1pB?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">WBEZ Chicago · August 25, 2026 · 10:30 UTC</div>
 
           <h3>
@@ -1069,6 +1085,28 @@
         
 
         <article class="news-item">
+          <div class="meta">MarketWatch · August 25, 2026 · 15:22 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQdlQ4V2ZPellyQ1dEdUtYS0xHb056UVNxem9GQzNZLU1tdkV4Ni1ick1BemJBT0stUkNyaGlvdGNWZTlqZmVMajA5a01EVlFwQ2E1MUdkaVN6MklRVW42WXZfZmtDbjB4ZEZyUG04T19LWVdjVU9QREFVelBaV2t1aGNrWE1UMU9kUlhmTzQ1c3o0WlFVZW83SXBXTVYwMFl0UXl2WXN6bWtuSDBCRFdiUUM1SFNuQQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Home prices in Chicago have risen more than in any other U.S. city over the past year - MarketWatch
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQdlQ4V2ZPellyQ1dEdUtYS0xHb056UVNxem9GQzNZLU1tdkV4Ni1ick1BemJBT0stUkNyaGlvdGNWZTlqZmVMajA5a01EVlFwQ2E1MUdkaVN6MklRVW42WXZfZmtDbjB4ZEZyUG04T19LWVdjVU9QREFVelBaV2t1aGNrWE1UMU9kUlhmTzQ1c3o0WlFVZW83SXBXTVYwMFl0UXl2WXN6bWtuSDBCRFdiUUM1SFNuQQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
           <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
 
           <h3>
@@ -1091,11 +1129,11 @@
         
 
         <article class="news-item">
-          <div class="meta">MarketWatch · August 25, 2026 · 15:22 UTC</div>
+          <div class="meta">MLSsoccer.com · August 25, 2026 · 15:56 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQdlQ4V2ZPellyQ1dEdUtYS0xHb056UVNxem9GQzNZLU1tdkV4Ni1ick1BemJBT0stUkNyaGlvdGNWZTlqZmVMajA5a01EVlFwQ2E1MUdkaVN6MklRVW42WXZfZmtDbjB4ZEZyUG04T19LWVdjVU9QREFVelBaV2t1aGNrWE1UMU9kUlhmTzQ1c3o0WlFVZW83SXBXTVYwMFl0UXl2WXN6bWtuSDBCRFdiUUM1SFNuQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Home prices in Chicago have risen more than in any other U.S. city over the past year - MarketWatch
+            <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPUXZrZGgybHBqVjZjQmZpVzgwX0ZsZmZsMXlaekhNZG52em1MUmlWNzFHdXRQdkl4ckxoRnJzWVNZa1F0cG0wUnpvUkQyMzdmenZLMndvN2M2cWNHcUFsclRubURENzFsazZEaVFjTHpUZ21NRFV3V2xVSE9yQWFFMW5mbzJrVGdFXzBld0xMQnhCWFlhMXBvMg?oc=5" target="_blank" rel="noopener noreferrer">
+              Power Rankings: Chicago Fire, St. Louis CITY extend unbeaten runs - MLSsoccer.com
             </a>
           </h3>
 
@@ -1103,7 +1141,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQdlQ4V2ZPellyQ1dEdUtYS0xHb056UVNxem9GQzNZLU1tdkV4Ni1ick1BemJBT0stUkNyaGlvdGNWZTlqZmVMajA5a01EVlFwQ2E1MUdkaVN6MklRVW42WXZfZmtDbjB4ZEZyUG04T19LWVdjVU9QREFVelBaV2t1aGNrWE1UMU9kUlhmTzQ1c3o0WlFVZW83SXBXTVYwMFl0UXl2WXN6bWtuSDBCRFdiUUM1SFNuQQ?oc=5"
+            href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPUXZrZGgybHBqVjZjQmZpVzgwX0ZsZmZsMXlaekhNZG52em1MUmlWNzFHdXRQdkl4ckxoRnJzWVNZa1F0cG0wUnpvUkQyMzdmenZLMndvN2M2cWNHcUFsclRubURENzFsazZEaVFjTHpUZ21NRFV3V2xVSE9yQWFFMW5mbzJrVGdFXzBld0xMQnhCWFlhMXBvMg?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1113,6 +1151,160 @@
         
 
   </section>
+
+
+  
+<section class="international-section">
+
+  <h2>Chicago News — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of Chicago News from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    
+            <div class="international-column">
+
+              <h3>
+                🇪🇸 Español
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOb0E1M1JuOG9YcmhjSWU1cG9WcUZyUWgwTFRFNGlta0VsM3VKS190QW1vaDF4d1dra1JHYW1qVHlfcHhXbk1vUG9XM2wxSDFjOVppYTVTVHRlcTdlYXVrTUVjQlJJM0k0RHBuNzVKWThlYlZGYnBvcHB6ZzU0enJWWWptZzg5UHREMXU2WmlpRGdWMEE3alhISnZKTnd0OEFJalRnOE5nSXBVblNhMWFONVZMXzJFbklBaFRadkRZWkJjWEJPS3U2UkxsQjhkTks3VWfSAdIBQVVfeXFMT3VQMTNoRXh1bDlUc1RyWXhMNGR0STNqQUdRZnpCX1JXQkZwMHJ0b3MyRWJ1UGpETDJxQUo5WFloRkFLM09OTnBtQ1lfZHhTZmNPMDYtbzRaUkZxMmtLUU1qSXJxTE1tLU8ycTdXZ29nWUVqSEV1Z001cFZwN3ZucHJCdERvVS1qR0k2OFZSTUNVN0xWWTJRRk8ybEJyeVJUOEhNSVc5QXF6SFJTZjg2c3pndFBzdUp6elhfYjBENVl3TTBObFp4cHRhdDNMTU5wd3VB?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Monterrey - Chicago Fire: Dónde ver, canal y a qué hora inician los Cuartos de Final de Leagues Cup 2026 - MARCA
+                  </a>
+                  <span class="international-source">MARCA</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1zZjM5NUhJeEY2elAxR0Z5MXV4cGIzSmxEZjFyeWUtbUwxZk4yZUNLUFM4WU5rMERDTHpaTFB6UjVmNWNrV1BTdERBemRKRkFfYUptVtIBVEFVX3lxTE1zZjM5NUhJeEY2elAxR0Z5MXV4cGIzSmxEZjFyeWUtbUwxZk4yZUNLUFM4WU5rMERDTHpaTFB6UjVmNWNrV1BTdERBemRKRkFfYUptVg?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Texas Rangers at Chicago White Sox Game Story, Scores/Highlights - 08/24/2026 - MLB.com
+                  </a>
+                  <span class="international-source">MLB.com</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMingFBVV95cUxPS2JTRkRBbjJmc0xhdGxBT1MzMkR1TVJibzFPcU9NUlZvSjF0ZnhzT3MxUGxER2t0RWpTazdneW1XSndrbm1zVDBCSU5ZR2pka3JpaGF1VGVQMlNaT2k5eFBwb0Y2UVlCT1lGWjdCY2lCUmxfNWJwZ3Q0MHlWa3NhMlNsaDlIbWZiYXJYbEVzdDdTdVNtMzFISnpzZDRSUQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rayados no pudo viajar a Chicago para Leagues Cup - TUDN
+                  </a>
+                  <span class="international-source">TUDN</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇩🇪 Deutsch
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcjhUZkRJVlc2ZGJ5YWpWVVRzSzlLMVp3cUQzOWd4SkQteGs3eGUwMmZYVVJZcm4xbzVHUWZIWlIyTmc5QmpRSzE5RXVjRkx0N3llN2djNWZPQUNMbkhNYUNNaE9VYTdmNjRBaUtlSXhjR3R3YnNrZnFRMzI5UFN1dFgxNTYxdEpRaDh1Vzd6ejlCM1RXVDRESm5obURROC1jalYxRmdjcHNlaFgyVklUOGdTVko1dGZZbENUM1g3cjY?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Swiss leitet Boeing 777 wegen stechenden Geruchs auf die Azoren um - Spiegel
+                  </a>
+                  <span class="international-source">Spiegel</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1jd2I5eHkwNGVNWTRBZDdBR05TTm1aWjN4VXMyV0F6RVRCa29Ib1dHWXQ5eWpDeTlFU2R5cjgzSUxhVk5IVXVEYUsteHBDcXFGWlZkcy1IWnhra290TVlWMFh3Tk4zR29QSXotNEFBYzJUQzdJTkNQaWVB?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Newsbrief (Flug LX9): Umleitung nach Terceira - SWISS Newsroom
+                  </a>
+                  <span class="international-source">SWISS Newsroom</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQcG1sZFZSMmdjMVNsZGVHZTBmaEdHOE91RGlMYnpOMzg5Y2ZEblp1VVJHTi00SFZpX1hNY1lMLUpVYVBiYzhFSVpoUFhiZ3JoRXFDemxSdmNaYUxyd1pxOVhzblBFdzlZa1RWbG1EUUR5TWF6VENieU02UkZyMk9GSTRlYjBiTk1iMkFIWGhIajBYcnpRTkJfLUU0WVYwSlgxbzhwVlR2VjI5Y09LM0ZxaEtUa2NyaXJGMzNUS0hEWWk3SzNsZU9J?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Massenschlägerei mit Flugeinlage erschüttert MLB - n-tv.de
+                  </a>
+                  <span class="international-source">n-tv.de</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇫🇷 Français
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPM2lZMVNhYWxRUGRYbjljTFR5VFEzbXBBZTBNX210WDBSU2xaZ054VkxKaVI4cEVLcC1kc3VXMkNYUVpHMkZITkRRaS04eUV3VVlNd2RQQzhGUHJCODd5dFVsSXhiUGRwNmFYZG50Nno4VTZpRkVaZkE4YzdCSnBpV0syZEYwMTZLZWUyaUZud1VtLWI5akg0UzBwbHJjMlRUdC1pQTNsSHkxbjVBU1dkTG1SNVU?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Un vol Chicago-Zurich de Swiss se pose en urgence aux Açores à cause d&#x27;une odeur âcre à bord - rts.ch
+                  </a>
+                  <span class="international-source">rts.ch</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPSUdkR0x4cUtHaFNvUHdxalFOWFpUZkN2VU53RHU4UTR1dlZTQUdMcHFuU0ljU0pNUXJydTlma0tCNUwyX2JFeGRYNlVLUmVLVmJiVWNHVzNYS1NtcnlhMHp2VXF1c3AwY0l6VVZ5QlQ4dWhIRlUyQ1Z5YXNWalJvY3IwV1NaNmI1NUZPRWlDZkFIZTJ2a2h0ek1uYjV4UUlPS1RxNG5xOWpOcmlUMmZodWc3MHNsMVlZbURSekIxVl9tbExYci14NnIxUF8?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Vol SWISS Chicago–Zurich : déroutement d’urgence aux Açores après une odeur chimique - Air Journal
+                  </a>
+                  <span class="international-source">Air Journal</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPWWMwdkxMTTMwd1M0RU5nWUxEYXBwMnRlQm1hYVliTk1PeFR1U3V6SWNKbEUwRVdqOERkUm9MeU1yLVRwMk5vRmpzQWU0SVFjU3JvTUFuTHFZS290ZGs5aHZQMFFCS0R4eGRPeGJfXzBMMURXS1dvcFdqN0dndW5YXzE2cGptS0ZEd3lmRmZQdUpiWmZYM2dUMVZUaXphZnQzelJQeW1DWlFPXzBwWWtFV3p3?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Vol Swiss LX9 : atterrissage d&#x27;urgence aux Açores après un appel de détresse - 20 Minuten
+                  </a>
+                  <span class="international-source">20 Minuten</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+  </div>
+
+</section>
+
+
 
 </main>
 

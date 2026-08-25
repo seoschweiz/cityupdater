@@ -121,7 +121,9 @@
       margin-bottom: 20px;
     }
 
-    .editorial-content {
+    .editorial-content,
+    .resources-section,
+    .international-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -141,19 +143,13 @@
       margin-bottom: 18px;
     }
 
-    .resources-section {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }
-
-    .resources-section h2 {
+    .resources-section h2,
+    .international-section h2 {
       margin-top: 0;
     }
 
-    .resources-intro {
+    .resources-intro,
+    .international-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -286,6 +282,50 @@
       text-decoration: underline;
     }
 
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .international-column {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .international-column h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .international-column ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .international-column li {
+      margin-bottom: 14px;
+    }
+
+    .international-column a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .international-column a:hover {
+      text-decoration: underline;
+    }
+
+    .international-source {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -299,7 +339,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
 
       header h1 {
         font-size: 36px;
@@ -313,8 +353,13 @@
 
       .news-item,
       .editorial-content,
-      .resources-section {
+      .resources-section,
+      .international-section {
         padding: 20px;
+      }
+
+      .international-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -360,13 +405,12 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:02 UTC
+      Last updated: August 25, 2026 · 22:10 UTC
     </p>
 
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   
 <section class="deal-box">
 
@@ -393,7 +437,6 @@
 
 
 
-  <!-- EDITORIAL CONTENT -->
   
 <section class="editorial-content">
 
@@ -461,7 +504,6 @@
 
 
 
-  <!-- LOCAL RESOURCES -->
   
 <section class="resources-section">
 
@@ -473,7 +515,6 @@
   </p>
 
   <div class="resources-grid">
-
     
         <article class="resource-item">
 
@@ -531,14 +572,12 @@
 
         </article>
         
-
   </div>
 
 </section>
 
 
 
-  <!-- AMAZON BUTTON #2 -->
   
 <section class="deal-box">
 
@@ -570,10 +609,9 @@
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
-
+    
         <article class="news-item">
           <div class="meta">Eater Chicago · August 24, 2026 · 13:30 UTC</div>
 
@@ -1125,6 +1163,160 @@
         
 
   </section>
+
+
+  
+<section class="international-section">
+
+  <h2>Chicago Restaurants — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of Chicago Restaurants from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    
+            <div class="international-column">
+
+              <h3>
+                🇪🇸 Español
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRExvUElMdVVCdDZRdGpFWVlWN0lsVEhQWGNpRFJJcXlMZDBOV0JHbVRzRWZ4bThnZjlaN0R3X1VmOVlmWlQtNjJ2SWsyUVpRX20tb29fd3lSY0ZPcFpXMy1kaGFaYnN1dk0wZDFqbVJDTW41SGZ5QlBDWTZ6d09CaUZKZEJGaklMRF9mNUlHbXd3eEJwSk8zUG5iU2ZWX2VTM2hHRWF2U3EybzRsWEF1bDh2SkZkTW94b2VMd2lVejZxTHBSTXRFUTNFMDdYdHFYUURCbV9vLUhpSnI4a0E4b3FPYw?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aitor Zabala bate otro récord: Somni entra en la lista 50 Best de Norteamérica, que lidera Smyth (Chicago) en 2026 - Gastroeconomy
+                  </a>
+                  <span class="international-source">Gastroeconomy</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tYS003UEI4ZV9adW5QQ29lajVubjBjVU9rdlpidFRkbkRsMUFfU3QwQ3BkaUxiTFo3MEhnMmUyR2dsZGcxVnE5Ym1JbEtla2xzYVl1N3M3TWttc2lyYVBBTVJzYjhtR0Jac05nY1hpRjRZY0F4bGozaS1hN0R5b053U0h4U0lJbnUyeTNLSkVIUGM?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Food trucks en Chicago. Chi Food Truck Fest 2026 — Street Food Magazine - Foodtruckya
+                  </a>
+                  <span class="international-source">Foodtruckya</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNc0N0SE03M0M3anZ5T3o4elRpVE1HNTVVVm9nWlhJcFpDQkd5UUFlSU9nYy1QMnRpZEtNSm5CdWItTUVyWGJVX0h1cmswV2pvOGJoZmZ1TjlPVUk5TlI4OWNjWjFVWjZKVVNnX2tCbGxGRF91cVdvakRHaE1pcXN1MFQ5YlZ5SURPeThqMkhtOEhZdw?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chicago conquista la cima gastronómica de Norteamérica: Smyth es elegido el mejor restaurante de 2026 - Excelencias Gourmet
+                  </a>
+                  <span class="international-source">Excelencias Gourmet</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇩🇪 Deutsch
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPWURzYVpGLWdvNEJrdGJoVnEzVWhRREdjS1ZOREhUbVYwbnRpNm5KaHZYOHd3VFpLVDZscGxTTUVRbUJyUUkwYTB0UndrS2xMSnFDeUpGa2tkTGRmM0I4LXgwZzhPc25lelFpeWYwV0t4YlFoeHRRdy01Y3gwVDFOOG5TLVk?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    The Bear, Chicago und ein Italian Beef Sandwich: Diese Foodtour macht Seriengucker satt - reisen EXCLUSIV
+                  </a>
+                  <span class="international-source">reisen EXCLUSIV</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOYWtZQVZTZHNvOFlubF9EVVdtRHpzOEFCRmpGdDN4S3ZoQlBzNVlRUC1fY0NvVDZ1dE5IMmVpWnAteUFyc2tmTUZVSHZ6ZjN3YkpJU0szU3RNeUM1Mk1WYUtkZW1GWlhwamF2dTNzY1psYVdtMWx6b2tGRGZNZjEzREJnYkktUU4zSk5jZlZlUUZBR3ZuRllPQWhMRmJDc2ZWWXg0TWVsdDcteWUtaW1zakplUWI?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Smyth zum besten Restaurant Nordamerikas gewählt - Restaurant Ranglisten
+                  </a>
+                  <span class="international-source">Restaurant Ranglisten</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNMWY2Q2RGbVVUM3JndlhJaXlpSHQwN3N0MFZicVpDbDNpZEZaTHMtZEo2N1dYTVFfZkdwbHNhc0FzOEQ5S2p6dC1neGl3OTRLeFlfaFlLYUFqMDk0VzE0OVYyTzBJNXpCcWp6LVhKRWdoMFN2bmlLbWhjbERXZVlQcG14UmUyaFQySXdwSFBjbHUtV0twUExQcWhCaFZUeF92cmFwRkgycUZ1dWt0TUpmX0ZVOWJyNVdKYjZYQ3lZWFE4Z2N6?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Finale von &quot;The Bear – King of the Kitchen&quot;: Ein Restaurant kämpft um seine Existenz - prisma.de
+                  </a>
+                  <span class="international-source">prisma.de</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇫🇷 Français
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPNWhXV3dhVmxSOXVOMDBPVUJBTUg1cTc3Rm00Qnc5a2xIQkF2aXJDWS10eTNHLVpGXzAzTnRsV0lyUENIWlRTYjdWOW9zakJUemR4Q09xdFBDX21mSkNYdVA4RFgxaHhEdExEMlFqNm1TTUdyR185V0ZwUDN4eWhzWmxTYnNwa2FmX3VRU0xlX3lreU5CRVdLdDVZdzBpNktLZElHc2J1OVRNQjRsS0UtSkFFQUgwUENJTEFnbTRDRzF2MlRCSUpv?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Demon Slayer Café : Chicago accueille le premier restaurant officiel Kimetsu no Yaiba aux États-Unis - Le Journal du Web
+                  </a>
+                  <span class="international-source">Le Journal du Web</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPLTlvRnZoanhnYzlqa3RCdXNtMkZock51QWJfX3NQcTYwWlJ0QUR0RE1YSE9mYWNLSnMtN2doNFpDcjY3b1ZQWWRFSW9Zc1lvRV9KT2o0SHNsOGhlT0RCUzUzMkRjZDljcnA0VkJ3VjZsc0hNZmg5Wm5MRGRST3A5M1k4c2UzaXhHUktNM3VjbjRac2w0OXZJaVNlX3ozaEJldzNMeDV3ZUs0RVpIdVZPeTlYU3A3QQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Nous avons testé 6 restaurants de la série The Bear à Chicago - L&#x27;Echo
+                  </a>
+                  <span class="international-source">L&#x27;Echo</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiogJBVV95cUxNVXZWZjA0a1JoNUZGVVRHaV9Wb0UwemV4d1RvNENjbTJCdEJPSlZRU2hRUUZaZ3k3THdsZDJqNjBBcC0yaVBDakpUWFFybWZ1dWxvR2hqWV8wYjJfaUFQODFRSjZZY0YxaGpxbnNzUWFGTlFVTnZUWHVDdUxGYUFuYlhKSHNGdXExTmdhelY2MXRnMnZVejBOOU9LTHZsSVRCd2ZySFFwQzlNY1hWUENpMVFKTldFVzh1WUJuRE9tTUp4azVFZUNzcmZwSFJtaUU0LURNUXJub19yTkhhSmVTb1dCRERaaHZYcDhVYVl6bUFBR2YxeDc5clZWQjlYM1pMaEpLdkJKWFdmRTJjbE1iZ01xa0VqSVhjMDNWazRwNHN4QQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Il mange une huître contaminée dans un restaurant qui lui cause des lésions cérébrales permanentes : un Américain porte plainte contre l&#x27;établissement responsable de son état de santé - ladepeche.fr
+                  </a>
+                  <span class="international-source">ladepeche.fr</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+  </div>
+
+</section>
+
+
 
 </main>
 

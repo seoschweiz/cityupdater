@@ -121,7 +121,9 @@
       margin-bottom: 20px;
     }
 
-    .editorial-content {
+    .editorial-content,
+    .resources-section,
+    .international-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -141,19 +143,13 @@
       margin-bottom: 18px;
     }
 
-    .resources-section {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }
-
-    .resources-section h2 {
+    .resources-section h2,
+    .international-section h2 {
       margin-top: 0;
     }
 
-    .resources-intro {
+    .resources-intro,
+    .international-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -286,6 +282,50 @@
       text-decoration: underline;
     }
 
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .international-column {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .international-column h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .international-column ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .international-column li {
+      margin-bottom: 14px;
+    }
+
+    .international-column a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .international-column a:hover {
+      text-decoration: underline;
+    }
+
+    .international-source {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -299,7 +339,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
 
       header h1 {
         font-size: 36px;
@@ -313,8 +353,13 @@
 
       .news-item,
       .editorial-content,
-      .resources-section {
+      .resources-section,
+      .international-section {
         padding: 20px;
+      }
+
+      .international-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -360,13 +405,12 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:02 UTC
+      Last updated: August 25, 2026 · 22:10 UTC
     </p>
 
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   
 <section class="deal-box">
 
@@ -393,7 +437,6 @@
 
 
 
-  <!-- EDITORIAL CONTENT -->
   
 <section class="editorial-content">
 
@@ -459,7 +502,6 @@
 
 
 
-  <!-- LOCAL RESOURCES -->
   
 <section class="resources-section">
 
@@ -471,7 +513,6 @@
   </p>
 
   <div class="resources-grid">
-
     
         <article class="resource-item">
 
@@ -556,14 +597,12 @@
 
         </article>
         
-
   </div>
 
 </section>
 
 
 
-  <!-- AMAZON BUTTON #2 -->
   
 <section class="deal-box">
 
@@ -595,10 +634,9 @@
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
-
+    
         <article class="news-item">
           <div class="meta">Axios · August 25, 2026 · 18:24 UTC</div>
 
@@ -798,28 +836,6 @@
         
 
         <article class="news-item">
-          <div class="meta">Stock Titan · August 25, 2026 · 21:17 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkk1bURhNHl3NUpuQzdrUUMtemZCdzdtaGk0QllYUE5UWnNJTVlFbTZGSS1qU2llMjZfblM5OHlRcDBzVnQzbTBOZ1EzSWpOSG9hQVVCMnE3V0lXMzR2VjgyRjRBRjFQRWtpVFR4NzR3eDVGWUs4VldGbGV6NnVCeVdTQlRVc24yLTNuYkk1SjN5YS13X3doTnFoMlYzUm5XQjdVblYwb2k1MzRiYk5yRkp5S2prYWtsVmZlMUlXNHdxdW0wNXB1c3RNYw?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Atlantic (REFI) chair now holds 478,851 shares - Stock Titan
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkk1bURhNHl3NUpuQzdrUUMtemZCdzdtaGk0QllYUE5UWnNJTVlFbTZGSS1qU2llMjZfblM5OHlRcDBzVnQzbTBOZ1EzSWpOSG9hQVVCMnE3V0lXMzR2VjgyRjRBRjFQRWtpVFR4NzR3eDVGWUs4VldGbGV6NnVCeVdTQlRVc24yLTNuYkk1SjN5YS13X3doTnFoMlYzUm5XQjdVblYwb2k1MzRiYk5yRkp5S2prYWtsVmZlMUlXNHdxdW0wNXB1c3RNYw?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
 
           <h3>
@@ -833,6 +849,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Stock Titan · August 25, 2026 · 21:17 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkk1bURhNHl3NUpuQzdrUUMtemZCdzdtaGk0QllYUE5UWnNJTVlFbTZGSS1qU2llMjZfblM5OHlRcDBzVnQzbTBOZ1EzSWpOSG9hQVVCMnE3V0lXMzR2VjgyRjRBRjFQRWtpVFR4NzR3eDVGWUs4VldGbGV6NnVCeVdTQlRVc24yLTNuYkk1SjN5YS13X3doTnFoMlYzUm5XQjdVblYwb2k1MzRiYk5yRkp5S2prYWtsVmZlMUlXNHdxdW0wNXB1c3RNYw?oc=5" target="_blank" rel="noopener noreferrer">
+              Chicago Atlantic (REFI) chair now holds 478,851 shares - Stock Titan
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkk1bURhNHl3NUpuQzdrUUMtemZCdzdtaGk0QllYUE5UWnNJTVlFbTZGSS1qU2llMjZfblM5OHlRcDBzVnQzbTBOZ1EzSWpOSG9hQVVCMnE3V0lXMzR2VjgyRjRBRjFQRWtpVFR4NzR3eDVGWUs4VldGbGV6NnVCeVdTQlRVc24yLTNuYkk1SjN5YS13X3doTnFoMlYzUm5XQjdVblYwb2k1MzRiYk5yRkp5S2prYWtsVmZlMUlXNHdxdW0wNXB1c3RNYw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1084,28 +1122,6 @@
         
 
         <article class="news-item">
-          <div class="meta">NBC 5 Chicago · May 20, 2026 · 07:00 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRWRRbERHYUZIeEJEUHE3emxxV1kyNjJoVmFDaHhQbXY3V1dESXh5VXdkSjlkb1lhV2lsUXk5ZUt1RnJFVlF2VnBNOXVBdEZDRGljSTRTa2V4TEZtUGdVVUVHb0tFSkhKMWgyYkV2T2FZaFhMM0RvUmg2Tnpxd0ZWZ3RrZzV1U2hyVVFCYjIwS2drSm9GRzJrVFkxT3JoVld5MmNydUZZWVlzR2laNC1qOVdocU14VTBIRkVr0gHDAUFVX3lxTE1yR2V0MmdMWU9lUkV1QUVLWTVrbjkzbGk5RThJUjZ4OE00RkI3eEs5elYtaGhQOHVGNTU3dGlhN1NxRkI3UGpvbVpDaVg0d0E5Y3BoZC1qNEpiOC1mVjRjdThHMU9GZHZCNEtmSWh1bGtnY0dMbUFmaFR1Ml91NWJ3OXp6RlVhbTU4cFJ4UGJTSk1ycmc2SFNDaEwxT2l6SS1sbmhlQmtJNDdPM0RpZjcwMlB6di13bFlERDFRUEZFMFpMRQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Thousands of Chicago-area home listings removed from Zillow over dispute - NBC 5 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRWRRbERHYUZIeEJEUHE3emxxV1kyNjJoVmFDaHhQbXY3V1dESXh5VXdkSjlkb1lhV2lsUXk5ZUt1RnJFVlF2VnBNOXVBdEZDRGljSTRTa2V4TEZtUGdVVUVHb0tFSkhKMWgyYkV2T2FZaFhMM0RvUmg2Tnpxd0ZWZ3RrZzV1U2hyVVFCYjIwS2drSm9GRzJrVFkxT3JoVld5MmNydUZZWVlzR2laNC1qOVdocU14VTBIRkVr0gHDAUFVX3lxTE1yR2V0MmdMWU9lUkV1QUVLWTVrbjkzbGk5RThJUjZ4OE00RkI3eEs5elYtaGhQOHVGNTU3dGlhN1NxRkI3UGpvbVpDaVg0d0E5Y3BoZC1qNEpiOC1mVjRjdThHMU9GZHZCNEtmSWh1bGtnY0dMbUFmaFR1Ml91NWJ3OXp6RlVhbTU4cFJ4UGJTSk1ycmc2SFNDaEwxT2l6SS1sbmhlQmtJNDdPM0RpZjcwMlB6di13bFlERDFRUEZFMFpMRQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">WBEZ Chicago · August 24, 2026 · 10:30 UTC</div>
 
           <h3>
@@ -1149,7 +1165,183 @@
         </article>
         
 
+        <article class="news-item">
+          <div class="meta">The Real Deal · August 24, 2026 · 21:30 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNODg2ZnBPcld0OTBIcWE0UUwxRGlmR0J0NU0ySkxGdkt4T1h6cVpKcnpteWxOdWRiOTJnVmdqZ2VqanpSdHpZTG8zYnNqVE9fU21oRE44RTVBSHZ6T1ZBdUhGR2FtbzBRYUo4dTg4SW5wOVJmVU1ISng3dEpRaXpKSFZwUUM2UmgzRVRLcUtJQ0VCSEtxcFotcUpXOA?oc=5" target="_blank" rel="noopener noreferrer">
+              Lake Geneva Spec Home Sells for new Build Record $9M - The Real Deal
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNODg2ZnBPcld0OTBIcWE0UUwxRGlmR0J0NU0ySkxGdkt4T1h6cVpKcnpteWxOdWRiOTJnVmdqZ2VqanpSdHpZTG8zYnNqVE9fU21oRE44RTVBSHZ6T1ZBdUhGR2FtbzBRYUo4dTg4SW5wOVJmVU1ISng3dEpRaXpKSFZwUUM2UmgzRVRLcUtJQ0VCSEtxcFotcUpXOA?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
   </section>
+
+
+  
+<section class="international-section">
+
+  <h2>Chicago Real Estate — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of Chicago Real Estate from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    
+            <div class="international-column">
+
+              <h3>
+                🇪🇸 Español
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQMGJ0SGhzeEtKNUNTbjJqU3JFUF9nR0dKeDFCY1QxVjlZaS04dXQ5RWdweUZQamNGSHpWLUNaUVo1SVltQ3VEUHVmY0pfVXdOM2FXeVZGcDVwU3VIeVY0TzR2cUdVRGtqSzFHZ1lkNDF6UF9PZDl4clMyakNuTEgtQUl3MWJONUF0dFFvcEFVa2UybmxwMnAwY0MtTkxSdC1kc0xmdTVEWGZkQTA3TTRoVDM4Wkd2SEI5ZWdTZ2JJSjE2amJISWZNdUJYbm5IRXYtRFdLN3dOR21mMzR5?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    El presidente ejecutivo de Chicago Atlantic REFI compra 1.547 dólares en acciones - Investing.com España
+                  </a>
+                  <span class="international-source">Investing.com España</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUURjVWppU21Fa2JRdHE0WDhmMjZBT2dMWlRSajhkZHpDb3BSRXJUNXNZcmx2c1pzb2xlMGh2UzFyRVNtN2lkbVpaVjZVeGFOMkJ5ZkVVMWR6S0NFVU1aMnJFTFZLZG9SYXBFa25hdXdjcDM0cHlYVTJaWEVZNWRodWtjV3pETFNWWGFSaS05ZFNQTkFqaGl5ZHZsT0llVVlrWUNBTldpZG9YQmZDLUpKeURPSVFQMTlPOV9VZFZHTVJQcXpsWWc3czhJWTBRaVJXZ203Qjdsdjg0cmp5d2dnTXFCOUpDYVJmUDJF?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Un directivo de Chicago Atlantic Real Estate Finance adquiere acciones por valor de 468.225 USD, según los registros de la SEC - MarketScreener España
+                  </a>
+                  <span class="international-source">MarketScreener España</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiggJBVV95cUxPTGsxb0NVLVVLUDJYZGY2dWNNeFY2aFNsRkVPSktlRGN0WTlLTllBSjU2ZUpjZ1RKd3NnZGN3Y1JtRF94Y0RKZWRyMENwYXFmYzltcUc4ZWFXSF9HaWZiYXNjNTVpZWh2NmUtTEtUd29lcmVGNlFHZFJrblhGTm9iRDhYckpvZV9QZDVVWHkzVU9LcWU5ZmFEaW91UUE3a0wtRDNveEE1WlV0d1dlQXVwa3BmRUU0VXQwM1RsaE9EMFNqNHh3RFVJbWFlVV9JLTdwN1FLY0ZzQVdYOTkxeTk0T2FaNFhJbTM5YTBpUHlXcGw5VU44MGw5UFlZMG15dFdJNVE?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chicago Atlantic Real Estate Finance Inc reports results for the quarter ended June 30 - Earnings Summary - TradingView
+                  </a>
+                  <span class="international-source">TradingView</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇩🇪 Deutsch
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQUVpPTTJRVHM2cjM3anI2dEJkRkNTYlhSNlNOemR2YkxpNWFxN21DaldDd2tXSHBlUk1odDVPdTBvWmd5dFhsaUFLeGl6UnpKbW5EakpLZl9BMU8zRDdBX0VqYkZBUUNBblgydTlGSnNYUFAzXzYwLThrRVE2d2RXYUdQTU9zVmJmSXBGRDRGM3d4QTJU?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Becton Dickinson gliedert erstmals mit Clifford Sparten aus und fusioniert sie mit Waters - juve.de
+                  </a>
+                  <span class="international-source">juve.de</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMic0FVX3lxTE16b2V2RDZXVFVqWlhpMEtBdUNzM1gwTXA5MTM5MlpOT01mMUZVSHZNNGdRUXhvbklfLTR6X3kwMHpfVmVzOWlkNXdjaUM2Ym12Q0VyVVZRYWl3SnpvQ0VUcW5DY3ladGRDMGJRN29sZ3c5eWs?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chicago Atlantic Real Estate Finance Aktie • A3C82H • US1672391026 - OnVista
+                  </a>
+                  <span class="international-source">OnVista</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQUThWUUYtalRyVDNGdkdpeGxacWxidXBweWh1Z2hsUFRITGhTOGpNbmFMdTY0bHlHdE5pcXctQmMzeURtTk43eTEyT21FT0ZVeHdKMUZRSmx1bGNfR0g3VEJiMUtPN1hnOVc3WkxPd0FuNjU3a2M1b09aOTB2Szd5c2NBQUdUa2N2OGZKdGU2YWQ0NXZGR2k4N0plSWd1LTc1V0RnVE5mVQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Real Estate | Investment | Finance - DEAL - Magazine
+                  </a>
+                  <span class="international-source">DEAL - Magazine</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇫🇷 Français
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1KYVN2dGJDODA2NFRRVVROVDdZTVpSYVptYjJfU0VvcEgyWmVhWlNhSGFmcTRtVmJXTDhyaGtGOUF0bi1YQWgzemdBX2JDNHA1OGFPdjg3YVZKSmhieVU1eGZvMGNVU2dWVERlVXV6X1N5V2Y1?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Les 5 villes où les Américains déménagent le plus et les 5 qu&#x27;ils quittent en 2026 - fr.qz.com
+                  </a>
+                  <span class="international-source">fr.qz.com</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5uWXgzaFVValJhcTF5ZkllSk9HcDVoc3hrRG1zVUZGYlJUM2k4WFBTaVE2bjNXb3JnME43UEZsUzE0QS1PTWpNRTZOLXJ0VHdTWDY3amdPcHB1d0E?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    REFI Prix de l&#x27;action et Graphique - NASDAQ:REFI - TradingView
+                  </a>
+                  <span class="international-source">TradingView</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUF8xbEJHMWVUaUh5cVd5SllBTTg2TkZuS1ZESUs4RGFReGlwczVkeFBBblZGV25MaEpXY2RNZlhNcjI5UVZkLWZxSGZlRGNyd0h5VVVSQWtQUXEwS0pFYk83c0tCb1lCRGNIVl9pU2RoVTA4c1NnSmJiY0FNZU5VT1ZEWW8zZVl3UFo3eGhfeW5UbXlHMUdIT2FlZHRUMi00WE5NQ3B4M3VLMmdIRTFhRkU1TWYwSkRwNjBEVFVUMko?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Spéculation et immobilier dans les immeubles d&#x27;habitation de Mies van der Rohe à Chicago - Espazium
+                  </a>
+                  <span class="international-source">Espazium</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+  </div>
+
+</section>
+
+
 
 </main>
 

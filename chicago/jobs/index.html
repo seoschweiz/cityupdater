@@ -121,7 +121,9 @@
       margin-bottom: 20px;
     }
 
-    .editorial-content {
+    .editorial-content,
+    .resources-section,
+    .international-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -141,19 +143,13 @@
       margin-bottom: 18px;
     }
 
-    .resources-section {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }
-
-    .resources-section h2 {
+    .resources-section h2,
+    .international-section h2 {
       margin-top: 0;
     }
 
-    .resources-intro {
+    .resources-intro,
+    .international-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -286,6 +282,50 @@
       text-decoration: underline;
     }
 
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .international-column {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .international-column h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .international-column ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .international-column li {
+      margin-bottom: 14px;
+    }
+
+    .international-column a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .international-column a:hover {
+      text-decoration: underline;
+    }
+
+    .international-source {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -299,7 +339,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
 
       header h1 {
         font-size: 36px;
@@ -313,8 +353,13 @@
 
       .news-item,
       .editorial-content,
-      .resources-section {
+      .resources-section,
+      .international-section {
         padding: 20px;
+      }
+
+      .international-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -360,13 +405,12 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:02 UTC
+      Last updated: August 25, 2026 · 22:10 UTC
     </p>
 
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   
 <section class="deal-box">
 
@@ -393,7 +437,6 @@
 
 
 
-  <!-- EDITORIAL CONTENT -->
   
 <section class="editorial-content">
 
@@ -468,7 +511,6 @@
 
 
 
-  <!-- LOCAL RESOURCES -->
   
 <section class="resources-section">
 
@@ -480,7 +522,6 @@
   </p>
 
   <div class="resources-grid">
-
     
         <article class="resource-item">
 
@@ -519,14 +560,12 @@
 
         </article>
         
-
   </div>
 
 </section>
 
 
 
-  <!-- AMAZON BUTTON #2 -->
   
 <section class="deal-box">
 
@@ -558,10 +597,9 @@
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
-
+    
         <article class="news-item">
           <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
 
@@ -1113,6 +1151,160 @@
         
 
   </section>
+
+
+  
+<section class="international-section">
+
+  <h2>Chicago Jobs — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of Chicago Jobs from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    
+            <div class="international-column">
+
+              <h3>
+                🇪🇸 Español
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQaFJCaExJR1gwdVh0ZS1EU0tRSzVCZUhScmt5QUd5Y2Nodm12QUNRYnZFM29yRklEMHN5eE84ZzI4akVvelJ2MzhTRzdGZ2U1WFRVVGRadG1NY1ZZQlRQTHhBbVMwSTEtdDhfcGlCcjZQRFprTU8xOTYtRk1sbUVGLVZXTmk3aElrRXhMTDdiODF0ZmZIdi0tVUhwcmFSWVZLemxqU1BiNmpaTFcwcmdpTlAzRVp5RTczNkt3TjFSRmZDOGpl?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Trabajadores en China temen por sus empleos mientras se adaptan al impacto de la IA - Chicago Tribune
+                  </a>
+                  <span class="international-source">Chicago Tribune</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMikAJBVV95cUxOWW1oU0hHYlVUdXJlNGM0cHdVZmZqRWZGMF8zOUhVWGo5YzBOMFR3aDZZX3FPY3JwRDNRZ3NTV3BrUWhFaUtXeGZHSWU0eFkzT1U4Rk5keWxyQTEwZUtDY0t3OVJvSkxacGxmMElEZ2h4WER2ZHpnMHZYM3ZSUnhrTlN4UW82ZG1qSVFVVGJ3cUVycjlsd281MVltRVFTbUlmU0NhY1l4aUdONEtWWGJfNlJnUUNmdGJ0UXdDOWJtaHlRZWpjQ01wYjdTTHNHQnI0b2lxYklSVy1PUDdRQWZObllTakt3SjRRb2o4V3h3Rno1eTZKQWpnS2dmeHgtUWh6aUU2QzRwYkNtN2lGMTZUeg?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Más de 4.000 protestas de trabajadores en EE.UU. que se sienten &quot;invisibles&quot; - quepasamedia.com
+                  </a>
+                  <span class="international-source">quepasamedia.com</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOVHR6NGJGT1VPam90OEVFd2p1VjlpU21UX3ZxMmdzWEVJQ3ppUUF3eUVyNUlfeGw2a0hGZGFQcXVrUkIwLV9BU0x6TWtmVHVTZkJnWElSVmNZWm1ybms5c1lRTG84LVN0MUVDUFV1QnF3Rmppa05wV1VmWjF4ZUN5WEM1OGRKeXFodDNfRkk5VFBlVzh3X2hZaVI3Q1gyN0FJdnV4TnNXaU9uT2JZTzdOaXF6Um9fRlU?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Espacio Schengen, víctima de la migración a Europa - El Heraldo de México
+                  </a>
+                  <span class="international-source">El Heraldo de México</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇩🇪 Deutsch
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNVmEwbG95NmNsaFdKcTZHZzRLY1EyUVBXMnZhamplLWc4S1p6VzEyX3JQSzRZX2N0ZzRnRW5jNDM2TTFJeWRZZjBhZ2hpNlNyMWg2MGlkQTVkUlU5cEQybmhESkRQTE1mRG9ZNGlGbDEySEVYd3NFcnI3TFZ2eWdxdHZMdERpWU9iVFRzQ3V2RHczMnFTemt2OFdjZll1MTZKYjd0aVZwRHRJNE8zWldjdVUxdXRaWmRNQXBHZzdB?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Seit einem Jahr arbeitslos: Dieser Aspekt trifft mich bei der Jobsuche am härtesten - Business Insider Deutschland
+                  </a>
+                  <span class="international-source">Business Insider Deutschland</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNWmRoc3huNndNU2E0MVYzZGg4MWxXZHFmZWEzTnpXbldzS1dkUVpNVFpRVlVDbkpUcTdpR3J2VVNIbFdqRk51d1hZX0NrN3BiNkI0TVdhdVo5d3RoM2pmMktNVzg4QVlTbFBNc0pEY0w3WDFUbnJFc29qYllER1F1cmx5TDRaLVNuX3cyWVg3OUZ6M2xLS3Bn?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    «plan b» zeigt Chancen von KI und Robotik im Arbeitsalltag - Quotenmeter
+                  </a>
+                  <span class="international-source">Quotenmeter</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOUU1QOXJMNXpfMllOSHpZTF9NNjg4Vzh2b3ZlWWo5WjhBbGNOWXBpWVFxTF9Fd2wyLVJJYzhoVXdhWVlpX2JKTzJpV25ObGRwTEp0NmN1eHZ5Q0pYdWdkU09ldXFkUnE3TnFjQTlHZFdLRm82WVl5ZGlhMVhUZUdZNWRyMFRWLTBkMHlHQ2Q4SDRHZw?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    NFL: Neuer Job für Ex-Dolphins-Coach Mike McDaniel - sport.de
+                  </a>
+                  <span class="international-source">sport.de</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇫🇷 Français
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9rWGpvS1gzWlJGVEU3NVZTTHVlajlsR3FPYmltZS0xZ1pQUVdVbGs4cE9NUGNyUzB4cnZZRFl3V2VTZGwyLWhSa3AzUmlHVFkxVWEzb0JreW85WF9TbnpLU0ZYeXF0Q2w4ZlE?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Offres d&#x27;emploi / Job offers - La France aux États-Unis
+                  </a>
+                  <span class="international-source">La France aux États-Unis</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1IzcmtPbWpNNmRMVWdIa3BiZHcwNEVIMW1QNjczb3ZMWXF0U0k5TEVERURteW1CN05SUG9Ga1VpYTc5N0pBTlVpQS1IUkZ5bXdyTFkyOUprZXJVRVdSdk9VM3NZQjN6dENZVlJiam81Nndka3FTTlVRZXdwVmhLcEF3RnJFVTR4eTlN?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Garantir une alimentation électrique sûre et continue pendant le jour férié de la Fête nationale, le 2 septembre. - Vietnam.vn
+                  </a>
+                  <span class="international-source">Vietnam.vn</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQQUI3U2MxUzJFWGxaVXNaV1A2V2NpQXEwVTl5UnIzRkhVY2NLSmVqQXNXMFg1aDVGblRrOEVUV2swU0NXWWd6TWI2VVowUkZsc1hvbWo5TDN0bWNLNEpCRXE3ZFQ2dVNFZ2UxcGhnNVIwX040RTZ1ZTFZemd0QnFCVFRCekI5aVY2alJNQ0ZNLXUybFZlbXY5MDJxLTNxZW94UU5OUkk4ZUhJUHhSMVJyUU51Mmpmdm93RWtHYkZR?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Insolite : British Airways recrute des pilotes… qui ne décolleront jamais - Air Journal
+                  </a>
+                  <span class="international-source">Air Journal</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+  </div>
+
+</section>
+
+
 
 </main>
 

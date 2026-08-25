@@ -121,7 +121,9 @@
       margin-bottom: 20px;
     }
 
-    .editorial-content {
+    .editorial-content,
+    .resources-section,
+    .international-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -141,19 +143,13 @@
       margin-bottom: 18px;
     }
 
-    .resources-section {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }
-
-    .resources-section h2 {
+    .resources-section h2,
+    .international-section h2 {
       margin-top: 0;
     }
 
-    .resources-intro {
+    .resources-intro,
+    .international-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -286,6 +282,50 @@
       text-decoration: underline;
     }
 
+    .international-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .international-column {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }
+
+    .international-column h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .international-column ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .international-column li {
+      margin-bottom: 14px;
+    }
+
+    .international-column a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .international-column a:hover {
+      text-decoration: underline;
+    }
+
+    .international-source {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -299,7 +339,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
 
       header h1 {
         font-size: 36px;
@@ -313,8 +353,13 @@
 
       .news-item,
       .editorial-content,
-      .resources-section {
+      .resources-section,
+      .international-section {
         padding: 20px;
+      }
+
+      .international-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -360,13 +405,12 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:02 UTC
+      Last updated: August 25, 2026 · 22:10 UTC
     </p>
 
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   
 <section class="deal-box">
 
@@ -393,7 +437,6 @@
 
 
 
-  <!-- EDITORIAL CONTENT -->
   
 <section class="editorial-content">
 
@@ -457,7 +500,6 @@
 
 
 
-  <!-- LOCAL RESOURCES -->
   
 <section class="resources-section">
 
@@ -469,7 +511,6 @@
   </p>
 
   <div class="resources-grid">
-
     
         <article class="resource-item">
 
@@ -527,14 +568,12 @@
 
         </article>
         
-
   </div>
 
 </section>
 
 
 
-  <!-- AMAZON BUTTON #2 -->
   
 <section class="deal-box">
 
@@ -566,10 +605,9 @@
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
-
+    
         <article class="news-item">
           <div class="meta">Chicago Parent · August 25, 2026 · 14:46 UTC</div>
 
@@ -1121,6 +1159,160 @@
         
 
   </section>
+
+
+  
+<section class="international-section">
+
+  <h2>Chicago Events — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of Chicago Events from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    
+            <div class="international-column">
+
+              <h3>
+                🇪🇸 Español
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNLVoxdmc0NjFNanZaQ1l2ZmxQMzhMMktiX3NzcV9TRzItaWVtSmM5b2pXS1VPVGtaVTVqQV9OOGYzLWJpQ2tXRXJ3Y2ZIcE5WMHF2UU9pSFJEVEZQMGNRZXFxWkVjZ1NfQ1c4c1hyQUVzVmxFSWxUUU42NlhGMThCeVNRRzVQWXdiRS1taFJlN3BXdVFaRjI1bTlUdTJqYjc0bmfSAaoBQVVfeXFMTmtPcXc1QWVlZ25veXRVSGhmcmk4TnphV0dla1hhTHE5MHRXcVBYb1BIZjZoT2tucjBPRWVVemdBa1pvWGE3Y09zRHVabmhNUGVWVGJINkNwS1A4R19udjlocFl3S0Qtdy02R2xUay1vRGQ4RnRqVW5GTEpvTFdUT3BCWm91d3lydzlMRElZbEZrSFJxeHhSVU55UXFVdlI3U01hV21tODRoSnc?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Arranca el primer día del festival Lollapalooza en el centro de Chicago - Telemundo Chicago
+                  </a>
+                  <span class="international-source">Telemundo Chicago</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQclk4VGZHbk84Z1ctblhVUm9qVnZuYmxhVFc5M3FibUxCVDBId2JKOEZtcEhyY1VqdHRHYm5WSEpyLXdPa2ZZSHY0SkhKWnlaQTk1RzFwUm16czlmdWl2M1kzVFZ6bDlnbHczQldWVjlIQW9yWE9HYXVLa1RTOVRTVWJMakZLc05fN0ZWRw?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Información del Legions Of Metal Festival 2026 de Chicago (USA) - Metaltrip
+                  </a>
+                  <span class="international-source">Metaltrip</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPU05wM0Y3blI0bGMweV9QTm9zMS0yY0NuRTJvNjZxT2k3ZW5PUTI3Yng2UmNxZmRIOHhpc241MXJKVHZaUk8wRGR5R2pMR1F4ZFo5ZDJTMThqYnZMMGVpVGJmZk5UWVl3bGlIV19aM3oxSjY2R3Y0OUJYOFNWdjhpMDRhYVRyMkFuZjhiSFVDdWFjNW1oT0o3VlBhRVFMYl9ZUjFTaWNkWlJuakh1cnhJSUtJVGdwaHZ1ajYwekE1UjFTWlNLTlZUMlAzWXdBeTAzODBF0gHYAUFVX3lxTFBwWlIzMTZhLUZqajJsaHNpMXBJdkhDbTdJMGgxNnlzRENhWkNLN1JoMm9HZS10a2tJdURsUFdYUGt0SWdXVUlOd1J3X1RnVlN6NU1nMXZJREFqOUt3aUtfckJHVFFGUzM3dm5uLWI2QTI2ZENYel9VLUU0ZDl4MFBMZ1RDclFER0gwckdRM0h0dlJ3ZUpEdDA0U1pydW1PdzJzbVBRUGJyNVNTVmRfc04zVG54WWo0SE0zUzI3QUt1el8tdGZuc3FoWHAxcmdWX19YY1RPX20wRg?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Comenzó Lollapalooza Chicago 2026: el festival que le marca el camino a la industria y se vuelve más fuerte cada año - Clarin.com
+                  </a>
+                  <span class="international-source">Clarin.com</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇩🇪 Deutsch
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQd3Nka3lqS0JNRzBLVFlsVjAxSE5lTlZyemc0X0ZMTEhSOEVjeTNyd19lNmJha0RQTTBtcUFJYlFIb21VWHdCVC1pN3B5aUJScmNfYWZDNUk3WlV6NlBvLVRKV3pRQlhvQkw4V1RBU0paeVhualNqVWlPVkVodnNEclpJNEw0YkVVM0s3RWR4Wm9rVWdyME1NVTQ0R1dET0tKbHZtVDBBVlcyMGswcXRJ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wrestling-Krieg eskaliert: WWE vs. AEW Show-Duell in Chicago angekündigt! - Power-Wrestling.de
+                  </a>
+                  <span class="international-source">Power-Wrestling.de</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5CNDdHcmZXYzdQdUp3WHhZV2JXcDM3Y1hLUjBuY240R21kQXB3OWRDWHg0WXJ5U25aMk9PVVVRc21raEI3ejlxVXA1R1g2WU9mM2k1eUZYNkZpN3BxajkxcU5HXzJRTms?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ticketoptionen für Live-Events beim Pokémon GO Fest 2026 - Pokémon GO
+                  </a>
+                  <span class="international-source">Pokémon GO</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSY3RFRmNiTFNtaU01V1JfcVEwY3lZdmpOeVdtXzk1LWgyRDM4a010VldCTG9ZMGZjM1I4WFNYQ3lRMk12ZnBxZTdUOUhoNlh5M0xPSHV0N29MeTE4YzhmRUZIUXZ5Skk?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    QAD | Redzone kündigt die Veranstaltungen „Champions of Manufacturing 2026“ in Chicago und München an - Business Wire
+                  </a>
+                  <span class="international-source">Business Wire</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+            <div class="international-column">
+
+              <h3>
+                🇫🇷 Français
+              </h3>
+
+              <ul>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxQdGtlczBkeUxKcTd4MzA2WW50VGFXVS1KcTNHT054bWlfX3N3NFl3cFlOeDdUTVdYV2RrLVNGRlVWOHE1LWRRY3N6dXZOZkI3X2t2RVhQX3dPVGpLZnVsMGNuSWJyX1Z5cDZkREE1UHE2eDlhbjdESGVaZnV4eHlvMjVIYTZrVHB4ZEh1dkMyR1JtLXQwNUJlamZ5UEZZN3gzbHZ0aXd3VTE0V2xkaG9Wem1ieFJnU2FzbXB4bThnWDNiUU1Xa0RRWmZ1V281MlJITkZVZnlFQlJqX3UyT3Z3N3FobW1zUHc2T0RPM2JtN1k?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Place de l’Équerre à Toulon, l’électro festival fait son grand retour pour sa 5e édition ce vendredi 14 août - Nice-Matin
+                  </a>
+                  <span class="international-source">Nice-Matin</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNamlERFdWOTJhMHFhZ2U1eFZvUmVDSzJsTTVXTDRqWVpKYU1sdm1pMjlRZUJ0aXhLWklmekdGZzJRN2RnOXYtVWRnUTRBcVJ2bW1RZnN4ak5mXzlOM0x2VFg5U0V1LUl5VXlDeFdDQ08wbnl6UVdEZWgwV0d0UmQtckFUVGQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Eris Drew (T4T LUV NRG | Chicago) - Montreux Jazz Festival
+                  </a>
+                  <span class="international-source">Montreux Jazz Festival</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNcWdMTXpwaTViT0EtajZtdjdLaG5yU3lTRGZkN1lZd1NVaVlRaE1obDVYaVZkV3YzekhDNFVyQndkYktWYUZLX1lRTkNlX3RiYlQ2Tk5PT3hDOGRWNVhCLWtNUnlJOGN1cFNFREd3QTJQMFNsR0VUVF8yNk4zSGxmckVZZjd6bmw5YXcyWlA1SlU4Zw?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Guide complet du Pokémon GO Fest Chicago 2026 (Festival Pokémon GO) - Margxt
+                  </a>
+                  <span class="international-source">Margxt</span>
+                </li>
+                
+              </ul>
+
+            </div>
+            
+  </div>
+
+</section>
+
+
 
 </main>
 
