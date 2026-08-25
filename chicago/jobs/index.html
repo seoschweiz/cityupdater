@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -843,28 +880,6 @@
         
 
         <article class="news-item">
-          <div class="meta">USA Today · August 24, 2026 · 03:36 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNRjJXa2huR0syNzJqOVVYLXJCZWVYLXVUZTEwM201T09IbTRZeVE0cUlMQmJnQVN1ODVRNHFqX1dXcEJsUUxvSmZ6SG1VOWxhRm1qa2JqMF81X3dXa1ZoSXdtai1CR0FEbFBKQlR3M2U1MGlmZDFnZDJNbjlHR25LTGx3MUs3WHZwWWZ5bkVVOTRjbmFBbE10U0RWcV9tUjUwUzBxNlpxdUZYWjNzOTRaUVVOQVAzSmMyV0Nlb180aw?oc=5" target="_blank" rel="noopener noreferrer">
-              Caitlin Clark&#x27;s career-high eight 3s help Fever stop Sky: Highlights, score - USA Today
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNRjJXa2huR0syNzJqOVVYLXJCZWVYLXVUZTEwM201T09IbTRZeVE0cUlMQmJnQVN1ODVRNHFqX1dXcEJsUUxvSmZ6SG1VOWxhRm1qa2JqMF81X3dXa1ZoSXdtai1CR0FEbFBKQlR3M2U1MGlmZDFnZDJNbjlHR25LTGx3MUs3WHZwWWZ5bkVVOTRjbmFBbE10U0RWcV9tUjUwUzBxNlpxdUZYWjNzOTRaUVVOQVAzSmMyV0Nlb180aw?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">WTTW News · June 25, 2026 · 07:00 UTC</div>
 
           <h3>
@@ -878,6 +893,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOV09EWmR6Zi1Fdk9FeVRFWHM1M0Fod2tSNTNXZGMtSTR6LUJySi1yT2E1Rjh3Zkt6NEpLQWkzNDNEci1lbTJpa0J6NjFPamlvaVFpQzhoSExqcldsbjNZcXFJSmZrQ2xPUnNDQUFMV0k1NWxhc1pCamFkMDJZc2JQZk9meV9CX0JQQTMyalNpWDNrZzBUMG1yNW84RXY1bXlURmMtWkJKVmZDV2NURXRYS3F3?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">USA Today · August 24, 2026 · 03:36 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNRjJXa2huR0syNzJqOVVYLXJCZWVYLXVUZTEwM201T09IbTRZeVE0cUlMQmJnQVN1ODVRNHFqX1dXcEJsUUxvSmZ6SG1VOWxhRm1qa2JqMF81X3dXa1ZoSXdtai1CR0FEbFBKQlR3M2U1MGlmZDFnZDJNbjlHR25LTGx3MUs3WHZwWWZ5bkVVOTRjbmFBbE10U0RWcV9tUjUwUzBxNlpxdUZYWjNzOTRaUVVOQVAzSmMyV0Nlb180aw?oc=5" target="_blank" rel="noopener noreferrer">
+              Caitlin Clark&#x27;s career-high eight 3s help Fever stop Sky: Highlights, score - USA Today
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNRjJXa2huR0syNzJqOVVYLXJCZWVYLXVUZTEwM201T09IbTRZeVE0cUlMQmJnQVN1ODVRNHFqX1dXcEJsUUxvSmZ6SG1VOWxhRm1qa2JqMF81X3dXa1ZoSXdtai1CR0FEbFBKQlR3M2U1MGlmZDFnZDJNbjlHR25LTGx3MUs3WHZwWWZ5bkVVOTRjbmFBbE10U0RWcV9tUjUwUzBxNlpxdUZYWjNzOTRaUVVOQVAzSmMyV0Nlb180aw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1300,6 +1337,60 @@
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago Jobs</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago Jobs
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+jobs+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+jobs+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+jobs+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+jobs+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>

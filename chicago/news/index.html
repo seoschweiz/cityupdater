@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -601,11 +638,11 @@
 
     
         <article class="news-item">
-          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:00 UTC</div>
+          <div class="meta">NBC 5 Chicago · August 25, 2026 · 22:24 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5" target="_blank" rel="noopener noreferrer">
-              O&#x27;Hare to the Loop in 15 minutes? This company thinks it can finally bring fast rail to Chicago - Chicago Sun-Times
+            <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPMjh5MHF3VWwzUVJjMC1rbWdKWVNja1hFUXE0Qy16MHdDSjZUbmZrQl9XRjBxVk41b0JpaWtubklRMk5wcUlDdWdWM3FHU2F1RmxrWl80MG9jbm9HenV2TmR6SEIyVlFXSnRsWmNWbkxsRW9VX0hiVU4zQnFUbXBUamFDaTFIeFlMWXozaHdvQThoZDg2S0JHVmtNYi1ScUlGaWdrV2x2b21XLVpZX0JN0gG3AUFVX3lxTE5QNWdHRDZNYmlYUmhsQ0trbXBIc0ZLbDVsUmplMTdpWWg4RlZLWHhDa21nZGhhUlBTWGoweTJ2VlB3RGV6UTlXT25QYWxvMzVzTHVyWHJ6SGh4eU4wV2RRajhVa3BadG16cjdVamRZY3NGc3JoZTVlcHJfZTUzUFZ5MjNvVHFlM0cwQVI5U1ZTUmFqaUVGUXBZRk5YSHJzQndvMWFIbF85NHVVOVIzaHBNVUUzVWFLdw?oc=5" target="_blank" rel="noopener noreferrer">
+              Power fully restored in NW Indiana 2 weeks after derecho: NIPSCO - NBC 5 Chicago
             </a>
           </h3>
 
@@ -613,7 +650,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5"
+            href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPMjh5MHF3VWwzUVJjMC1rbWdKWVNja1hFUXE0Qy16MHdDSjZUbmZrQl9XRjBxVk41b0JpaWtubklRMk5wcUlDdWdWM3FHU2F1RmxrWl80MG9jbm9HenV2TmR6SEIyVlFXSnRsWmNWbkxsRW9VX0hiVU4zQnFUbXBUamFDaTFIeFlMWXozaHdvQThoZDg2S0JHVmtNYi1ScUlGaWdrV2x2b21XLVpZX0JN0gG3AUFVX3lxTE5QNWdHRDZNYmlYUmhsQ0trbXBIc0ZLbDVsUmplMTdpWWg4RlZLWHhDa21nZGhhUlBTWGoweTJ2VlB3RGV6UTlXT25QYWxvMzVzTHVyWHJ6SGh4eU4wV2RRajhVa3BadG16cjdVamRZY3NGc3JoZTVlcHJfZTUzUFZ5MjNvVHFlM0cwQVI5U1ZTUmFqaUVGUXBZRk5YSHJzQndvMWFIbF85NHVVOVIzaHBNVUUzVWFLdw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -623,11 +660,11 @@
         
 
         <article class="news-item">
-          <div class="meta">NBC 5 Chicago · August 25, 2026 · 12:02 UTC</div>
+          <div class="meta">CBS News · August 25, 2026 · 22:09 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5" target="_blank" rel="noopener noreferrer">
-              ‘O&#x27;Hare Flyer:&#x27; Private group aims to build new, electric express train from Loop to airport - NBC 5 Chicago
+            <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPXzJhLTJSMDhTRG55d0R0UmZUNVlTUDlSMFZnYUUzSE12TVNPZURBVkYweDFjQTFGZ1J4bFRDYUp5allPTzMxbXhFMDlCeVNhSjNIWWFOdndwYmVqUGl1ZWJaVWFGUHR4MWFoeGlmT29Dem1nU3NmNFVXVWd6Q2pPdmh3TUR2c2tySktKWV9FMWRMam5EMlduUVA2aw?oc=5" target="_blank" rel="noopener noreferrer">
+              Suspected mold found inside Kinzie Elementary on SW Side - CBS News
             </a>
           </h3>
 
@@ -635,29 +672,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZXJOeVdKV29vYUV0TW5lYVZWYldjQ29NNDBsSEV6MEp4Qnp4RWJGbnlsSHZ2QUw5LUhCU2w5NlBobnJVU294cGFsMWZuRVZ6OFQ1ODFTQnU1S1gyWHpaSXRFLVhOWkhBM2FqYWVyWFNrWnl3WHA0VjhaeEZuVzB1LVBHcGxqaDhGdElmYUYwZURkUlJ5MGZnbVBNdUl4QVlGbEhDSDNhU2xoWTRlamlHQmpZZUZWN01yMndPT3NrdlXSAcgBQVVfeXFMTnMtdkp2Zjc3WG4xTzdUMXNudHkyN1k1VldLZ01paWJodmNQQWo3QjJlLVZfS1I2MFd4UjBzRzZpMElWbkVtWjRsb05OdHl1YmJkWEtRLUduaG1SLTdOelNWZGR0QkdxUFdleF9ZVDVxRUFkQUkycWdsVVdsbVV6ZmNZZTYxb3A4UFBDRDlwQmVUUVpOTWg2bFNDRjJITG1RNDBFQ0FyMHdwVTlXd25TMHZ6aV95ZGNSRzBVamVxdk9ZUmlkcmN0d3A?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">CBS News · August 25, 2026 · 21:46 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5" target="_blank" rel="noopener noreferrer">
-              3 arrested after khat worth over $140K seized at O&#x27;Hare Airport - CBS News
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5"
+            href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPXzJhLTJSMDhTRG55d0R0UmZUNVlTUDlSMFZnYUUzSE12TVNPZURBVkYweDFjQTFGZ1J4bFRDYUp5allPTzMxbXhFMDlCeVNhSjNIWWFOdndwYmVqUGl1ZWJaVWFGUHR4MWFoeGlmT29Dem1nU3NmNFVXVWd6Q2pPdmh3TUR2c2tySktKWV9FMWRMam5EMlduUVA2aw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -711,7 +726,7 @@
         
 
         <article class="news-item">
-          <div class="meta">Chicago Tribune · August 25, 2026 · 21:22 UTC</div>
+          <div class="meta">Chicago Tribune · August 25, 2026 · 22:12 UTC</div>
 
           <h3>
             <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQaUpLMU9BeEhKdk5ERFZpVW5YS0ZEZGdBWG0xT1Jhak9mdmZYWHZJc3lPR3VsMmlwWEt0dENQMS0xTkkyU3ZpUGNGUWpQak9iZm1GcExJLW5BMkw2LTdGQy0zdG1wbTNlLUppdGVscm5CMTJBSE80dy1jYlo2QjZfdWpUZzc0X0dpQzlRV25nWlh1NldBVnh3bGxoQXpOTVlmdUE?oc=5" target="_blank" rel="noopener noreferrer">
@@ -724,6 +739,204 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQaUpLMU9BeEhKdk5ERFZpVW5YS0ZEZGdBWG0xT1Jhak9mdmZYWHZJc3lPR3VsMmlwWEt0dENQMS0xTkkyU3ZpUGNGUWpQak9iZm1GcExJLW5BMkw2LTdGQy0zdG1wbTNlLUppdGVscm5CMTJBSE80dy1jYlo2QjZfdWpUZzc0X0dpQzlRV25nWlh1NldBVnh3bGxoQXpOTVlmdUE?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Block Club Chicago · August 25, 2026 · 21:06 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPeF9EcFhwcDFzeVNHU0JSUHdKREp1NW53Sk1MR0U2SzFidmlrUW9jY1pvRWpFUzlXV19CX1h0UWNidjZfMHhBNGIyVTVkR2V4UGZwSEtDaElpSFFSUlc5U3BXVEhlU0Vjblc4aWFXZUNqcFhkRmVkVjMyZ2xfOEFfcVlLMXNCSEdnUWc?oc=5" target="_blank" rel="noopener noreferrer">
+              Dolly Parton, Chicago Will Always Love You - Block Club Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPeF9EcFhwcDFzeVNHU0JSUHdKREp1NW53Sk1MR0U2SzFidmlrUW9jY1pvRWpFUzlXV19CX1h0UWNidjZfMHhBNGIyVTVkR2V4UGZwSEtDaElpSFFSUlc5U3BXVEhlU0Vjblc4aWFXZUNqcFhkRmVkVjMyZ2xfOEFfcVlLMXNCSEdnUWc?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Axios · August 25, 2026 · 19:56 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZmdPRWZOM1Fnb3FXLXdBNDVOUWFacFFhQmpSYzFyZVdOc1J6SzZjNWRDLW9HQXdTZElROTdyWE9jNWY0bEdCZElveXNqSkZsdnFjamdFNlk3UzVqMGFzZ3VfbndVSFdKUkV5YmxvTW1ndk90TFB1Sk95UjZjR1RMT1NuOXNfM04xTXBubTBLY2FsYWpIVzBkZGRaX01mUmhzeUJFSlRQdWU?oc=5" target="_blank" rel="noopener noreferrer">
+              Remembering Dolly Parton&#x27;s star turn at Chicago&#x27;s Rainbo Club - Axios
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZmdPRWZOM1Fnb3FXLXdBNDVOUWFacFFhQmpSYzFyZVdOc1J6SzZjNWRDLW9HQXdTZElROTdyWE9jNWY0bEdCZElveXNqSkZsdnFjamdFNlk3UzVqMGFzZ3VfbndVSFdKUkV5YmxvTW1ndk90TFB1Sk95UjZjR1RMT1NuOXNfM04xTXBubTBLY2FsYWpIVzBkZGRaX01mUmhzeUJFSlRQdWU?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">NBC 5 Chicago · August 25, 2026 · 20:31 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOTzlhclM4MXU1TUs1RzVieXBHNkJHUHZJazNFLVViRkVxUURwOTFnQ3JOTlVsQ0p5X0hiaEd3cWwyLUVYdnptNmdaMjI5eEZkR2o2WUdLcElqWndHTkpqT2ZkWkRQODhpQktWa25xclZuVkhvVEFzVUFxY0dXcXpsUVZTMGthdVFVRWR6VS1BZWd4X0x2Q3dMZllJV0FrVXhOa2xJdElwOUFKX2dxM3hzQ3JMbFd3Z9IBvgFBVV95cUxNSl9JVkNCWmVwMEpCM0k5UTI1OTRNNHBZNWxDaWJaSEg5Q0JYNFhiVm9rREJVOG54OExOejBGTE9INlk0aFVvTWNxQ21MRG5jVVhVWkxaemZlZF9VQTFpdEZET2ljMXIyeXpWb3BUcWtIbURLcnZtQUpWRDdRVHhMc1lHeklxNHVGd3F2c2NSRUxVWS1FRHdfa3lRSHp0OG4zajFMN1JwREpfUEJMM1FhVlU0ZlNzcDZrNG9CTENR?oc=5" target="_blank" rel="noopener noreferrer">
+              Dolly Parton&#x27;s incredible philanthropy remembered as tributes pour in - NBC 5 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOTzlhclM4MXU1TUs1RzVieXBHNkJHUHZJazNFLVViRkVxUURwOTFnQ3JOTlVsQ0p5X0hiaEd3cWwyLUVYdnptNmdaMjI5eEZkR2o2WUdLcElqWndHTkpqT2ZkWkRQODhpQktWa25xclZuVkhvVEFzVUFxY0dXcXpsUVZTMGthdVFVRWR6VS1BZWd4X0x2Q3dMZllJV0FrVXhOa2xJdElwOUFKX2dxM3hzQ3JMbFd3Z9IBvgFBVV95cUxNSl9JVkNCWmVwMEpCM0k5UTI1OTRNNHBZNWxDaWJaSEg5Q0JYNFhiVm9rREJVOG54OExOejBGTE9INlk0aFVvTWNxQ21MRG5jVVhVWkxaemZlZF9VQTFpdEZET2ljMXIyeXpWb3BUcWtIbURLcnZtQUpWRDdRVHhMc1lHeklxNHVGd3F2c2NSRUxVWS1FRHdfa3lRSHp0OG4zajFMN1JwREpfUEJMM1FhVlU0ZlNzcDZrNG9CTENR?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">ABC7 Chicago · August 25, 2026 · 13:16 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUZWYlM1MVhJUmplLW4ya0xaYVNId0lXVFVEUmdTcDROTUJ0RWpJQ1hlTDRKMUhZRnM3WDhPLTJxT0s1eDk5Y3k5QUdkQUFRR1ItY3hiNjNOeGdGbEprRWVQWEZkdzJDSHJTcjIzY0UtcEp3NmRNYUxDd2NlODRJbDZUaG5fb1RfUW1yMDUtQ3JHQ3hCOWljNHYxbmoxMjVTR2Vlem9NMWZpSHfSAbABQVVfeXFMTkx0U3NFd1ktUmxVbjlMVjAtODFJTlNibTdUZ2l6ek52T2ZKYlQ0M2NDd1RQQnNPc1VoTE1IZnlzZGJaZzZCd1BXX1A2c2VSRE8zWlNZUDlvZlVvRlZVeGltZExGR1NYeXpNZnpISXh2YTEzdkI2NzJmQUZaUzRFci1uejdnTWtMSlIxcWUxMTlBcFFrMm1QVkhSRHljTUlCQ1lmaGRuank1T0JOMGJTam4?oc=5" target="_blank" rel="noopener noreferrer">
+              Plans unveiled for 15-minute express &#x27;O&#x27;Hare Flyer&#x27; trains from Chicago airport to downtown - ABC7 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSUZWYlM1MVhJUmplLW4ya0xaYVNId0lXVFVEUmdTcDROTUJ0RWpJQ1hlTDRKMUhZRnM3WDhPLTJxT0s1eDk5Y3k5QUdkQUFRR1ItY3hiNjNOeGdGbEprRWVQWEZkdzJDSHJTcjIzY0UtcEp3NmRNYUxDd2NlODRJbDZUaG5fb1RfUW1yMDUtQ3JHQ3hCOWljNHYxbmoxMjVTR2Vlem9NMWZpSHfSAbABQVVfeXFMTkx0U3NFd1ktUmxVbjlMVjAtODFJTlNibTdUZ2l6ek52T2ZKYlQ0M2NDd1RQQnNPc1VoTE1IZnlzZGJaZzZCd1BXX1A2c2VSRE8zWlNZUDlvZlVvRlZVeGltZExGR1NYeXpNZnpISXh2YTEzdkI2NzJmQUZaUzRFci1uejdnTWtMSlIxcWUxMTlBcFFrMm1QVkhSRHljTUlCQ1lmaGRuank1T0JOMGJTam4?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:00 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5" target="_blank" rel="noopener noreferrer">
+              O&#x27;Hare to the Loop in 15 minutes? This company thinks it can finally bring fast rail to Chicago - Chicago Sun-Times
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPN0hfM2ZZdllHLVo1QWsxQk11VURmcjNuME5tMUZUcjJhUGRienk4d3NNV1pmSmFoMWczenl0RWs3SERuSWRQWjUwb1diZGpoSnZrc0FzRUNLWEdIRXRNN3RlSkN0dHFXNkRSWjFOTVRjaFowUEFTY0cxdm9CeEZsTWlZcmJqNjd2QWo3cDFTSmVwTHZiUW16bHpGbGo5N281dFVDMjcwOA?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">CBS News · August 25, 2026 · 21:46 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5" target="_blank" rel="noopener noreferrer">
+              3 arrested after khat worth over $140K seized at O&#x27;Hare Airport - CBS News
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQOEh2U1FHNzY2cEl1T2dDWXNLaUFwNXBsSjVqRTl2YXB1anZsOEIxSGdkOFlaeGJhc0RweEQxN3pqYzlyOGUwRGdBYkVmdWc2ajc5NUtwX2dyS3E3aExaVmc1bFpjek5ZQmRqRXhIblF4eU1wUDRlajhuME52Zk16OVo0dE91TE1mVDlMQ1lTRW96aTRMMF9yb0ZlTEZLLUpzanc?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Indiana Fever · August 24, 2026 · 03:07 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kNk53UkNIcmhoelpvcDZzM0NqQ3pqX3dfb3JNbzRnTndLUHRTMERyQXdjWVMzMUh1U1Noa21GMEg5QmZ4Um04c0J2d1FsSm1qUmZWc1p2SThNcl9CdlZ5ZEI3bF9LUQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Game Recap: Indiana Fever Take Down Chicago Sky on the Road - Indiana Fever
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kNk53UkNIcmhoelpvcDZzM0NqQ3pqX3dfb3JNbzRnTndLUHRTMERyQXdjWVMzMUh1U1Noa21GMEg5QmZ4Um04c0J2d1FsSm1qUmZWc1p2SThNcl9CdlZ5ZEI3bF9LUQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">FOX 32 Chicago · August 25, 2026 · 21:20 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNeUtEN3BCeFUtN2h0LU0tSkdIb2NnRDM5bHpWRUg4UklQZEluTTZpNTRDelNMZTZsNWJxRFFxbGxib19TOV95X19fOHA1X1NOLWZNS250d0JPVWZrTWV0VDBEaS1kUzhqX1I4Q0RSQUhweHQ3QWZXanJ3b3lxNy1RREFSNE1nZWpKWmI4MGRSOUQzV1MxUG5JeQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Chicago Sky: Enes Kanter Freedom was ejected after becoming ‘potential threat’ - FOX 32 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNeUtEN3BCeFUtN2h0LU0tSkdIb2NnRDM5bHpWRUg4UklQZEluTTZpNTRDelNMZTZsNWJxRFFxbGxib19TOV95X19fOHA1X1NOLWZNS250d0JPVWZrTWV0VDBEaS1kUzhqX1I4Q0RSQUhweHQ3QWZXanJ3b3lxNy1RREFSNE1nZWpKWmI4MGRSOUQzV1MxUG5JeQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">NBC 5 Chicago · August 24, 2026 · 01:30 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNY1NFNFJLcGpuMG94RGtJUWRaNnBLdFl1cGE0LWpkNUwwdXE0RGFxS1FUaHpUakR1OVgtc2IwQVdySVI0MUNyX1VQajUxVUpMY0RNNVppMm9teXh4aEM3d0hRWDJhY05WVVF6am1UQzZwNWdTTGF1UTJld2IwMWR0aW9wMUY3d3JVbWcwZk9wNzcxYkplZzlUSmpsZ1B4Z9IBpgFBVV95cUxOSzRrT3c4TUdDLTVEbzdna0RPaHlRWnhPajR0eFh5a3VKTFZzcU9IT0RQb2EydF9ERU1HblNSMC0taHpabEFjbzlNTTdmalZuNXczQzdWMHNqd3hLblJFb3BnM3poS3FoMzFSUnc3dlhUaG9jU2NCTlZnelQ1bUZWbktWdVVfTllyZGZQS2tlbmZwSjEyc0lBV2liZUhMczE5WTRydGhn?oc=5" target="_blank" rel="noopener noreferrer">
+              Enes Kanter Freedom ejected from Fever-Sky game after confrontation with Natasha Cloud - NBC 5 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMingFBVV95cUxNY1NFNFJLcGpuMG94RGtJUWRaNnBLdFl1cGE0LWpkNUwwdXE0RGFxS1FUaHpUakR1OVgtc2IwQVdySVI0MUNyX1VQajUxVUpMY0RNNVppMm9teXh4aEM3d0hRWDJhY05WVVF6am1UQzZwNWdTTGF1UTJld2IwMWR0aW9wMUY3d3JVbWcwZk9wNzcxYkplZzlUSmpsZ1B4Z9IBpgFBVV95cUxOSzRrT3c4TUdDLTVEbzdna0RPaHlRWnhPajR0eFh5a3VKTFZzcU9IT0RQb2EydF9ERU1HblNSMC0taHpabEFjbzlNTTdmalZuNXczQzdWMHNqd3hLblJFb3BnM3poS3FoMzFSUnc3dlhUaG9jU2NCTlZnelQ1bUZWbktWdVVfTllyZGZQS2tlbmZwSjEyc0lBV2liZUhMczE5WTRydGhn?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -799,11 +1012,11 @@
         
 
         <article class="news-item">
-          <div class="meta">NBC 5 Chicago · August 25, 2026 · 17:33 UTC</div>
+          <div class="meta">Chicago Bears · August 25, 2026 · 14:07 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQSGRMT3ZwM3VCRzVjcEduME5uYzE0M1J5WlhGdzktWVNoQk0xcGxLZkVmNlRsUzJsYWJpQ08yX2pKbDZZbEt4VzhnSFBpdTNFU1c4dkJVVXFLSW53VU9CVGtXSUVHbHlLMmJHV0wwbVU1NDlzLTNIT2tGMlliMGREYTNybzNNS1pZeE95N1Zub1FVMnc2eW9abzNudE1zcXFDTEljUFgtb0NqTzU4RnNB0gG3AUFVX3lxTE5fUmxoRnc2dFI4TTViVTlIT21iQmdUOTZidHc3aXFtNTQyMHJBVjh6eFZRSzFEQ2RULTJDMl9HWGp6LVBDQ2hLdWhoYTZKaGpUTkpCN3NfYnUzb1lvaFAtanlNbDQyd1IwSTBXNHpnLTJfN21NYmJWd1NOWTR0XzhFbWp4cGx1Z05kelhvQkhXdm1SSFVvYnVsejVMTVRWTTU4UGpleTh6WDBwVG1uZDB4dEZ3SE04UQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago area could see severe weather, isolated tornadoes this week - NBC 5 Chicago
+            <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Bears unveil Rivalries uniform - Chicago Bears
             </a>
           </h3>
 
@@ -811,117 +1024,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQSGRMT3ZwM3VCRzVjcEduME5uYzE0M1J5WlhGdzktWVNoQk0xcGxLZkVmNlRsUzJsYWJpQ08yX2pKbDZZbEt4VzhnSFBpdTNFU1c4dkJVVXFLSW53VU9CVGtXSUVHbHlLMmJHV0wwbVU1NDlzLTNIT2tGMlliMGREYTNybzNNS1pZeE95N1Zub1FVMnc2eW9abzNudE1zcXFDTEljUFgtb0NqTzU4RnNB0gG3AUFVX3lxTE5fUmxoRnc2dFI4TTViVTlIT21iQmdUOTZidHc3aXFtNTQyMHJBVjh6eFZRSzFEQ2RULTJDMl9HWGp6LVBDQ2hLdWhoYTZKaGpUTkpCN3NfYnUzb1lvaFAtanlNbDQyd1IwSTBXNHpnLTJfN21NYmJWd1NOWTR0XzhFbWp4cGx1Z05kelhvQkhXdm1SSFVvYnVsejVMTVRWTTU4UGpleTh6WDBwVG1uZDB4dEZ3SE04UQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">ABC7 Chicago · August 25, 2026 · 16:49 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRzVPQnNhYXhvaG56aXNEUjJVeWs3TW1HcHAzdkljZnQyVlE1VFZLZlFCVEU3eUFpZzFtdTlEUmVMQzQ0ZG1IeDAybWxaTDk3cG1YQWtfSE5QNDdmMVZ5c3Y2eW5NNk1yeGk2UzFEeHdFcEROcndQY3BLNDJtaENBUE5qemg1N3Z5M3NPcXZ2bERHNm92Zmg0V09pS2MxUGZKWkx6OER2c3hZVzhpWXNFbjlNR0pZanotTkNjcURVd1RRQXpCRE5qal9DMlBESU53TTdKb3JBc3p6UdIB3wFBVV95cUxOa0RuSk1NRF9GRXdkQjY3UEd1akI2aVpfR3lYN093Q09NSTRBSFhuWmZ1Z081QzZZZlhRTzA2SkMyV0xYYWJmN1I0ZE1rZ1VQNXVjaXZBSm12cFE5azZLWWtxLUlObHVOTUNReVF4em1RN0pJaE1MZmFPYV9CU2dLakZDcjg4bXo5aWJFRmd0eUxHRUNUUGN4bmtEV0U5Q0RBYTlkREFNb0lyekZLRXBycDczakFHY2dObVJTSEpoUVRBVGhBdGlId3lqbzJTa2J0OHAxSHM1ckFHbk81MGNz?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago-area weather forecast this week: Threat of severe storms Wednesday, with tornado risk for south suburbs, NW Indiana - ABC7 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRzVPQnNhYXhvaG56aXNEUjJVeWs3TW1HcHAzdkljZnQyVlE1VFZLZlFCVEU3eUFpZzFtdTlEUmVMQzQ0ZG1IeDAybWxaTDk3cG1YQWtfSE5QNDdmMVZ5c3Y2eW5NNk1yeGk2UzFEeHdFcEROcndQY3BLNDJtaENBUE5qemg1N3Z5M3NPcXZ2bERHNm92Zmg0V09pS2MxUGZKWkx6OER2c3hZVzhpWXNFbjlNR0pZanotTkNjcURVd1RRQXpCRE5qal9DMlBESU53TTdKb3JBc3p6UdIB3wFBVV95cUxOa0RuSk1NRF9GRXdkQjY3UEd1akI2aVpfR3lYN093Q09NSTRBSFhuWmZ1Z081QzZZZlhRTzA2SkMyV0xYYWJmN1I0ZE1rZ1VQNXVjaXZBSm12cFE5azZLWWtxLUlObHVOTUNReVF4em1RN0pJaE1MZmFPYV9CU2dLakZDcjg4bXo5aWJFRmd0eUxHRUNUUGN4bmtEV0U5Q0RBYTlkREFNb0lyekZLRXBycDczakFHY2dObVJTSEpoUVRBVGhBdGlId3lqbzJTa2J0OHAxSHM1ckFHbk81MGNz?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">FOX 32 Chicago · August 25, 2026 · 18:48 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5WZlhieGxKOW44WFROdEtCYWx3ekJwSDd1OEU5LUNOX1dFUlZ5YmJRQkl5NWJZQWdHWm50TUprUVJ5NnhDSi1OMXNULU0yUTdqb2cwNUt5YmFQQmF0Q3ZKSkY5U2ZMd9IBa0FVX3lxTE1OTUp1NkVLbHZpMlBGemVHWGFsNU5YQzhCUmVycTQ0SVNjZkN2Sk5NRUhXcTg2R1g4bjVneXBYbjhMU2JRRGVieG85ZFJDNWZibVdZS1BmdWdqMHBid25pRGdhVjRZTXJPa2Z3?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago weather: Tuesday afternoon forecast - FOX 32 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5WZlhieGxKOW44WFROdEtCYWx3ekJwSDd1OEU5LUNOX1dFUlZ5YmJRQkl5NWJZQWdHWm50TUprUVJ5NnhDSi1OMXNULU0yUTdqb2cwNUt5YmFQQmF0Q3ZKSkY5U2ZMd9IBa0FVX3lxTE1OTUp1NkVLbHZpMlBGemVHWGFsNU5YQzhCUmVycTQ0SVNjZkN2Sk5NRUhXcTg2R1g4bjVneXBYbjhMU2JRRGVieG85ZFJDNWZibVdZS1BmdWdqMHBid25pRGdhVjRZTXJPa2Z3?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Chicago Tribune · August 25, 2026 · 12:00 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNVXlMcWpiN1pQdG1KVmxvNE5RUWxXWUpVTmZ1cVE0eWFxTDRfUlJ3TjhTTnZfWUhZekVZV0haLWI2aFpvbXNEVkZRbkVmU1lEcmhCaFpUQXJNckpUVDdzUmVqeWZjZk9ibGN4aTI1Y1pZRWs1ZDQ0b0p3clVRUC00Ng?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Sky miss the WNBA playoffs for a 3rd year in a row. How much longer can this cycle repeat? - Chicago Tribune
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNVXlMcWpiN1pQdG1KVmxvNE5RUWxXWUpVTmZ1cVE0eWFxTDRfUlJ3TjhTTnZfWUhZekVZV0haLWI2aFpvbXNEVkZRbkVmU1lEcmhCaFpUQXJNckpUVDdzUmVqeWZjZk9ibGN4aTI1Y1pZRWs1ZDQ0b0p3clVRUC00Ng?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Indiana Fever · August 24, 2026 · 03:07 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kNk53UkNIcmhoelpvcDZzM0NqQ3pqX3dfb3JNbzRnTndLUHRTMERyQXdjWVMzMUh1U1Noa21GMEg5QmZ4Um04c0J2d1FsSm1qUmZWc1p2SThNcl9CdlZ5ZEI3bF9LUQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Game Recap: Indiana Fever Take Down Chicago Sky on the Road - Indiana Fever
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kNk53UkNIcmhoelpvcDZzM0NqQ3pqX3dfb3JNbzRnTndLUHRTMERyQXdjWVMzMUh1U1Noa21GMEg5QmZ4Um04c0J2d1FsSm1qUmZWc1p2SThNcl9CdlZ5ZEI3bF9LUQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">FOX 32 Chicago · August 25, 2026 · 21:20 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNeUtEN3BCeFUtN2h0LU0tSkdIb2NnRDM5bHpWRUg4UklQZEluTTZpNTRDelNMZTZsNWJxRFFxbGxib19TOV95X19fOHA1X1NOLWZNS250d0JPVWZrTWV0VDBEaS1kUzhqX1I4Q0RSQUhweHQ3QWZXanJ3b3lxNy1RREFSNE1nZWpKWmI4MGRSOUQzV1MxUG5JeQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Sky: Enes Kanter Freedom was ejected after becoming ‘potential threat’ - FOX 32 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNeUtEN3BCeFUtN2h0LU0tSkdIb2NnRDM5bHpWRUg4UklQZEluTTZpNTRDelNMZTZsNWJxRFFxbGxib19TOV95X19fOHA1X1NOLWZNS250d0JPVWZrTWV0VDBEaS1kUzhqX1I4Q0RSQUhweHQ3QWZXanJ3b3lxNy1RREFSNE1nZWpKWmI4MGRSOUQzV1MxUG5JeQ?oc=5"
+            href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -953,11 +1056,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Block Club Chicago · August 24, 2026 · 15:22 UTC</div>
+          <div class="meta">Chicago Tribune · August 25, 2026 · 12:00 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNT0ZGcms2a2ExRWVObG84WlJnbU9ZRVl5ZmRiejY3ZmU4VzgwTkREMmhXY3o2MnRZalpyR2R3YS0wTDB1Zy0yeGw2dWJjc3otUGVaR1VrR2RqZjFRNVE0Y0NXZXk1R0dzbUM1WHFSdUNSZU1oc3lfQjBLSmFlSjhtcDZwWVRZMHFjWnBFdmZ5TmU?oc=5" target="_blank" rel="noopener noreferrer">
-              How Old Style Won — And Lost — Its Hold On Chicago - Block Club Chicago
+            <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Column: Chicago Bears roster puzzle coming into focus. What are the biggest battles before Sunday’s cuts? - Chicago Tribune
             </a>
           </h3>
 
@@ -965,7 +1068,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNT0ZGcms2a2ExRWVObG84WlJnbU9ZRVl5ZmRiejY3ZmU4VzgwTkREMmhXY3o2MnRZalpyR2R3YS0wTDB1Zy0yeGw2dWJjc3otUGVaR1VrR2RqZjFRNVE0Y0NXZXk1R0dzbUM1WHFSdUNSZU1oc3lfQjBLSmFlSjhtcDZwWVRZMHFjWnBFdmZ5TmU?oc=5"
+            href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -997,11 +1100,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Windy City Gridiron · August 25, 2026 · 20:00 UTC</div>
+          <div class="meta">OSV News · August 25, 2026 · 18:41 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQSnp1bnVLVHJVMGFjRDAwWW5ZVzZrTGVQb1hxeGNCZjNCMllqRFgySUhtMmJCTmltbVlNVUUwdkh0NElpNGhndEdycU5JNUxlU1dlTUZ5bGdNSHVXUC1YcDN4RkM5Q0ZpY29jR3NxVFVwU0pyMmdBRFNpbHhVVmhsamRRQ2FDQmlJWUNNblBGc2RfSHVFRVV1bXFvaUg2STJkalQ0ZHBHbnJ4UlpZWFc0UTFrcnVuR1Y1QVF3OFU3ZGRnYjhWa3lmeHM3UE1sUHpMMW5DX2I4R2ZLQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Bears Roster Moves: Keyshaun Elliott and Elijah Hicks activated off PUP - Windy City Gridiron
+            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOWU9mbGg3YU1Vb0dCanNFT1ZDZEJYdkdFWm9iei1FNGVSU1diNS1rZEsyUkpPZm9jejNvUDFSSlB4N19Kd3ZZX05MQXlDdUZnQndqZUtsR1Z3c1MwSXpuV3o1MmU3SktzdzB6RXRjYWZoLU0xT1hDME5XUFFXVDlTNFdaaS11UnJyR3NudEpidHdiOUN1YUFmcTk0X2xpSTZ0WEVidTYteF9yZnZvOW1vR1ZrTEdwZw?oc=5" target="_blank" rel="noopener noreferrer">
+              Cardinal Cupich reinstates Chicago priest and social activist cleared of abuse allegations - OSV News
             </a>
           </h3>
 
@@ -1009,73 +1112,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQSnp1bnVLVHJVMGFjRDAwWW5ZVzZrTGVQb1hxeGNCZjNCMllqRFgySUhtMmJCTmltbVlNVUUwdkh0NElpNGhndEdycU5JNUxlU1dlTUZ5bGdNSHVXUC1YcDN4RkM5Q0ZpY29jR3NxVFVwU0pyMmdBRFNpbHhVVmhsamRRQ2FDQmlJWUNNblBGc2RfSHVFRVV1bXFvaUg2STJkalQ0ZHBHbnJ4UlpZWFc0UTFrcnVuR1Y1QVF3OFU3ZGRnYjhWa3lmeHM3UE1sUHpMMW5DX2I4R2ZLQQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">The New York Times · August 25, 2026 · 10:05 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNMXI2ejNzcTBvUUxlVU9ZNm51UlJERFZhck9QNWVPSkdjckl4NGFfcGt1MTJFVFB0NElNN1F0cHlyUDdQZGpVcWNvSmNmei1BaWtubFhSd2UxdGpsX1VGSVh4UTlyX2lYa3FYR2VfaXMwRnFhSHlmWXJOeHAxTXBDQWNhN210Mm1TM2NjU1ZvYUpvLU9xVGVGQWNVMA?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Bears camp mood check: Reasons for optimism, concern, curiosity - The New York Times
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNMXI2ejNzcTBvUUxlVU9ZNm51UlJERFZhck9QNWVPSkdjckl4NGFfcGt1MTJFVFB0NElNN1F0cHlyUDdQZGpVcWNvSmNmei1BaWtubFhSd2UxdGpsX1VGSVh4UTlyX2lYa3FYR2VfaXMwRnFhSHlmWXJOeHAxTXBDQWNhN210Mm1TM2NjU1ZvYUpvLU9xVGVGQWNVMA?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">NewsNation · August 25, 2026 · 18:56 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOUVl0TnhYRkNiRmJ3YlREc0xHNHJSZWRPZXJ3bDZXaGhtM01mbzNOc2N1OFhCZ1YxLWk3dl9WZUoxd05CTmRRdDVyVUdXMGhoeVdJdkgxanR3V0pwVHc2OU54NVBya25xbWNuZkpzOERiNEg0VGhCcmVLMXRUUFJKQ0dpbnZ6VF9xeS1LTklDd9IBlAFBVV95cUxNSjBHNHR1cUF2eHdQeG1ZRVM0QVhGLUV5VzBxZzlCX1VHa3J3ZDRZSEpER0JONGFIQ1MtUVlfX1U3bWNSUFlGSkdkaEFLY1l2LTFiS2w0NXhSSEVtd1ZnWTAtQjNLQ1JTQkFjR1B4czhZcnl3YkM3TmRGTU42ZWwwSk9rMTMtcGZyb0hKOUdoRnIyY2pL?oc=5" target="_blank" rel="noopener noreferrer">
-              Mysterious odor forces flight from Chicago to land in Azores archipelago - NewsNation
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOUVl0TnhYRkNiRmJ3YlREc0xHNHJSZWRPZXJ3bDZXaGhtM01mbzNOc2N1OFhCZ1YxLWk3dl9WZUoxd05CTmRRdDVyVUdXMGhoeVdJdkgxanR3V0pwVHc2OU54NVBya25xbWNuZkpzOERiNEg0VGhCcmVLMXRUUFJKQ0dpbnZ6VF9xeS1LTklDd9IBlAFBVV95cUxNSjBHNHR1cUF2eHdQeG1ZRVM0QVhGLUV5VzBxZzlCX1VHa3J3ZDRZSEpER0JONGFIQ1MtUVlfX1U3bWNSUFlGSkdkaEFLY1l2LTFiS2w0NXhSSEVtd1ZnWTAtQjNLQ1JTQkFjR1B4czhZcnl3YkM3TmRGTU42ZWwwSk9rMTMtcGZyb0hKOUdoRnIyY2pL?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Grice Connect · August 25, 2026 · 00:01 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNLWNJU0IzTVB5MUJXTnNhVldBS2hPcmxPZDIwSFY2RzktUk5fbWVFRnlIdXVKbFIxQWNpY0lJbVJZd0c2OHg2TTdFbXplYU0yc1dQUzBLeXVYT2pLN2lXaUpYRGhnTDdwTWxuaFRteEhxRUFUR1pfQUpGQTN6ZDFDTVYwaExjWjllMzRSONIBkgFBVV95cUxOWDV2dk13TDdSUnlDZmw3MS1SUDd1YmxzVlBZVGV6SUN3WmRaTXIwNHNpNDEtNEFzeVNxNWhLQXdhRFRoZXh0NmI4b3VOcEQwanh1Y3ZvWVhGQVVzZ05tMzdoSGVVd1BlOTZwTEhtTTBFZlBYN0t2VW00VGdOZkZ3UUpDMmZZZWZXT204eHFLcEFwdw?oc=5" target="_blank" rel="noopener noreferrer">
-              William Stephen &quot;Chicago&quot; Anderson II - Grice Connect
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNLWNJU0IzTVB5MUJXTnNhVldBS2hPcmxPZDIwSFY2RzktUk5fbWVFRnlIdXVKbFIxQWNpY0lJbVJZd0c2OHg2TTdFbXplYU0yc1dQUzBLeXVYT2pLN2lXaUpYRGhnTDdwTWxuaFRteEhxRUFUR1pfQUpGQTN6ZDFDTVYwaExjWjllMzRSONIBkgFBVV95cUxOWDV2dk13TDdSUnlDZmw3MS1SUDd1YmxzVlBZVGV6SUN3WmRaTXIwNHNpNDEtNEFzeVNxNWhLQXdhRFRoZXh0NmI4b3VOcEQwanh1Y3ZvWVhGQVVzZ05tMzdoSGVVd1BlOTZwTEhtTTBFZlBYN0t2VW00VGdOZkZ3UUpDMmZZZWZXT204eHFLcEFwdw?oc=5"
+            href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOWU9mbGg3YU1Vb0dCanNFT1ZDZEJYdkdFWm9iei1FNGVSU1diNS1rZEsyUkpPZm9jejNvUDFSSlB4N19Kd3ZZX05MQXlDdUZnQndqZUtsR1Z3c1MwSXpuV3o1MmU3SktzdzB6RXRjYWZoLU0xT1hDME5XUFFXVDlTNFdaaS11UnJyR3NudEpidHdiOUN1YUFmcTk0X2xpSTZ0WEVidTYteF9yZnZvOW1vR1ZrTEdwZw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1107,28 +1144,6 @@
         
 
         <article class="news-item">
-          <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5" target="_blank" rel="noopener noreferrer">
-              We moved from Chicago to a much smaller Midwestern city. It had a lot of perks, but not enough to keep us. - Business Insider
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">MLSsoccer.com · August 25, 2026 · 15:56 UTC</div>
 
           <h3>
@@ -1142,6 +1157,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPUXZrZGgybHBqVjZjQmZpVzgwX0ZsZmZsMXlaekhNZG52em1MUmlWNzFHdXRQdkl4ckxoRnJzWVNZa1F0cG0wUnpvUkQyMzdmenZLMndvN2M2cWNHcUFsclRubURENzFsazZEaVFjTHpUZ21NRFV3V2xVSE9yQWFFMW5mbzJrVGdFXzBld0xMQnhCWFlhMXBvMg?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Grice Connect · August 25, 2026 · 00:01 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNLWNJU0IzTVB5MUJXTnNhVldBS2hPcmxPZDIwSFY2RzktUk5fbWVFRnlIdXVKbFIxQWNpY0lJbVJZd0c2OHg2TTdFbXplYU0yc1dQUzBLeXVYT2pLN2lXaUpYRGhnTDdwTWxuaFRteEhxRUFUR1pfQUpGQTN6ZDFDTVYwaExjWjllMzRSONIBkgFBVV95cUxOWDV2dk13TDdSUnlDZmw3MS1SUDd1YmxzVlBZVGV6SUN3WmRaTXIwNHNpNDEtNEFzeVNxNWhLQXdhRFRoZXh0NmI4b3VOcEQwanh1Y3ZvWVhGQVVzZ05tMzdoSGVVd1BlOTZwTEhtTTBFZlBYN0t2VW00VGdOZkZ3UUpDMmZZZWZXT204eHFLcEFwdw?oc=5" target="_blank" rel="noopener noreferrer">
+              William Stephen &quot;Chicago&quot; Anderson II - Grice Connect
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNLWNJU0IzTVB5MUJXTnNhVldBS2hPcmxPZDIwSFY2RzktUk5fbWVFRnlIdXVKbFIxQWNpY0lJbVJZd0c2OHg2TTdFbXplYU0yc1dQUzBLeXVYT2pLN2lXaUpYRGhnTDdwTWxuaFRteEhxRUFUR1pfQUpGQTN6ZDFDTVYwaExjWjllMzRSONIBkgFBVV95cUxOWDV2dk13TDdSUnlDZmw3MS1SUDd1YmxzVlBZVGV6SUN3WmRaTXIwNHNpNDEtNEFzeVNxNWhLQXdhRFRoZXh0NmI4b3VOcEQwanh1Y3ZvWVhGQVVzZ05tMzdoSGVVd1BlOTZwTEhtTTBFZlBYN0t2VW00VGdOZkZ3UUpDMmZZZWZXT204eHFLcEFwdw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1300,6 +1337,60 @@
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago News</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago News
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+news+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+news+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+news+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+news+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>

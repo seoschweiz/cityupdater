@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -726,11 +763,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Crain&#x27;s Chicago Business · August 25, 2026 · 18:33 UTC</div>
+          <div class="meta">Crain&#x27;s Chicago Business · August 25, 2026 · 17:54 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzlVUTI3X0kwdUtLRzcwOUVDN08zd0QtdDlDV254WWd6bmh2Z0o3OElLWFZMSUdyRmJBcG1ld0Z3QUhTeVBhNzVLMkhBbGNRMFdLYUhwYktwOS1YTXpqRXV1VHJwVlNvc2hKeXAwOENUUWVoQ1M2OF81Mm5CdlE2OXRYanBGZlhpMW8zeEVfUHJwS0JDZGJMUEE4Vkc?oc=5" target="_blank" rel="noopener noreferrer">
-              Rehab turns $6 million Winnetka mansion into $14.9 million offering - Crain&#x27;s Chicago Business
+            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcUlaY0NmaWhRbjZpVWtxSUxQSnJnMXphOTk2enpDVGZiRzJfYThPVlVuYWxJQ25TVDR1QTN6WTltRXhiQU5FZml0M0NmS19wNDFqS2ZaQjNXRndoeDU2dnBFZ2R3NEstS0N1ZnBkbGhaR3N0MngtSmdZd0NUNllPT3h3Q0tqZGRHM1pxMDgyS3lsd0ZEd0g1YVNrOE53OFRsMWx2YTFtc3Y?oc=5" target="_blank" rel="noopener noreferrer">
+              Rental complex near Yorktown Mall sold for $99M in latest high-dollar apartment deal - Crain&#x27;s Chicago Business
             </a>
           </h3>
 
@@ -738,7 +775,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzlVUTI3X0kwdUtLRzcwOUVDN08zd0QtdDlDV254WWd6bmh2Z0o3OElLWFZMSUdyRmJBcG1ld0Z3QUhTeVBhNzVLMkhBbGNRMFdLYUhwYktwOS1YTXpqRXV1VHJwVlNvc2hKeXAwOENUUWVoQ1M2OF81Mm5CdlE2OXRYanBGZlhpMW8zeEVfUHJwS0JDZGJMUEE4Vkc?oc=5"
+            href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcUlaY0NmaWhRbjZpVWtxSUxQSnJnMXphOTk2enpDVGZiRzJfYThPVlVuYWxJQ25TVDR1QTN6WTltRXhiQU5FZml0M0NmS19wNDFqS2ZaQjNXRndoeDU2dnBFZ2R3NEstS0N1ZnBkbGhaR3N0MngtSmdZd0NUNllPT3h3Q0tqZGRHM1pxMDgyS3lsd0ZEd0g1YVNrOE53OFRsMWx2YTFtc3Y?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -770,28 +807,6 @@
         
 
         <article class="news-item">
-          <div class="meta">PR Newswire · August 25, 2026 · 13:00 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPLXJiYlFiTXJxMmpWdFpkaVFPSV93TGNYT3pPUWZEWG1FUGZxMlFPV0l1NWt2X0IwUlN0RmE3dk43SXlRQ0xlaFJjZEg3X3JXaUZGalhrc2FkMmg3bjF1U2p1YlZtRUI4Zi1LRklEUl9EUkdoRnFwaTYzb25PVzJJc0RGckhjTUVqZVYwNG4yM093b1VDbjNIcDRST1Y1OWIxQTYtM2Q1T2U5ODZ0UEs0REtCc2ZDcG1Yd0wteU5yaEVXeWw1?oc=5" target="_blank" rel="noopener noreferrer">
-              Matterhorn Venture Partners Acquires Chicago Area Industrial Portfolio - PR Newswire
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPLXJiYlFiTXJxMmpWdFpkaVFPSV93TGNYT3pPUWZEWG1FUGZxMlFPV0l1NWt2X0IwUlN0RmE3dk43SXlRQ0xlaFJjZEg3X3JXaUZGalhrc2FkMmg3bjF1U2p1YlZtRUI4Zi1LRklEUl9EUkdoRnFwaTYzb25PVzJJc0RGckhjTUVqZVYwNG4yM093b1VDbjNIcDRST1Y1OWIxQTYtM2Q1T2U5ODZ0UEs0REtCc2ZDcG1Yd0wteU5yaEVXeWw1?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">Yield PRO · August 25, 2026 · 16:30 UTC</div>
 
           <h3>
@@ -805,6 +820,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1JWHhRMW1wcVdCa0l2bzZZSnNEcGJWZzB1VjNqbDFHNWNaMEc2SVVhZ211aWdzX3pzYXlyVHBOZ2YyR2lyWmJpU05BeXZrQQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">PR Newswire · August 25, 2026 · 13:00 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPLXJiYlFiTXJxMmpWdFpkaVFPSV93TGNYT3pPUWZEWG1FUGZxMlFPV0l1NWt2X0IwUlN0RmE3dk43SXlRQ0xlaFJjZEg3X3JXaUZGalhrc2FkMmg3bjF1U2p1YlZtRUI4Zi1LRklEUl9EUkdoRnFwaTYzb25PVzJJc0RGckhjTUVqZVYwNG4yM093b1VDbjNIcDRST1Y1OWIxQTYtM2Q1T2U5ODZ0UEs0REtCc2ZDcG1Yd0wteU5yaEVXeWw1?oc=5" target="_blank" rel="noopener noreferrer">
+              Matterhorn Venture Partners Acquires Chicago Area Industrial Portfolio - PR Newswire
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPLXJiYlFiTXJxMmpWdFpkaVFPSV93TGNYT3pPUWZEWG1FUGZxMlFPV0l1NWt2X0IwUlN0RmE3dk43SXlRQ0xlaFJjZEg3X3JXaUZGalhrc2FkMmg3bjF1U2p1YlZtRUI4Zi1LRklEUl9EUkdoRnFwaTYzb25PVzJJc0RGckhjTUVqZVYwNG4yM093b1VDbjNIcDRST1Y1OWIxQTYtM2Q1T2U5ODZ0UEs0REtCc2ZDcG1Yd0wteU5yaEVXeWw1?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -836,28 +873,6 @@
         
 
         <article class="news-item">
-          <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5" target="_blank" rel="noopener noreferrer">
-              We moved from Chicago to a much smaller Midwestern city. It had a lot of perks, but not enough to keep us. - Business Insider
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">Stock Titan · August 25, 2026 · 21:17 UTC</div>
 
           <h3>
@@ -871,6 +886,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOUkk1bURhNHl3NUpuQzdrUUMtemZCdzdtaGk0QllYUE5UWnNJTVlFbTZGSS1qU2llMjZfblM5OHlRcDBzVnQzbTBOZ1EzSWpOSG9hQVVCMnE3V0lXMzR2VjgyRjRBRjFQRWtpVFR4NzR3eDVGWUs4VldGbGV6NnVCeVdTQlRVc24yLTNuYkk1SjN5YS13X3doTnFoMlYzUm5XQjdVblYwb2k1MzRiYk5yRkp5S2prYWtsVmZlMUlXNHdxdW0wNXB1c3RNYw?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Business Insider · August 25, 2026 · 14:38 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5" target="_blank" rel="noopener noreferrer">
+              We moved from Chicago to a much smaller Midwestern city. It had a lot of perks, but not enough to keep us. - Business Insider
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQRTBkM196aTlwbjlsczh0VXhzbGMxTDRYRFJrY0lQdjF4eXpTSTdVMHVZV0drWTNTX2diT1BFTUI5c1dWcDJCZUh6UXNPWjJSVXZya3FwMHJLNDR1TnN2OVhRQ0tqRFVKemd3LWI2VUJnS0hieW80UVVjOFdrenR0N0VVNFNJcWN5U2dmZDF1UnV2SFVRakFFcmIyTUhvVWM?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -990,11 +1027,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Crain&#x27;s Chicago Business · August 25, 2026 · 17:54 UTC</div>
+          <div class="meta">Crain&#x27;s Chicago Business · August 25, 2026 · 18:33 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcUlaY0NmaWhRbjZpVWtxSUxQSnJnMXphOTk2enpDVGZiRzJfYThPVlVuYWxJQ25TVDR1QTN6WTltRXhiQU5FZml0M0NmS19wNDFqS2ZaQjNXRndoeDU2dnBFZ2R3NEstS0N1ZnBkbGhaR3N0MngtSmdZd0NUNllPT3h3Q0tqZGRHM1pxMDgyS3lsd0ZEd0g1YVNrOE53OFRsMWx2YTFtc3Y?oc=5" target="_blank" rel="noopener noreferrer">
-              Rental complex near Yorktown Mall sold for $99M in latest high-dollar apartment deal - Crain&#x27;s Chicago Business
+            <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzlVUTI3X0kwdUtLRzcwOUVDN08zd0QtdDlDV254WWd6bmh2Z0o3OElLWFZMSUdyRmJBcG1ld0Z3QUhTeVBhNzVLMkhBbGNRMFdLYUhwYktwOS1YTXpqRXV1VHJwVlNvc2hKeXAwOENUUWVoQ1M2OF81Mm5CdlE2OXRYanBGZlhpMW8zeEVfUHJwS0JDZGJMUEE4Vkc?oc=5" target="_blank" rel="noopener noreferrer">
+              Rehab turns $6 million Winnetka mansion into $14.9 million offering - Crain&#x27;s Chicago Business
             </a>
           </h3>
 
@@ -1002,7 +1039,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcUlaY0NmaWhRbjZpVWtxSUxQSnJnMXphOTk2enpDVGZiRzJfYThPVlVuYWxJQ25TVDR1QTN6WTltRXhiQU5FZml0M0NmS19wNDFqS2ZaQjNXRndoeDU2dnBFZ2R3NEstS0N1ZnBkbGhaR3N0MngtSmdZd0NUNllPT3h3Q0tqZGRHM1pxMDgyS3lsd0ZEd0g1YVNrOE53OFRsMWx2YTFtc3Y?oc=5"
+            href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOXzlVUTI3X0kwdUtLRzcwOUVDN08zd0QtdDlDV254WWd6bmh2Z0o3OElLWFZMSUdyRmJBcG1ld0Z3QUhTeVBhNzVLMkhBbGNRMFdLYUhwYktwOS1YTXpqRXV1VHJwVlNvc2hKeXAwOENUUWVoQ1M2OF81Mm5CdlE2OXRYanBGZlhpMW8zeEVfUHJwS0JDZGJMUEE4Vkc?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1268,17 +1305,6 @@
                 
                 <li>
                   <a
-                    href="https://news.google.com/rss/articles/CBMic0FVX3lxTE16b2V2RDZXVFVqWlhpMEtBdUNzM1gwTXA5MTM5MlpOT01mMUZVSHZNNGdRUXhvbklfLTR6X3kwMHpfVmVzOWlkNXdjaUM2Ym12Q0VyVVZRYWl3SnpvQ0VUcW5DY3ladGRDMGJRN29sZ3c5eWs?oc=5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Chicago Atlantic Real Estate Finance Aktie • A3C82H • US1672391026 - OnVista
-                  </a>
-                  <span class="international-source">OnVista</span>
-                </li>
-                
-                <li>
-                  <a
                     href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQUThWUUYtalRyVDNGdkdpeGxacWxidXBweWh1Z2hsUFRITGhTOGpNbmFMdTY0bHlHdE5pcXctQmMzeURtTk43eTEyT21FT0ZVeHdKMUZRSmx1bGNfR0g3VEJiMUtPN1hnOVc3WkxPd0FuNjU3a2M1b09aOTB2Szd5c2NBQUdUa2N2OGZKdGU2YWQ0NXZGR2k4N0plSWd1LTc1V0RnVE5mVQ?oc=5"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1286,6 +1312,17 @@
                     Real Estate | Investment | Finance - DEAL - Magazine
                   </a>
                   <span class="international-source">DEAL - Magazine</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNSERlVEF5WWVrTjVIRWZ3R3Via2lJV2ZjNVRDcmI5V1RsT3ZpbmxNbE1TY3FaRlJ2MzdIZ2dta2psU2N3anVLRUtsclVWd2NFVHBaR0ZQTHhtWFhMal9kREZJZ19MX1dBY1B0RHdYRUU5Y0dwUndvWU9uWEM1a0FmLUQ5bzVZZHpSdk1LZ0M0OUpHc3JCbUhiR1ZKWGp5czU3OFI1eHhDaGVDZzJIaHhYeC1FeFE?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Schroders: Where are the best global cities for real estate investing? - fundresearch.de
+                  </a>
+                  <span class="international-source">fundresearch.de</span>
                 </li>
                 
               </ul>
@@ -1337,6 +1374,60 @@
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago Real Estate</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago Real Estate
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+real+estate+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+real+estate+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+real+estate+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+real+estate+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>

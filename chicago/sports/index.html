@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -683,11 +720,11 @@
 
     
         <article class="news-item">
-          <div class="meta">Chicago Bears · August 25, 2026 · 14:07 UTC</div>
+          <div class="meta">FOX 32 Chicago · August 25, 2026 · 22:07 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Bears unveil Rivalries uniform - Chicago Bears
+            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbFpGYTROLVJxdTYtT1hpZUFyLWgwN2FwQ1RjYnZOeVc4UUh0b0JDQm9JakJKQmhLcUdYWC1lNko2S3hSTzAtcUszdl9XT2RjbThrRDBTa0llMTRWMlFleUR4YUhnSXRaUnFvZXVHbTk5ZE5TUmllV28za0hBMnoyTnFhRkFzMnVwQ2NNTkxCWTE5WnRMcl93bFYyV1JiUjNXbmszWkRZcEfSAa4BQVVfeXFMTUIyZGNvbWFINHhsc2o4TWlBQlhxNkN2SmNFMEN2WlRBZUpDeERxVkFZdThobGVEV3Bnakp4UmRXanBLbVVWZ1M1TlVuX3pra2R5WVZ6ZXVqblRTeHFSYzlVa2l2VklaWksyeXNrclBaMHlzbklOelJLTGkxNHJZUEFodmNtQ0V1dXVJODd6aWlVblFwVkZmbUR6Tm1hQ1htaGRFWEY0MDdxTjN3a1dB?oc=5" target="_blank" rel="noopener noreferrer">
+              Bears Preseason Concerns + Left Tackle Carousel + Cubs/Sox Series wins | Chicago Sports Tonight - FOX 32 Chicago
             </a>
           </h3>
 
@@ -695,7 +732,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5"
+            href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbFpGYTROLVJxdTYtT1hpZUFyLWgwN2FwQ1RjYnZOeVc4UUh0b0JDQm9JakJKQmhLcUdYWC1lNko2S3hSTzAtcUszdl9XT2RjbThrRDBTa0llMTRWMlFleUR4YUhnSXRaUnFvZXVHbTk5ZE5TUmllV28za0hBMnoyTnFhRkFzMnVwQ2NNTkxCWTE5WnRMcl93bFYyV1JiUjNXbmszWkRZcEfSAa4BQVVfeXFMTUIyZGNvbWFINHhsc2o4TWlBQlhxNkN2SmNFMEN2WlRBZUpDeERxVkFZdThobGVEV3Bnakp4UmRXanBLbVVWZ1M1TlVuX3pra2R5WVZ6ZXVqblRTeHFSYzlVa2l2VklaWksyeXNrclBaMHlzbklOelJLTGkxNHJZUEFodmNtQ0V1dXVJODd6aWlVblFwVkZmbUR6Tm1hQ1htaGRFWEY0MDdxTjN3a1dB?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -705,11 +742,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Chicago Tribune · August 25, 2026 · 12:00 UTC</div>
+          <div class="meta">Chicago Tribune · August 24, 2026 · 19:00 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Column: Chicago Bears roster puzzle coming into focus. What are the biggest battles before Sunday’s cuts? - Chicago Tribune
+            <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR1IwY0ZEMmsxQ3c3Q3U5bmpfUnJ2WDhMNkJJLVZiNDBHM3RYeV9ZLVZFeGl6WlMtanJINGRxTWpJVGd6dHlCTERGck9KUU1ZRlpveVJSNnVVYy1xeEF3aFZBMi1Qd2Q0ZGM3VEdCNkhuYXU0aHZ6Wjc5RVNuR1hyNkJLZmxmeFF0?oc=5" target="_blank" rel="noopener noreferrer">
+              The Score names Jarrett Payton to replace Mike Mulligan as morning co-host at Chicago sports radio station - Chicago Tribune
             </a>
           </h3>
 
@@ -717,7 +754,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5"
+            href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR1IwY0ZEMmsxQ3c3Q3U5bmpfUnJ2WDhMNkJJLVZiNDBHM3RYeV9ZLVZFeGl6WlMtanJINGRxTWpJVGd6dHlCTERGck9KUU1ZRlpveVJSNnVVYy1xeEF3aFZBMi1Qd2Q0ZGM3VEdCNkhuYXU0aHZ6Wjc5RVNuR1hyNkJLZmxmeFF0?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -749,6 +786,72 @@
         
 
         <article class="news-item">
+          <div class="meta">Axios · August 24, 2026 · 17:55 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNVTM3aGhvRWMtSkhyb0hKUmNrNDlNWkFXY005Z0NhVm12MVdiMTJOVW41Yl9ZLTNyLWszR2Fkd1lmNXFITXRaWEo1dWdtVEdkcGtSR2xLZXM1T3AxOUtoTlloUnhZV1NMMEtFLUVDRjVkTGJISll2Xzc1NEJDa1VIRGxGS3NrbVpoWlhKcnJ2VG4zcHZMZkZhbTN0eUVrcURqdWFoNnFwTE50WHBEbmozWg?oc=5" target="_blank" rel="noopener noreferrer">
+              Jarrett Payton to replace Mike Mulligan on The Score - Axios
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNVTM3aGhvRWMtSkhyb0hKUmNrNDlNWkFXY005Z0NhVm12MVdiMTJOVW41Yl9ZLTNyLWszR2Fkd1lmNXFITXRaWEo1dWdtVEdkcGtSR2xLZXM1T3AxOUtoTlloUnhZV1NMMEtFLUVDRjVkTGJISll2Xzc1NEJDa1VIRGxGS3NrbVpoWlhKcnJ2VG4zcHZMZkZhbTN0eUVrcURqdWFoNnFwTE50WHBEbmozWg?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Chicago Bears · August 25, 2026 · 14:07 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Bears unveil Rivalries uniform - Chicago Bears
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMickFVX3lxTE8telVlMEs1eUx1Nm9Weno0dmZGNGpwNmZ0b0F2ZDRVMGw2Tm9DaUM2TXlLczJQV29KSlZYaVNObGxxeUtYXzNxci1lTDFIVUxEYWpneGtuOC1LbDdGOU8wc3hZdm5DUEgzNWRKV0MzNDd5QQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Chicago Sun-Times · August 24, 2026 · 11:00 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNdzdVZ3IxNk41ZGV4NWNlM2hvb08yWHk3azhRQURVRmg2N3JnSnl0TVloQm4wMDZVNWdnUDMwLVloMkZyUXdtVFBQNEhheUZXVUNUQXhsSXk0UWhIaXFhLWNJQ3N2cFBuRjZIUVd1RVRrTjZPRUQ5bDJXLXUxalhZYUR3bmp1TlJBV3FjSEV6OGFPMk83a3ZRdTFsNjlYblY2b0NGMktyQTh6Z0pPSUYwNDBzeDZuWXpzMWpjYmU5ckJxUWJlZ0tLMA?oc=5" target="_blank" rel="noopener noreferrer">
+              With Bears desperate for instant impact, rookie S Dillon Thieneman in &#x27;very good spot&#x27; - Chicago Sun-Times
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNdzdVZ3IxNk41ZGV4NWNlM2hvb08yWHk3azhRQURVRmg2N3JnSnl0TVloQm4wMDZVNWdnUDMwLVloMkZyUXdtVFBQNEhheUZXVUNUQXhsSXk0UWhIaXFhLWNJQ3N2cFBuRjZIUVd1RVRrTjZPRUQ5bDJXLXUxalhZYUR3bmp1TlJBV3FjSEV6OGFPMk83a3ZRdTFsNjlYblY2b0NGMktyQTh6Z0pPSUYwNDBzeDZuWXpzMWpjYmU5ckJxUWJlZ0tLMA?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
           <div class="meta">Yahoo Sports · August 24, 2026 · 05:26 UTC</div>
 
           <h3>
@@ -762,50 +865,6 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNTkduZ2pBcHVuZWFpQV84a2VTaEwxdW5aN2RuZU5JOVZkSjBMcFF4U2dnY2cwZzVwTldXb3dnT1NEdkZqeEJoR0RzYTNBMmVtZ2lXb0ZkaHhvTVhIVGJEY2UtWU0wMXlfWDlSSEc5UWpHSl9iRmU3X0w4ZTBTUDQwNW1UOTRuOVgwX250azkyUQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">FOX 32 Chicago · August 25, 2026 · 17:59 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQZFdFUWVmN0JjNGdCUVQ0OUxqMkFoXzQzc1FhSURUaWN6R3FxN1J0VVV1ZWZJTzZTR3liYU80X1YwS29fV1BweDZQWFZUYTVNTm43Q2x2WVBqODJpdEJoS01kRWo5LXNLR3MxQXZPbzExVG5RZGNVTFF3YlhsZlRuSXBTVUpzQlc0b1gtSkVB0gGTAUFVX3lxTE15TmVYUmdiUWNRY3R3dTJ6LXkwZHRtckI0cjhwS3ZwckpoTG1qWWlCc2gtU01vVFZhdFlrNlo3RjdjVjFBTkV5eThiVkZYYUNXQTdib3RSNU15aWprSEtub0NxMlVZaTZTVm1vU1VpSkZDeFF2SFZScHRud3BRb2FEMWRHTGNpbG9ZQXpsaWhSTllGTQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Preseason Week 2 Recap + Roster Decisions | Chicago Sports Tonight - FOX 32 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQZFdFUWVmN0JjNGdCUVQ0OUxqMkFoXzQzc1FhSURUaWN6R3FxN1J0VVV1ZWZJTzZTR3liYU80X1YwS29fV1BweDZQWFZUYTVNTm43Q2x2WVBqODJpdEJoS01kRWo5LXNLR3MxQXZPbzExVG5RZGNVTFF3YlhsZlRuSXBTVUpzQlc0b1gtSkVB0gGTAUFVX3lxTE15TmVYUmdiUWNRY3R3dTJ6LXkwZHRtckI0cjhwS3ZwckpoTG1qWWlCc2gtU01vVFZhdFlrNlo3RjdjVjFBTkV5eThiVkZYYUNXQTdib3RSNU15aWprSEtub0NxMlVZaTZTVm1vU1VpSkZDeFF2SFZScHRud3BRb2FEMWRHTGNpbG9ZQXpsaWhSTllGTQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Daily Herald · August 24, 2026 · 18:44 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdTRPTnhMdUxHUDFxMW9keTQxSGhZRkdyaTZobGMxM2ZVTHU1MHJwYmRVb29Nbkx1UWdDeXJVQXVSNHhUQ0djN2QyMnM3UDBvaUhVUlJDZllYNnB2Z1hhVkoycmlOY0Y5UzJlZlhETEhaR2lUQUhybFhoWDNvM3M1YUJFcDZjdjQ0SElLOUZWa0tpa1NmX0tCelBIeW1KYXZ6ZE1TSXZKb3ZfUHJrWlNGbENnNExTTTEyQng5b0xWd3pSSUZETFRMZkxFempfb1NfUFZUblh5TDZydw?oc=5" target="_blank" rel="noopener noreferrer">
-              The Score names Jarrett Payton to replace Mully as morning co-host at Chicago sports radio station - Daily Herald
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdTRPTnhMdUxHUDFxMW9keTQxSGhZRkdyaTZobGMxM2ZVTHU1MHJwYmRVb29Nbkx1UWdDeXJVQXVSNHhUQ0djN2QyMnM3UDBvaUhVUlJDZllYNnB2Z1hhVkoycmlOY0Y5UzJlZlhETEhaR2lUQUhybFhoWDNvM3M1YUJFcDZjdjQ0SElLOUZWa0tpa1NmX0tCelBIeW1KYXZ6ZE1TSXZKb3ZfUHJrWlNGbENnNExTTTEyQng5b0xWd3pSSUZETFRMZkxFempfb1NfUFZUblh5TDZydw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -837,11 +896,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Axios · August 24, 2026 · 17:55 UTC</div>
+          <div class="meta">Terre Haute Tribune-Star · August 25, 2026 · 22:00 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNVTM3aGhvRWMtSkhyb0hKUmNrNDlNWkFXY005Z0NhVm12MVdiMTJOVW41Yl9ZLTNyLWszR2Fkd1lmNXFITXRaWEo1dWdtVEdkcGtSR2xLZXM1T3AxOUtoTlloUnhZV1NMMEtFLUVDRjVkTGJISll2Xzc1NEJDa1VIRGxGS3NrbVpoWlhKcnJ2VG4zcHZMZkZhbTN0eUVrcURqdWFoNnFwTE50WHBEbmozWg?oc=5" target="_blank" rel="noopener noreferrer">
-              Jarrett Payton to replace Mike Mulligan on The Score - Axios
+            <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPeDdCSDRVeUFSN3F4Z2NzZzNiM3hEOWN2Y2pld2ZnSEFQd0ZSMVl3MlNsbWpFSlpTOThvMmNTTVVLd2JOVXZiZWk3M1p0bC1SSFp5WHgtbkRKelRpQ3ExMVZBcU8wTm5zZzFBSWFyY2d4LU84ckhzWFdpRldubmtZZlBnLV9aUVcwUFI3RzdMVGJ5ajFlMVNvOG5Ib2daV1MtRHRwTk1fS2huZlAyd2c0eFk0Vm5MT3FjMGpoakJmRE1QaFJLYkJZR3ZiNy0?oc=5" target="_blank" rel="noopener noreferrer">
+              Riley Mathews shines in victory over Chicago State - Terre Haute Tribune-Star
             </a>
           </h3>
 
@@ -849,7 +908,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNVTM3aGhvRWMtSkhyb0hKUmNrNDlNWkFXY005Z0NhVm12MVdiMTJOVW41Yl9ZLTNyLWszR2Fkd1lmNXFITXRaWEo1dWdtVEdkcGtSR2xLZXM1T3AxOUtoTlloUnhZV1NMMEtFLUVDRjVkTGJISll2Xzc1NEJDa1VIRGxGS3NrbVpoWlhKcnJ2VG4zcHZMZkZhbTN0eUVrcURqdWFoNnFwTE50WHBEbmozWg?oc=5"
+            href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPeDdCSDRVeUFSN3F4Z2NzZzNiM3hEOWN2Y2pld2ZnSEFQd0ZSMVl3MlNsbWpFSlpTOThvMmNTTVVLd2JOVXZiZWk3M1p0bC1SSFp5WHgtbkRKelRpQ3ExMVZBcU8wTm5zZzFBSWFyY2d4LU84ckhzWFdpRldubmtZZlBnLV9aUVcwUFI3RzdMVGJ5ajFlMVNvOG5Ib2daV1MtRHRwTk1fS2huZlAyd2c0eFk0Vm5MT3FjMGpoakJmRE1QaFJLYkJZR3ZiNy0?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -859,11 +918,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Bleacher Nation · August 25, 2026 · 13:49 UTC</div>
+          <div class="meta">Bleacher Nation · August 23, 2026 · 20:17 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB0ODlsaEpiZ0oyUmZQeEZRb2x6WUxNaFpBTFpwcktlTkdTaTdrM0JKeE9CUGVWM3hJNkN1a0NPLTN3LWkwNWpQYlM3Z0RkRm1KY19ZWWhKVmtoNGVqUFpHUnA0c1p3MXpOWXlMWm5BeW1aLU5wLTB0ZWtKNFQ?oc=5" target="_blank" rel="noopener noreferrer">
-              Good Bears Injury Update, NFL-Disney Mashup, Chicago Sports Media Thoughts, More - Bleacher Nation
+            <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNQVVkMVBGNjBXY0s0M1F5SlRleW1EZHE3VlNyR1hsNzlpWFMzLW5td084VkN0RFZFOXpUM3BIRGNsQXRjR0Z3U3lmOU4tZ3JQa3Jyazl3dXB1SjIzY3pxOEtkLXNtcTBHWG40V2hNUENMdU9JQkdxSnlKQUlYTWw5Xw?oc=5" target="_blank" rel="noopener noreferrer">
+              Bears President Kevin Warren Shares Stadium Update During Preseason Week 2 - Bleacher Nation
             </a>
           </h3>
 
@@ -871,7 +930,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB0ODlsaEpiZ0oyUmZQeEZRb2x6WUxNaFpBTFpwcktlTkdTaTdrM0JKeE9CUGVWM3hJNkN1a0NPLTN3LWkwNWpQYlM3Z0RkRm1KY19ZWWhKVmtoNGVqUFpHUnA0c1p3MXpOWXlMWm5BeW1aLU5wLTB0ZWtKNFQ?oc=5"
+            href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNQVVkMVBGNjBXY0s0M1F5SlRleW1EZHE3VlNyR1hsNzlpWFMzLW5td084VkN0RFZFOXpUM3BIRGNsQXRjR0Z3U3lmOU4tZ3JQa3Jyazl3dXB1SjIzY3pxOEtkLXNtcTBHWG40V2hNUENMdU9JQkdxSnlKQUlYTWw5Xw?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -894,6 +953,50 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxOXzg1QmRkM0VYS3Z2NEZKSE1vYXN6TTV6ckxnOVVhMjRTbGwxT3BPb1lCYUtXYlRRdkpYS2J0VUJ3bVEtM0Jib3Rva2poZUVFMS0yb0NEaHJSLXQzQWk5Y0ZyUEV2MjlzR2RhV2NYd0pUTS1OMnBSZ2lVWm1Cb2paelpBMVJPYnhXampjNWE2YUxTcGN2SWE2RmdBV2o1ZzZ4MkVsTmpVeFFJcHliQU91Y2ZlZ1BodzVTT3ZNcS05ZTRCRmZ6aHVJWUpGWkQydTZtZU95UDQyNzRsQdIB4gFBVV95cUxNakg3aDBUb1NmeU93OUZrcmpvNVMwUDZWYW9IeHVQNUdSYWhBQ0pQaHdZYmNZelhpakt1MElDLWVVRWoxRENvVENTRWp4U2NzcHYxdHVmSFROUnhxM3h0OTdvMnlMdU5YbUlpWFdJcVRDLTYwcDB4M0NaNHV0VWxkQXB0NGNYWG1Ua0FpNG5VcWp0OEk0OE1oQmg1MXdhRExlZC10eUxoUFU3TXUwZXFjOFpIaVBsT0owUU0za2oyLWFrNzJ5RnNGbDVEaTNGV0VXYmNwc25fcXQ0TjJDNnFIUXNn?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Chicago Tribune · August 25, 2026 · 12:00 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Column: Chicago Bears roster puzzle coming into focus. What are the biggest battles before Sunday’s cuts? - Chicago Tribune
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9TQUFhaVZqTTBPT1F5QlY1WmVBMHNCMnpCenZ6OXk5eG9zbHVHOXZTVjFpZU1KTkpNVGdRZUxhVXlIRlo4Q2ZXNElNUm5WRHYwTFZ1aXNuZHM2SElNT1JwRmtfakJ6YngwRVVROENOVHdxeUVsc0syZ3ptN3ZkQQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">FOX 32 Chicago · August 25, 2026 · 17:59 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQZFdFUWVmN0JjNGdCUVQ0OUxqMkFoXzQzc1FhSURUaWN6R3FxN1J0VVV1ZWZJTzZTR3liYU80X1YwS29fV1BweDZQWFZUYTVNTm43Q2x2WVBqODJpdEJoS01kRWo5LXNLR3MxQXZPbzExVG5RZGNVTFF3YlhsZlRuSXBTVUpzQlc0b1gtSkVB0gGTAUFVX3lxTE15TmVYUmdiUWNRY3R3dTJ6LXkwZHRtckI0cjhwS3ZwckpoTG1qWWlCc2gtU01vVFZhdFlrNlo3RjdjVjFBTkV5eThiVkZYYUNXQTdib3RSNU15aWprSEtub0NxMlVZaTZTVm1vU1VpSkZDeFF2SFZScHRud3BRb2FEMWRHTGNpbG9ZQXpsaWhSTllGTQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Preseason Week 2 Recap + Roster Decisions | Chicago Sports Tonight - FOX 32 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQZFdFUWVmN0JjNGdCUVQ0OUxqMkFoXzQzc1FhSURUaWN6R3FxN1J0VVV1ZWZJTzZTR3liYU80X1YwS29fV1BweDZQWFZUYTVNTm43Q2x2WVBqODJpdEJoS01kRWo5LXNLR3MxQXZPbzExVG5RZGNVTFF3YlhsZlRuSXBTVUpzQlc0b1gtSkVB0gGTAUFVX3lxTE15TmVYUmdiUWNRY3R3dTJ6LXkwZHRtckI0cjhwS3ZwckpoTG1qWWlCc2gtU01vVFZhdFlrNlo3RjdjVjFBTkV5eThiVkZYYUNXQTdib3RSNU15aWprSEtub0NxMlVZaTZTVm1vU1VpSkZDeFF2SFZScHRud3BRb2FEMWRHTGNpbG9ZQXpsaWhSTllGTQ?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -991,6 +1094,28 @@
         
 
         <article class="news-item">
+          <div class="meta">Bleacher Nation · August 25, 2026 · 13:49 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB0ODlsaEpiZ0oyUmZQeEZRb2x6WUxNaFpBTFpwcktlTkdTaTdrM0JKeE9CUGVWM3hJNkN1a0NPLTN3LWkwNWpQYlM3Z0RkRm1KY19ZWWhKVmtoNGVqUFpHUnA0c1p3MXpOWXlMWm5BeW1aLU5wLTB0ZWtKNFQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Good Bears Injury Update, NFL-Disney Mashup, Chicago Sports Media Thoughts, More - Bleacher Nation
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB0ODlsaEpiZ0oyUmZQeEZRb2x6WUxNaFpBTFpwcktlTkdTaTdrM0JKeE9CUGVWM3hJNkN1a0NPLTN3LWkwNWpQYlM3Z0RkRm1KY19ZWWhKVmtoNGVqUFpHUnA0c1p3MXpOWXlMWm5BeW1aLU5wLTB0ZWtKNFQ?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
           <div class="meta">Audacy · August 25, 2026 · 13:09 UTC</div>
 
           <h3>
@@ -1057,6 +1182,50 @@
         
 
         <article class="news-item">
+          <div class="meta">Bears Wire · August 25, 2026 · 18:18 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQeWItSUx3QlhBQWw4emRPcmtPekpMSnlxWldYSE5nOTU5enY1U3lWNHl4aXYtRkdCYnNrODNMYkIxd3BsX0FFRmUzbmp5TDZxdTM4RGt5TFN6VlNCaXpPVGRmWlI1QW5tZ3RwZ1NWWHFsWHZMa3dxdWg1UHVZVFJzYUVsLXQwUTlRd1NqM3FoTG90UGE4V2pMQ3JoODBEWEY1TzJ4Ml9GdFhQOVFuMlBKT1l0X1ZlOTNzT3hqTHAtN1VxRnYtVVZz?oc=5" target="_blank" rel="noopener noreferrer">
+              Bears HC Ben Johnson shares injury updates before final open practice - Bears Wire
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQeWItSUx3QlhBQWw4emRPcmtPekpMSnlxWldYSE5nOTU5enY1U3lWNHl4aXYtRkdCYnNrODNMYkIxd3BsX0FFRmUzbmp5TDZxdTM4RGt5TFN6VlNCaXpPVGRmWlI1QW5tZ3RwZ1NWWHFsWHZMa3dxdWg1UHVZVFJzYUVsLXQwUTlRd1NqM3FoTG90UGE4V2pMQ3JoODBEWEY1TzJ4Ml9GdFhQOVFuMlBKT1l0X1ZlOTNzT3hqTHAtN1VxRnYtVVZz?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">Yahoo Sports · August 25, 2026 · 17:37 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQOWhvZEM2ZWo3NXdZOHRoa3BPQ0RpSXgyTUN6Y3c0angtODlEN2JfVm56VmJZajFtZEhyYWV3S0xmMzc3SWNRb25NQUdleGxHNFRSODYyUnA2WlV4SHlvUE9mbVNsbGNnYmlLeHhUTGtGbEpRdXY0RVR5eE1JSG5jRHd4MExVdVJaemRTRw?oc=5" target="_blank" rel="noopener noreferrer">
+              Chicago Bears unveil 2026 Rivalries uniforms. See pictures - Yahoo Sports
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQOWhvZEM2ZWo3NXdZOHRoa3BPQ0RpSXgyTUN6Y3c0angtODlEN2JfVm56VmJZajFtZEhyYWV3S0xmMzc3SWNRb25NQUdleGxHNFRSODYyUnA2WlV4SHlvUE9mbVNsbGNnYmlLeHhUTGtGbEpRdXY0RVR5eE1JSG5jRHd4MExVdVJaemRTRw?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
           <div class="meta">Bears Wire · August 25, 2026 · 20:01 UTC</div>
 
           <h3>
@@ -1092,138 +1261,6 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQci1jQ0NXMTJIMldlT3ZLb3V5MFNwbWVhZ1A0N2FPUHVrQUlNMGVHa3ZJaDVlak5nNGpyWmE2MlFSRlQ5bFVNUGpYS2h3a3B2WHZUTXBQeTBpOWFRNWE4cUNkRmhIZ1g1NElWZm02bWQ1MnhzaHlnaXF3R1lNbk8wd3draEZfUlFFZkFmYXBVMjlVUQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">ChiCitySports · August 25, 2026 · 17:50 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYUxnX0Z1by1mZmxpYURZRHU5ajh1X0hhQm5NcmRWcnd1TWY3b0VIT3dxaWF2UkZOS0FxVEpmWk00MUpBejJIWU8xY1lzaFptMGZTQk1ZbXpoMW9HUm9ZcXlkM1dsTnlHdTJPYzFpUDg4QVZjSHdhTFp6SFdCdXdWVF83UVI3eDdY?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Bears rookie as coaching staff’s attention - ChiCitySports
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYUxnX0Z1by1mZmxpYURZRHU5ajh1X0hhQm5NcmRWcnd1TWY3b0VIT3dxaWF2UkZOS0FxVEpmWk00MUpBejJIWU8xY1lzaFptMGZTQk1ZbXpoMW9HUm9ZcXlkM1dsTnlHdTJPYzFpUDg4QVZjSHdhTFp6SFdCdXdWVF83UVI3eDdY?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Bears Wire · August 25, 2026 · 18:18 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQeWItSUx3QlhBQWw4emRPcmtPekpMSnlxWldYSE5nOTU5enY1U3lWNHl4aXYtRkdCYnNrODNMYkIxd3BsX0FFRmUzbmp5TDZxdTM4RGt5TFN6VlNCaXpPVGRmWlI1QW5tZ3RwZ1NWWHFsWHZMa3dxdWg1UHVZVFJzYUVsLXQwUTlRd1NqM3FoTG90UGE4V2pMQ3JoODBEWEY1TzJ4Ml9GdFhQOVFuMlBKT1l0X1ZlOTNzT3hqTHAtN1VxRnYtVVZz?oc=5" target="_blank" rel="noopener noreferrer">
-              Bears HC Ben Johnson shares injury updates before final open practice - Bears Wire
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQeWItSUx3QlhBQWw4emRPcmtPekpMSnlxWldYSE5nOTU5enY1U3lWNHl4aXYtRkdCYnNrODNMYkIxd3BsX0FFRmUzbmp5TDZxdTM4RGt5TFN6VlNCaXpPVGRmWlI1QW5tZ3RwZ1NWWHFsWHZMa3dxdWg1UHVZVFJzYUVsLXQwUTlRd1NqM3FoTG90UGE4V2pMQ3JoODBEWEY1TzJ4Ml9GdFhQOVFuMlBKT1l0X1ZlOTNzT3hqTHAtN1VxRnYtVVZz?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">FOX 32 Chicago · August 25, 2026 · 00:44 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBVcWRpSm9zTzZtSWVwMVRFLVhYM1NLLWFHRVlMMUdMZnFjOEtjSGJVXzlpVEEwaHBJUWVDWHdkMFA0UDdXbi1UbFBrenZaSkphOTR3Z2pzeEJhaEpSQ2I4Wl9pUkVIZ9IBa0FVX3lxTE9WMHczNEFZYV9FRGtZWTR4SWNULU1LZlZPSXdmZHNsRDFQa0ZhMFRXaGpFU0lLbkNPVUU1NEg0NXpCcXZ2b19mSnBpUkVRUkdGVFJWeVhsOEpQX0FWbjRzd1JWUC00cXQ3Q1Fj?oc=5" target="_blank" rel="noopener noreferrer">
-              Preseason Week 2 Recap + Roster Decisions | Chicago Sports Tonight - FOX 32 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBVcWRpSm9zTzZtSWVwMVRFLVhYM1NLLWFHRVlMMUdMZnFjOEtjSGJVXzlpVEEwaHBJUWVDWHdkMFA0UDdXbi1UbFBrenZaSkphOTR3Z2pzeEJhaEpSQ2I4Wl9pUkVIZ9IBa0FVX3lxTE9WMHczNEFZYV9FRGtZWTR4SWNULU1LZlZPSXdmZHNsRDFQa0ZhMFRXaGpFU0lLbkNPVUU1NEg0NXpCcXZ2b19mSnBpUkVRUkdGVFJWeVhsOEpQX0FWbjRzd1JWUC00cXQ3Q1Fj?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Yahoo Sports · August 25, 2026 · 11:00 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPV1NkemluZll5WGp5TEFaVnBpLV9UYnhCeXgyQTBpbnJMOVdNams0R2dDUFJ3UEVFdHF0TjBvcjE3c285SlhYTTItRlBBRUZOaFI0a0JsbElwQm5pT3phb2FiaDZfS3YwUGVQc09SMnVKWUFDWEdLT3UtRXVYWi1WVWlVNkpxZC1ha3gw?oc=5" target="_blank" rel="noopener noreferrer">
-              Column: Chicago Bears roster puzzle coming into focus. What are the biggest battles before Sunday’s cuts? - Yahoo Sports
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPV1NkemluZll5WGp5TEFaVnBpLV9UYnhCeXgyQTBpbnJMOVdNams0R2dDUFJ3UEVFdHF0TjBvcjE3c285SlhYTTItRlBBRUZOaFI0a0JsbElwQm5pT3phb2FiaDZfS3YwUGVQc09SMnVKWUFDWEdLT3UtRXVYWi1WVWlVNkpxZC1ha3gw?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">ChiCitySports · August 25, 2026 · 20:07 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9hT0dORXBWa2xrUnpDeGhfNk9RMnZuRDVvTVo3N2ZoTkVxNTh3NVZXOXpUWFR3YnRxRGZGRTdobm92bVV0OVdNX29QeHcxWnRncVp2My1qeFFISjVrV2Z0TTZGeEtnRkd1OVBNc1V0UjY?oc=5" target="_blank" rel="noopener noreferrer">
-              Chicago Bears actively trying to shop pass-rusher: Report - ChiCitySports
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9hT0dORXBWa2xrUnpDeGhfNk9RMnZuRDVvTVo3N2ZoTkVxNTh3NVZXOXpUWFR3YnRxRGZGRTdobm92bVV0OVdNX29QeHcxWnRncVp2My1qeFFISjVrV2Z0TTZGeEtnRkd1OVBNc1V0UjY?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">Bears Wire · August 25, 2026 · 14:45 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxORkJPZmZldko1N3NKTGtRbzVGNG5wYUljbmJNRXItbHgyRzVlYUVlTGNWV0JWNzA4T1FOSklXLWJSNl9ZWDc0SVZMX2xfTTRDMFprRUotV3JNUTdhcFJBdVNmV3UtUE9fTWJySk42V2hma2k1eWZ2TVpJRTluQnByTHY5cnFnWVBXempCbzNJTFY2NVBxMW9MdVVUYnp1bU5XdkRoZmE0WFI0UTFvUVJUNQ?oc=5" target="_blank" rel="noopener noreferrer">
-              NFL world reacts to Chicago Bears &#x27;Rivalries&#x27; uniforms - Bears Wire
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMisAFBVV95cUxORkJPZmZldko1N3NKTGtRbzVGNG5wYUljbmJNRXItbHgyRzVlYUVlTGNWV0JWNzA4T1FOSklXLWJSNl9ZWDc0SVZMX2xfTTRDMFprRUotV3JNUTdhcFJBdVNmV3UtUE9fTWJySk42V2hma2k1eWZ2TVpJRTluQnByTHY5cnFnWVBXempCbzNJTFY2NVBxMW9MdVVUYnp1bU5XdkRoZmE0WFI0UTFvUVJUNQ?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1382,6 +1419,60 @@
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago Sports</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago Sports
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+sports+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+sports+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+sports+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+sports+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>

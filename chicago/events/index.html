@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -1273,28 +1310,6 @@
                 
                 <li>
                   <a
-                    href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxQdGtlczBkeUxKcTd4MzA2WW50VGFXVS1KcTNHT054bWlfX3N3NFl3cFlOeDdUTVdYV2RrLVNGRlVWOHE1LWRRY3N6dXZOZkI3X2t2RVhQX3dPVGpLZnVsMGNuSWJyX1Z5cDZkREE1UHE2eDlhbjdESGVaZnV4eHlvMjVIYTZrVHB4ZEh1dkMyR1JtLXQwNUJlamZ5UEZZN3gzbHZ0aXd3VTE0V2xkaG9Wem1ieFJnU2FzbXB4bThnWDNiUU1Xa0RRWmZ1V281MlJITkZVZnlFQlJqX3UyT3Z3N3FobW1zUHc2T0RPM2JtN1k?oc=5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Place de l’Équerre à Toulon, l’électro festival fait son grand retour pour sa 5e édition ce vendredi 14 août - Nice-Matin
-                  </a>
-                  <span class="international-source">Nice-Matin</span>
-                </li>
-                
-                <li>
-                  <a
-                    href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNamlERFdWOTJhMHFhZ2U1eFZvUmVDSzJsTTVXTDRqWVpKYU1sdm1pMjlRZUJ0aXhLWklmekdGZzJRN2RnOXYtVWRnUTRBcVJ2bW1RZnN4ak5mXzlOM0x2VFg5U0V1LUl5VXlDeFdDQ08wbnl6UVdEZWgwV0d0UmQtckFUVGQ?oc=5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Eris Drew (T4T LUV NRG | Chicago) - Montreux Jazz Festival
-                  </a>
-                  <span class="international-source">Montreux Jazz Festival</span>
-                </li>
-                
-                <li>
-                  <a
                     href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNcWdMTXpwaTViT0EtajZtdjdLaG5yU3lTRGZkN1lZd1NVaVlRaE1obDVYaVZkV3YzekhDNFVyQndkYktWYUZLX1lRTkNlX3RiYlQ2Tk5PT3hDOGRWNVhCLWtNUnlJOGN1cFNFREd3QTJQMFNsR0VUVF8yNk4zSGxmckVZZjd6bmw5YXcyWlA1SlU4Zw?oc=5"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1304,10 +1319,86 @@
                   <span class="international-source">Margxt</span>
                 </li>
                 
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPa0NOX3RRa3FLejloRG5lYzRiRU1TNklKSVJQSjcxQ015LXNnTkZER3o0cTE2Qm5DeW9GcWJSWjdrcTNQTm1sZDh5RWNXdFp1VmlhRjh4bkZNeUlFWGM4QXR0MWxXcHRhd0JzcWU4VktLUlhBSkdabmVzOWphdkpHV2c5a1RoTVB3RXh0cGZDMlhJeFFSWWU2WG5TRmlJUDMxUDE3TlJpRVc3T1JWSWVlQTMwbE13aFJ2QTJiLWhKZzF3RWJNcmJlVHZVUkhaWkFqTmtaekRDTQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Étude spéciale Festival GO 2026 Une découverte foudroyante à Tokyo, Copenhague et Chicago avec Zeraora dans Pokémon GO - Margxt
+                  </a>
+                  <span class="international-source">Margxt</span>
+                </li>
+                
+                <li>
+                  <a
+                    href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxNWWN1bGlJYXdZeURoMGhoQWtzNGF1UXNyOGo4Vk9wdVk1RWJmeER0MWNnTjRxZzZYcGs1Rks3UG00NjM0QzB3Tzlfbm5sZWI0U0h4dEpsWjVQbUhZMlZwWVFMWWJycmthUjhXUW5BaXd1YlNRNTE3RUhTanNzWWpBdVpnOWplSGFFeDV3bm52ZFVfSzNLQ0tBdzlRWDBIVW5LTGVsRGdlelZoTVFkUGRoSTFBdEp4ZGdRd0U5a18xQ2RoSVV2X0RDNzNOWjVXNWpxQmxfTXJjVHNJLTVTNHgzTTk0Uk83UQ?oc=5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Le Chicago blues festival prend place avec l&#x27;association Eden district blues à Oraison - La Provence
+                  </a>
+                  <span class="international-source">La Provence</span>
+                </li>
+                
               </ul>
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago Events</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago Events
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+events+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+events+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+events+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+events+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>

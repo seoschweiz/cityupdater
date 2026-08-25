@@ -123,7 +123,8 @@
 
     .editorial-content,
     .resources-section,
-    .international-section {
+    .international-section,
+    .discovery-section {
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -144,12 +145,14 @@
     }
 
     .resources-section h2,
-    .international-section h2 {
+    .international-section h2,
+    .discovery-section h2 {
       margin-top: 0;
     }
 
     .resources-intro,
-    .international-intro {
+    .international-intro,
+    .discovery-intro {
       margin-bottom: 22px;
       color: #4b5563;
     }
@@ -326,6 +329,30 @@
       color: #6b7280;
     }
 
+    .discovery-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .discovery-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
+      text-align: center;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .discovery-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       margin-top: 60px;
       background: #111827;
@@ -337,6 +364,14 @@
     footer a {
       color: white;
       text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .discovery-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
     }
 
     @media (max-width: 760px) {
@@ -354,11 +389,13 @@
       .news-item,
       .editorial-content,
       .resources-section,
-      .international-section {
+      .international-section,
+      .discovery-section {
         padding: 20px;
       }
 
-      .international-grid {
+      .international-grid,
+      .discovery-buttons {
         grid-template-columns: 1fr;
       }
 
@@ -405,7 +442,7 @@
     </p>
 
     <p class="updated">
-      Last updated: August 25, 2026 · 22:10 UTC
+      Last updated: August 25, 2026 · 22:35 UTC
     </p>
 
   </section>
@@ -613,6 +650,28 @@
 
     
         <article class="news-item">
+          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:30 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPc1hKMTVLS3JhSFczRU9QN2pEQXg4cGUtSmVBbXp0cWJpdGhPRXRNM1hNaVR0bFpPakpNSjM4dllfdE9qSXRfbl9jTU54dkdnS2xkcHNaN2czb0FBT19acXFuWDNIRHVGWDlfNUhRVElISGhUUURMNk5DTUVDQzllZEE3WnN3NGZtQWhBTE54TW9Ueml0WGZz?oc=5" target="_blank" rel="noopener noreferrer">
+              How Smyth became North America’s No. 1 restaurant, even as Chicago restaurants struggle - Chicago Sun-Times
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPc1hKMTVLS3JhSFczRU9QN2pEQXg4cGUtSmVBbXp0cWJpdGhPRXRNM1hNaVR0bFpPakpNSjM4dllfdE9qSXRfbl9jTU54dkdnS2xkcHNaN2czb0FBT19acXFuWDNIRHVGWDlfNUhRVElISGhUUURMNk5DTUVDQzllZEE3WnN3NGZtQWhBTE54TW9Ueml0WGZz?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
           <div class="meta">Eater Chicago · August 24, 2026 · 13:30 UTC</div>
 
           <h3>
@@ -635,28 +694,6 @@
         
 
         <article class="news-item">
-          <div class="meta">WBEZ Chicago · August 25, 2026 · 10:30 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQZFcwNkkyWlAwZVZ1aFdIb1ZxRW0zNnFTUmJCQUZSN19EWGkwS1R0N1pWWjEtaURqeUstM2dVZzJWbTN4ZkdQWlpkTmhVZDh1TklhTjJJMWhadDJVS3JIM3N1MF9uMUJ2ckFUV3NUTjNvMFNzbzNPUjllbFJZT2VEakhhN2FPZV9HZ3hXbg?oc=5" target="_blank" rel="noopener noreferrer">
-              How Smyth became North America’s No. 1 restaurant, even as Chicago restaurants struggle - WBEZ Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQZFcwNkkyWlAwZVZ1aFdIb1ZxRW0zNnFTUmJCQUZSN19EWGkwS1R0N1pWWjEtaURqeUstM2dVZzJWbTN4ZkdQWlpkTmhVZDh1TklhTjJJMWhadDJVS3JIM3N1MF9uMUJ2ckFUV3NUTjNvMFNzbzNPUjllbFJZT2VEakhhN2FPZV9HZ3hXbg?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">Block Club Chicago · August 24, 2026 · 19:39 UTC</div>
 
           <h3>
@@ -670,28 +707,6 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOYXJ0cGZuSkdMWmVKNm1iRnZDd0JUV3FnM2VnRVVMYkpldy1RQWdBRGh6bU9MUHE0LUx2ejN4RkkyRmZBQTVyX09pUWpJR0lJZzE0Z1lkNTJCMmw4U3VsM0tfaHVGSjJHZXpsay1LamxLMWhyWEJCUVF2LUZOWHdPV25DQkM1bG9hQzhnNVlDS24tdzUzSDNWdTBsb0plSldaZVF0NDZZa2FMX0Q0RkFEclVpZDFrUjVzNTRKYjVTSkFZb0tJbjhTRGlUSGQ?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
-          <div class="meta">NBC 5 Chicago · August 25, 2026 · 17:37 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVlYYk9YUXZRVjFGRlBUc0VJOEt4eEsxazl4cExHU0g0QWF1REs5blpaLWRJUWxBYXNsdnFNZ005Y0tob2JrSFBzb016c1FuNllLeG5HaUNaR2Y0clM5aXhIaDFaY0VlbVA5NlMydXNoSjd4OEcwTWdqSnBMc29MRVJtLWtnM3R4RWZ3b25GRUV6VVZOaDBrcDRKX2NDcTVNWGNPTWl5UDZBdFZPWm5hcXZaaXdmZ1E4T3JiNTg4Y2XSAcgBQVVfeXFMUFZwbkRmN3BxWWwzWnVTdjZXMS1OaWhwRkhrU2o4bFdqVjVYc25DNUlsOXJhcTByNXFjTnFYVU9ha3EtNUkwWEF1TVBpSVFUa2Y3dlNmb0hmWHptSDVJMGlRUWx1RjFSNUZsMWxoWUJoTXlpLTB5TEtkc1o5UWtvUTJ2V1ZUOHA2WFdmSnZNUjJ6WXFwaElja0FoalNHMHl5RTdKdnVwSldsUzItXzlPbzNudG81LWRLdWlMT3hxNUhRUG9hYlZYMmM?oc=5" target="_blank" rel="noopener noreferrer">
-              Creepies in Chicago makes Bon Appetit&#x27;s list of ‘Best New Restaurants&#x27; for 2026 - NBC 5 Chicago
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVlYYk9YUXZRVjFGRlBUc0VJOEt4eEsxazl4cExHU0g0QWF1REs5blpaLWRJUWxBYXNsdnFNZ005Y0tob2JrSFBzb016c1FuNllLeG5HaUNaR2Y0clM5aXhIaDFaY0VlbVA5NlMydXNoSjd4OEcwTWdqSnBMc29MRVJtLWtnM3R4RWZ3b25GRUV6VVZOaDBrcDRKX2NDcTVNWGNPTWl5UDZBdFZPWm5hcXZaaXdmZ1E4T3JiNTg4Y2XSAcgBQVVfeXFMUFZwbkRmN3BxWWwzWnVTdjZXMS1OaWhwRkhrU2o4bFdqVjVYc25DNUlsOXJhcTByNXFjTnFYVU9ha3EtNUkwWEF1TVBpSVFUa2Y3dlNmb0hmWHptSDVJMGlRUWx1RjFSNUZsMWxoWUJoTXlpLTB5TEtkc1o5UWtvUTJ2V1ZUOHA2WFdmSnZNUjJ6WXFwaElja0FoalNHMHl5RTdKdnVwSldsUzItXzlPbzNudG81LWRLdWlMT3hxNUhRUG9hYlZYMmM?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -736,6 +751,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMid0FVX3lxTE4xbmJncERhaXFac2lsal9fdUxEN2pvMndDbUhMWXpJd0dGM2lZSF93Uk50NGFOeXFrNkl4bDRSUFBKczNFZ2dkYko5NXpZMU1teWdYUFItXzMtVXExRGFPY1dKcEpUWlE2WFNfWjA4Z0ZZWkt1TkNv?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">NBC 5 Chicago · August 25, 2026 · 17:37 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVlYYk9YUXZRVjFGRlBUc0VJOEt4eEsxazl4cExHU0g0QWF1REs5blpaLWRJUWxBYXNsdnFNZ005Y0tob2JrSFBzb016c1FuNllLeG5HaUNaR2Y0clM5aXhIaDFaY0VlbVA5NlMydXNoSjd4OEcwTWdqSnBMc29MRVJtLWtnM3R4RWZ3b25GRUV6VVZOaDBrcDRKX2NDcTVNWGNPTWl5UDZBdFZPWm5hcXZaaXdmZ1E4T3JiNTg4Y2XSAcgBQVVfeXFMUFZwbkRmN3BxWWwzWnVTdjZXMS1OaWhwRkhrU2o4bFdqVjVYc25DNUlsOXJhcTByNXFjTnFYVU9ha3EtNUkwWEF1TVBpSVFUa2Y3dlNmb0hmWHptSDVJMGlRUWx1RjFSNUZsMWxoWUJoTXlpLTB5TEtkc1o5UWtvUTJ2V1ZUOHA2WFdmSnZNUjJ6WXFwaElja0FoalNHMHl5RTdKdnVwSldsUzItXzlPbzNudG81LWRLdWlMT3hxNUhRUG9hYlZYMmM?oc=5" target="_blank" rel="noopener noreferrer">
+              Creepies in Chicago makes Bon Appetit&#x27;s list of ‘Best New Restaurants&#x27; for 2026 - NBC 5 Chicago
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVlYYk9YUXZRVjFGRlBUc0VJOEt4eEsxazl4cExHU0g0QWF1REs5blpaLWRJUWxBYXNsdnFNZ005Y0tob2JrSFBzb016c1FuNllLeG5HaUNaR2Y0clM5aXhIaDFaY0VlbVA5NlMydXNoSjd4OEcwTWdqSnBMc29MRVJtLWtnM3R4RWZ3b25GRUV6VVZOaDBrcDRKX2NDcTVNWGNPTWl5UDZBdFZPWm5hcXZaaXdmZ1E4T3JiNTg4Y2XSAcgBQVVfeXFMUFZwbkRmN3BxWWwzWnVTdjZXMS1OaWhwRkhrU2o4bFdqVjVYc25DNUlsOXJhcTByNXFjTnFYVU9ha3EtNUkwWEF1TVBpSVFUa2Y3dlNmb0hmWHptSDVJMGlRUWx1RjFSNUZsMWxoWUJoTXlpLTB5TEtkc1o5UWtvUTJ2V1ZUOHA2WFdmSnZNUjJ6WXFwaElja0FoalNHMHl5RTdKdnVwSldsUzItXzlPbzNudG81LWRLdWlMT3hxNUhRUG9hYlZYMmM?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -855,28 +892,6 @@
         
 
         <article class="news-item">
-          <div class="meta">Chicago Sun-Times · August 25, 2026 · 10:30 UTC</div>
-
-          <h3>
-            <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPc1hKMTVLS3JhSFczRU9QN2pEQXg4cGUtSmVBbXp0cWJpdGhPRXRNM1hNaVR0bFpPakpNSjM4dllfdE9qSXRfbl9jTU54dkdnS2xkcHNaN2czb0FBT19acXFuWDNIRHVGWDlfNUhRVElISGhUUURMNk5DTUVDQzllZEE3WnN3NGZtQWhBTE54TW9Ueml0WGZz?oc=5" target="_blank" rel="noopener noreferrer">
-              How Smyth became North America’s No. 1 restaurant, even as Chicago restaurants struggle - Chicago Sun-Times
-            </a>
-          </h3>
-
-          <p>Read the full story from the original publisher.</p>
-
-          <a
-            class="read-more"
-            href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPc1hKMTVLS3JhSFczRU9QN2pEQXg4cGUtSmVBbXp0cWJpdGhPRXRNM1hNaVR0bFpPakpNSjM4dllfdE9qSXRfbl9jTU54dkdnS2xkcHNaN2czb0FBT19acXFuWDNIRHVGWDlfNUhRVElISGhUUURMNk5DTUVDQzllZEE3WnN3NGZtQWhBTE54TW9Ueml0WGZz?oc=5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read full article →
-          </a>
-        </article>
-        
-
-        <article class="news-item">
           <div class="meta">Yahoo Lifestyle Canada · August 25, 2026 · 09:05 UTC</div>
 
           <h3>
@@ -978,6 +993,28 @@
           <a
             class="read-more"
             href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9MS2N5VVBrZ0t2ZExzbGxzdUd3UTd4WFhJV1hZaWxCZHpIdm0xaFF3X0ZVMExFcmczdE01X1AwMnpRTGxDSzdPU01LVHJpT3hBbkxIYWtFTWhVdnVlWm43dWVRQXE?oc=5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read full article →
+          </a>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="meta">WKYT · August 25, 2026 · 02:29 UTC</div>
+
+          <h3>
+            <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQT2J4TENONS1RUFBOcDZQLXRTSmVzVk50d2xBZ2wwYnJVYmJOcVFJRlc0M3JVYjNMLXRxb055MTRYS1F6dy0zcUN5d1c4MGVHeUt1WGg4UzFBRG9EOXFBRUNpMFRTbjQzUGkyN0RNZ2ZnTXNSTkVVMlAwbmdEVHUtNUlaOTdNVnfSAZsBQVVfeXFMTzdPaHlfdWs5S2dLekVTRG5Lbm56QkxzeHhuMjd0Ulc3UjJSdGJveTR0Z3RXSEdHbGhobU9FWUxwektENVdDZzBmeHdkYUpnZmZmdWRkQ3pBQ3BySFlXR2JsNkpxdUN1VDBBNEM0dFAwbHRRdFNWV05ZQXRPcVNRbVhtQ3BydmQ2TlBuODRnVjJZM3ZkbG5BYXk5SjQ?oc=5" target="_blank" rel="noopener noreferrer">
+              Long-time Hamburg Pavilion dining staple closes - WKYT
+            </a>
+          </h3>
+
+          <p>Read the full story from the original publisher.</p>
+
+          <a
+            class="read-more"
+            href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQT2J4TENONS1RUFBOcDZQLXRTSmVzVk50d2xBZ2wwYnJVYmJOcVFJRlc0M3JVYjNMLXRxb055MTRYS1F6dy0zcUN5d1c4MGVHeUt1WGg4UzFBRG9EOXFBRUNpMFRTbjQzUGkyN0RNZ2ZnTXNSTkVVMlAwbmdEVHUtNUlaOTdNVnfSAZsBQVVfeXFMTzdPaHlfdWs5S2dLekVTRG5Lbm56QkxzeHhuMjd0Ulc3UjJSdGJveTR0Z3RXSEdHbGhobU9FWUxwektENVdDZzBmeHdkYUpnZmZmdWRkQ3pBQ3BySFlXR2JsNkpxdUN1VDBBNEM0dFAwbHRRdFNWV05ZQXRPcVNRbVhtQ3BydmQ2TlBuODRnVjJZM3ZkbG5BYXk5SjQ?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1141,11 +1178,11 @@
         
 
         <article class="news-item">
-          <div class="meta">Time Out Worldwide · August 25, 2026 · 05:00 UTC</div>
+          <div class="meta">newcity.com · August 25, 2026 · 12:00 UTC</div>
 
           <h3>
-            <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rbERLSk0yR191NlBxMHJGV0hNaEFLa1pOMUZFeVlFSVFneTBIS05JZU1Kdkw2dTIwdVRLakhDSDlCbzd4cXlKTGhKcDVWQ3NMQTdleEppdVBmT1ZJVTA3cGtEQVU4dw?oc=5" target="_blank" rel="noopener noreferrer">
-              Sumo + Sushi | The Fields Studios | Things to do in Chicago - Time Out Worldwide
+            <a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxOY1pIQXphME8xX0RjWkR2cFpQZzdFblRsQTRxTHRDUEY5SFFpS2pnTXZJMEs1ejJ3NXdjdGNjNW1KaUJnWXhjQ2lyQ1JyZWlwOE9Pa1B0ZUlEeWpoV2NzdmdEVHQwaVYycUNhc1VSWkpKZFRDRFpzSnBPdEpCMThBUzB2WGljaVh5bXAtS0dKb0RocUU5X2xoM1V0SU5mb2dsWGxyNWdYNDZhcUlpSjdvU0hlc05hVWlHTVpUdTJmWDc0TDB4cUdDMFNPLWpNLUVyd3ZCYnIyRTYwNDVFcVZCbnhDTWh6QlM3M1pv?oc=5" target="_blank" rel="noopener noreferrer">
+              Bon Appétit Honors Creepies | Chicago&#x27;s Brick Renaissance | Kristoffer&#x27;s Café Closing - newcity.com
             </a>
           </h3>
 
@@ -1153,7 +1190,7 @@
 
           <a
             class="read-more"
-            href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rbERLSk0yR191NlBxMHJGV0hNaEFLa1pOMUZFeVlFSVFneTBIS05JZU1Kdkw2dTIwdVRLakhDSDlCbzd4cXlKTGhKcDVWQ3NMQTdleEppdVBmT1ZJVTA3cGtEQVU4dw?oc=5"
+            href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxOY1pIQXphME8xX0RjWkR2cFpQZzdFblRsQTRxTHRDUEY5SFFpS2pnTXZJMEs1ejJ3NXdjdGNjNW1KaUJnWXhjQ2lyQ1JyZWlwOE9Pa1B0ZUlEeWpoV2NzdmdEVHQwaVYycUNhc1VSWkpKZFRDRFpzSnBPdEpCMThBUzB2WGljaVh5bXAtS0dKb0RocUU5X2xoM1V0SU5mb2dsWGxyNWdYNDZhcUlpSjdvU0hlc05hVWlHTVpUdTJmWDc0TDB4cUdDMFNPLWpNLUVyd3ZCYnIyRTYwNDVFcVZCbnhDTWh6QlM3M1pv?oc=5"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1312,6 +1349,60 @@
 
             </div>
             
+  </div>
+
+</section>
+
+
+
+  
+<section class="discovery-section">
+
+  <h2>Explore Chicago Restaurants</h2>
+
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to Chicago Restaurants
+    on Facebook and YouTube.
+  </p>
+
+  <div class="discovery-buttons">
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+restaurant+page"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Pages
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+restaurant+group"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Groups
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.facebook.com/search/top/?q=Chicago+restaurant+video"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="https://www.youtube.com/results?search_query=Chicago+restaurant+video&sp=EgQIAhgE"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
+    </a>
+
   </div>
 
 </section>
