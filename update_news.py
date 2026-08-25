@@ -27,6 +27,7 @@ CATEGORIES = {
         "amazon_query": "Chicago gifts",
         "deal_text": "Chicago Deals",
         "facebook_query": "Chicago news",
+        "youtube_query": "Chicago news video",
     },
     "restaurants": {
         "query": "Chicago restaurants",
@@ -35,6 +36,7 @@ CATEGORIES = {
         "amazon_query": "Chicago restaurant gifts kitchen",
         "deal_text": "Chicago Restaurant Deals",
         "facebook_query": "Chicago restaurant",
+        "youtube_query": "Chicago restaurant video",
     },
     "events": {
         "query": "Chicago events",
@@ -43,6 +45,7 @@ CATEGORIES = {
         "amazon_query": "Chicago event gifts",
         "deal_text": "Chicago Event Deals",
         "facebook_query": "Chicago events",
+        "youtube_query": "Chicago events video",
     },
     "jobs": {
         "query": "Chicago jobs",
@@ -51,6 +54,7 @@ CATEGORIES = {
         "amazon_query": "office work accessories",
         "deal_text": "Chicago Work Deals",
         "facebook_query": "Chicago jobs",
+        "youtube_query": "Chicago jobs video",
     },
     "real-estate": {
         "query": "Chicago real estate",
@@ -59,6 +63,7 @@ CATEGORIES = {
         "amazon_query": "home moving organization",
         "deal_text": "Chicago Home Deals",
         "facebook_query": "Chicago real estate",
+        "youtube_query": "Chicago real estate video",
     },
     "sports": {
         "query": "Chicago sports",
@@ -67,6 +72,7 @@ CATEGORIES = {
         "amazon_query": "Chicago sports",
         "deal_text": "Chicago Sports Deals",
         "facebook_query": "Chicago sports",
+        "youtube_query": "Chicago sports video",
     },
 }
 
@@ -125,6 +131,16 @@ def get_facebook_search_url(query):
     return (
         "https://www.facebook.com/search/top/"
         f"?q={encoded_query}"
+    )
+
+
+def get_youtube_search_url(query):
+    encoded_query = urllib.parse.quote_plus(query)
+
+    return (
+        "https://www.youtube.com/results"
+        f"?search_query={encoded_query}"
+        "&sp=EgQIAhgE"
     )
 
 
@@ -474,7 +490,7 @@ def build_international_html(data, international_articles):
 """
 
 
-def build_facebook_html(data):
+def build_discovery_html(data):
     base_query = data["facebook_query"]
 
     page_url = get_facebook_search_url(
@@ -489,19 +505,24 @@ def build_facebook_html(data):
         f"{base_query} video"
     )
 
+    youtube_url = get_youtube_search_url(
+        data["youtube_query"]
+    )
+
     return f"""
-<section class="facebook-section">
+<section class="discovery-section">
 
-  <h2>Explore {data["title"]} on Facebook</h2>
+  <h2>Explore {data["title"]}</h2>
 
-  <p class="facebook-intro">
-    Discover Facebook pages, groups and videos related to {data["title"]}.
+  <p class="discovery-intro">
+    Discover pages, groups and recent videos related to {data["title"]}
+    on Facebook and YouTube.
   </p>
 
-  <div class="facebook-buttons">
+  <div class="discovery-buttons">
 
     <a
-      class="facebook-button"
+      class="discovery-button"
       href="{page_url}"
       target="_blank"
       rel="nofollow noopener noreferrer"
@@ -510,7 +531,7 @@ def build_facebook_html(data):
     </a>
 
     <a
-      class="facebook-button"
+      class="discovery-button"
       href="{group_url}"
       target="_blank"
       rel="nofollow noopener noreferrer"
@@ -519,12 +540,21 @@ def build_facebook_html(data):
     </a>
 
     <a
-      class="facebook-button"
+      class="discovery-button"
       href="{video_url}"
       target="_blank"
       rel="nofollow noopener noreferrer"
     >
       Facebook Videos
+    </a>
+
+    <a
+      class="discovery-button"
+      href="{youtube_url}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      Latest YouTube Videos
     </a>
 
   </div>
@@ -538,11 +568,13 @@ def build_page(slug, data, articles, international_articles):
     navigation = build_navigation(slug)
     editorial_content = get_editorial_content(slug)
     resources_html = build_resources_html(slug, data)
+
     international_html = build_international_html(
         data,
         international_articles,
     )
-    facebook_html = build_facebook_html(data)
+
+    discovery_html = build_discovery_html(data)
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
@@ -689,7 +721,7 @@ def build_page(slug, data, articles, international_articles):
     .editorial-content,
     .resources-section,
     .international-section,
-    .facebook-section {{
+    .discovery-section {{
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -711,13 +743,13 @@ def build_page(slug, data, articles, international_articles):
 
     .resources-section h2,
     .international-section h2,
-    .facebook-section h2 {{
+    .discovery-section h2 {{
       margin-top: 0;
     }}
 
     .resources-intro,
     .international-intro,
-    .facebook-intro {{
+    .discovery-intro {{
       margin-bottom: 22px;
       color: #4b5563;
     }}
@@ -894,15 +926,18 @@ def build_page(slug, data, articles, international_articles):
       color: #6b7280;
     }}
 
-    .facebook-buttons {{
+    .discovery-buttons {{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 15px;
     }}
 
-    .facebook-button {{
-      display: block;
-      padding: 15px 18px;
+    .discovery-button {{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 16px;
       text-align: center;
       background: #111827;
       color: white;
@@ -911,7 +946,7 @@ def build_page(slug, data, articles, international_articles):
       border-radius: 8px;
     }}
 
-    .facebook-button:hover {{
+    .discovery-button:hover {{
       opacity: 0.9;
     }}
 
@@ -926,6 +961,14 @@ def build_page(slug, data, articles, international_articles):
     footer a {{
       color: white;
       text-decoration: none;
+    }}
+
+    @media (max-width: 850px) {{
+
+      .discovery-buttons {{
+        grid-template-columns: repeat(2, 1fr);
+      }}
+
     }}
 
     @media (max-width: 760px) {{
@@ -944,12 +987,12 @@ def build_page(slug, data, articles, international_articles):
       .editorial-content,
       .resources-section,
       .international-section,
-      .facebook-section {{
+      .discovery-section {{
         padding: 20px;
       }}
 
       .international-grid,
-      .facebook-buttons {{
+      .discovery-buttons {{
         grid-template-columns: 1fr;
       }}
 
@@ -1024,7 +1067,7 @@ def build_page(slug, data, articles, international_articles):
   {international_html}
 
 
-  {facebook_html}
+  {discovery_html}
 
 
 </main>
