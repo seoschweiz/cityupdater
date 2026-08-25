@@ -9,7 +9,6 @@ from pathlib import Path
 from content import CITY_CONTENT
 
 
-SITE_NAME = "CityUpdater"
 SITE_URL = "https://cityupdater.com"
 CITY = "Chicago"
 CITY_SLUG = "chicago"
@@ -65,7 +64,6 @@ CATEGORIES = {
 
 def get_google_news_rss_url(query):
     encoded_query = urllib.parse.quote(query)
-
     return (
         "https://news.google.com/rss/search"
         f"?q={encoded_query}"
@@ -77,7 +75,6 @@ def get_google_news_rss_url(query):
 
 def get_amazon_url(query):
     encoded_query = urllib.parse.quote_plus(query)
-
     return (
         "https://www.amazon.com/s"
         f"?k={encoded_query}"
@@ -92,13 +89,12 @@ def fetch_rss(url):
         headers={
             "User-Agent": (
                 "Mozilla/5.0 "
-                "(compatible; CityUpdater/1.0; "
-                "+https://cityupdater.com/)"
+                "(compatible; CityUpdater/1.0; +https://cityupdater.com/)"
             )
         },
     )
 
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=20) as response:
         return response.read()
 
 
@@ -120,7 +116,6 @@ def format_date(date_string):
 
 def parse_feed(xml_data):
     root = ET.fromstring(xml_data)
-
     articles = []
 
     for item in root.findall(".//item"):
@@ -137,14 +132,12 @@ def parse_feed(xml_data):
         if not title or not link:
             continue
 
-        articles.append(
-            {
-                "title": title,
-                "link": link,
-                "date": format_date(pub_date),
-                "source": source,
-            }
-        )
+        articles.append({
+            "title": title,
+            "link": link,
+            "date": format_date(pub_date),
+            "source": source,
+        })
 
         if len(articles) >= MAX_ARTICLES:
             break
@@ -227,30 +220,35 @@ def get_editorial_content(slug):
     return city_content.get(slug, "")
 
 
-def build_deal_box(data, amazon_url, button_prefix="Shop"):
+def build_deal_box(data, amazon_url, position):
+    if position == "top":
+        button_text = f"Shop {data['deal_text']} on Amazon"
+    else:
+        button_text = f"View {data['deal_text']} on Amazon"
+
     return f"""
-  <section class="deal-box">
+<section class="deal-box">
 
-    <h2>{data["deal_text"]}</h2>
+  <h2>{data["deal_text"]}</h2>
 
-    <p>
-      Discover products and offers related to {data["title"]}.
-    </p>
+  <p>
+    Discover products and offers related to {data["title"]}.
+  </p>
 
-    <a
-      class="deal-button"
-      href="{amazon_url}"
-      target="_blank"
-      rel="nofollow sponsored noopener"
-    >
-      {button_prefix} {data["deal_text"]} on Amazon
-    </a>
+  <a
+    class="deal-button"
+    href="{amazon_url}"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+  >
+    {button_text}
+  </a>
 
-    <p class="affiliate-note">
-      As an Amazon Associate, CityUpdater earns from qualifying purchases.
-    </p>
+  <p class="affiliate-note">
+    As an Amazon Associate, CityUpdater earns from qualifying purchases.
+  </p>
 
-  </section>
+</section>
 """
 
 
@@ -269,13 +267,13 @@ def build_page(slug, data, articles):
     top_deal_box = build_deal_box(
         data,
         amazon_url,
-        "Shop",
+        "top",
     )
 
-    lower_deal_box = build_deal_box(
+    bottom_deal_box = build_deal_box(
         data,
         amazon_url,
-        "View",
+        "bottom",
     )
 
     return f"""<!DOCTYPE html>
@@ -456,6 +454,11 @@ def build_page(slug, data, articles):
       color: #6b7280;
     }}
 
+    .news-heading {{
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }}
+
     .news-list {{
       display: grid;
       gap: 20px;
@@ -575,15 +578,24 @@ def build_page(slug, data, articles):
   </section>
 
 
+  <!-- AMAZON BUTTON #1 -->
   {top_deal_box}
 
 
+  <!-- EDITORIAL CONTENT -->
   {editorial_content}
 
 
-  {lower_deal_box}
+  <!-- AMAZON BUTTON #2 -->
+  {bottom_deal_box}
 
 
+  <h2 class="news-heading">
+    Latest {data["title"]} Updates
+  </h2>
+
+
+  <!-- RSS NEWS -->
   <section class="news-list">
 
 {articles_html}
