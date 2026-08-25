@@ -13,7 +13,9 @@ from resources import CITY_RESOURCES
 SITE_URL = "https://cityupdater.com"
 CITY = "Chicago"
 CITY_SLUG = "chicago"
+
 MAX_ARTICLES = 25
+MAX_INTERNATIONAL_ARTICLES = 3
 
 AMAZON_AFFILIATE_TAG = "custommade01-20"
 
@@ -62,16 +64,40 @@ CATEGORIES = {
     },
 }
 
+INTERNATIONAL_FEEDS = {
+    "es": {
+        "label": "Español",
+        "flag": "🇪🇸",
+        "hl": "es",
+        "gl": "ES",
+        "ceid": "ES:es",
+    },
+    "de": {
+        "label": "Deutsch",
+        "flag": "🇩🇪",
+        "hl": "de",
+        "gl": "DE",
+        "ceid": "DE:de",
+    },
+    "fr": {
+        "label": "Français",
+        "flag": "🇫🇷",
+        "hl": "fr",
+        "gl": "FR",
+        "ceid": "FR:fr",
+    },
+}
 
-def get_google_news_rss_url(query):
+
+def get_google_news_rss_url(query, hl="en-US", gl="US", ceid="US:en"):
     encoded_query = urllib.parse.quote(query)
 
     return (
         "https://news.google.com/rss/search"
         f"?q={encoded_query}"
-        "&hl=en-US"
-        "&gl=US"
-        "&ceid=US:en"
+        f"&hl={hl}"
+        f"&gl={gl}"
+        f"&ceid={ceid}"
     )
 
 
@@ -117,7 +143,7 @@ def format_date(date_string):
         return escape(date_string)
 
 
-def parse_feed(xml_data):
+def parse_feed(xml_data, max_articles):
     root = ET.fromstring(xml_data)
     articles = []
 
@@ -142,7 +168,7 @@ def parse_feed(xml_data):
             "source": source,
         })
 
-        if len(articles) >= MAX_ARTICLES:
+        if len(articles) >= max_articles:
             break
 
     return articles
@@ -284,9 +310,7 @@ def build_resources_html(slug, data):
   </p>
 
   <div class="resources-grid">
-
     {resources_html}
-
   </div>
 
 </section>
@@ -325,11 +349,120 @@ def build_deal_box(data, amazon_url, position):
 """
 
 
-def build_page(slug, data, articles):
+def get_international_articles(query):
+    results = {}
+
+    for language_code, language_data in INTERNATIONAL_FEEDS.items():
+        try:
+            rss_url = get_google_news_rss_url(
+                query,
+                language_data["hl"],
+                language_data["gl"],
+                language_data["ceid"],
+            )
+
+            xml_data = fetch_rss(rss_url)
+
+            results[language_code] = parse_feed(
+                xml_data,
+                MAX_INTERNATIONAL_ARTICLES,
+            )
+
+        except Exception as error:
+            print(
+                f"International RSS error "
+                f"({language_code}): {error}"
+            )
+            results[language_code] = []
+
+    return results
+
+
+def build_international_html(data, international_articles):
+    columns = []
+
+    for language_code, language_data in INTERNATIONAL_FEEDS.items():
+        articles = international_articles.get(language_code, [])
+
+        links = []
+
+        for article in articles:
+            title = escape(article["title"])
+            link = escape(article["link"], quote=True)
+            source = escape(article["source"])
+
+            source_html = ""
+
+            if source:
+                source_html = f'<span class="international-source">{source}</span>'
+
+            links.append(
+                f"""
+                <li>
+                  <a
+                    href="{link}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {title}
+                  </a>
+                  {source_html}
+                </li>
+                """
+            )
+
+        if not links:
+            links.append(
+                """
+                <li>
+                  No current headlines available.
+                </li>
+                """
+            )
+
+        columns.append(
+            f"""
+            <div class="international-column">
+
+              <h3>
+                {language_data["flag"]} {language_data["label"]}
+              </h3>
+
+              <ul>
+                {''.join(links)}
+              </ul>
+
+            </div>
+            """
+        )
+
+    return f"""
+<section class="international-section">
+
+  <h2>{data["title"]} — International Coverage</h2>
+
+  <p class="international-intro">
+    Recent coverage of {data["title"]} from selected international
+    Google News feeds.
+  </p>
+
+  <div class="international-grid">
+    {''.join(columns)}
+  </div>
+
+</section>
+"""
+
+
+def build_page(slug, data, articles, international_articles):
     articles_html = build_articles_html(articles)
     navigation = build_navigation(slug)
     editorial_content = get_editorial_content(slug)
     resources_html = build_resources_html(slug, data)
+    international_html = build_international_html(
+        data,
+        international_articles,
+    )
 
     updated = datetime.now(timezone.utc).strftime(
         "%B %d, %Y · %H:%M UTC"
@@ -473,7 +606,9 @@ def build_page(slug, data, articles):
       margin-bottom: 20px;
     }}
 
-    .editorial-content {{
+    .editorial-content,
+    .resources-section,
+    .international-section {{
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -493,19 +628,13 @@ def build_page(slug, data, articles):
       margin-bottom: 18px;
     }}
 
-    .resources-section {{
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 25px 0 35px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-    }}
-
-    .resources-section h2 {{
+    .resources-section h2,
+    .international-section h2 {{
       margin-top: 0;
     }}
 
-    .resources-intro {{
+    .resources-intro,
+    .international-intro {{
       margin-bottom: 22px;
       color: #4b5563;
     }}
@@ -638,6 +767,50 @@ def build_page(slug, data, articles):
       text-decoration: underline;
     }}
 
+    .international-grid {{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }}
+
+    .international-column {{
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fafafa;
+    }}
+
+    .international-column h3 {{
+      margin-top: 0;
+      font-size: 20px;
+    }}
+
+    .international-column ul {{
+      padding-left: 20px;
+      margin-bottom: 0;
+    }}
+
+    .international-column li {{
+      margin-bottom: 14px;
+    }}
+
+    .international-column a {{
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }}
+
+    .international-column a:hover {{
+      text-decoration: underline;
+    }}
+
+    .international-source {{
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      color: #6b7280;
+    }}
+
     footer {{
       margin-top: 60px;
       background: #111827;
@@ -651,7 +824,7 @@ def build_page(slug, data, articles):
       text-decoration: none;
     }}
 
-    @media (max-width: 600px) {{
+    @media (max-width: 760px) {{
 
       header h1 {{
         font-size: 36px;
@@ -665,8 +838,13 @@ def build_page(slug, data, articles):
 
       .news-item,
       .editorial-content,
-      .resources-section {{
+      .resources-section,
+      .international-section {{
         padding: 20px;
+      }}
+
+      .international-grid {{
+        grid-template-columns: 1fr;
       }}
 
     }}
@@ -713,19 +891,15 @@ def build_page(slug, data, articles):
   </section>
 
 
-  <!-- AMAZON BUTTON #1 -->
   {top_deal_box}
 
 
-  <!-- EDITORIAL CONTENT -->
   {editorial_content}
 
 
-  <!-- LOCAL RESOURCES -->
   {resources_html}
 
 
-  <!-- AMAZON BUTTON #2 -->
   {bottom_deal_box}
 
 
@@ -734,12 +908,15 @@ def build_page(slug, data, articles):
   </h2>
 
 
-  <!-- RSS NEWS -->
   <section class="news-list">
 
-{articles_html}
+    {articles_html}
 
   </section>
+
+
+  {international_html}
+
 
 </main>
 
@@ -773,16 +950,24 @@ def update_category(slug, data):
 
     xml_data = fetch_rss(rss_url)
 
-    articles = parse_feed(xml_data)
+    articles = parse_feed(
+        xml_data,
+        MAX_ARTICLES,
+    )
+
+    international_articles = get_international_articles(
+        data["query"]
+    )
 
     print(
-        f"Found {len(articles)} articles."
+        f"Found {len(articles)} English articles."
     )
 
     html_page = build_page(
         slug,
         data,
         articles,
+        international_articles,
     )
 
     output_file = Path(
