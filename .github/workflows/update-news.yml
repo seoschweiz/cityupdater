@@ -1,18 +1,16 @@
-name: Update Chicago News
+name: Update Chicago Content
 
 on:
   schedule:
-    # Runs every 3 hours
     - cron: "17 */3 * * *"
 
-  # Allows manual testing from GitHub Actions
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-news:
+  update-chicago:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,18 +22,19 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Update Chicago news
+      - name: Update Chicago pages
         run: python update_news.py
 
-      - name: Commit updated news
+      - name: Commit updated pages
         run: |
           git config user.name "CityUpdater Bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add chicago/news/index.html
+
+          git add chicago/
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update Chicago news"
+            git commit -m "Update Chicago city content"
             git push
           fi
